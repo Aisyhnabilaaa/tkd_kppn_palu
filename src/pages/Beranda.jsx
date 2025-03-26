@@ -17,7 +17,7 @@ const Beranda = () => {
 
                 {/* Konten */}
 
-                <div className="grid grid-cols-2 gap-12 itmes-center">
+                <div className="grid grid-cols-2 gap-12 items-center">
                     <div></div>
                     <div className=" relative text-right max-w-[600px]">
                         <h1 className="lg:text-4xl text-2xl">Selamat Datang di Situs</h1>
@@ -85,7 +85,7 @@ const Beranda = () => {
                         {
                             title: "Donggala",
                             description: " Terletak di pesisir barat Sulawesi Tengah, dikenal dengan keindahan pantainya, seperti Pantai Tanjung Karang, Memiliki potensi wisata bahari yang besar. ",
-                            bgImage: "/src/assets/img/kantor-bupati-parimo.jpg",
+                            bgImage: "src/assets/img/donggala.jpg",
                             logo: "/src/assets/img/Lambang_Kabupaten_Donggala.png",
                         },
                         {
@@ -105,7 +105,7 @@ const Beranda = () => {
                             }}
                         >
                             <div
-                                className="flex items-center justify-center w-10 h-11 mb-4 bg-cover bg-center"
+                                className="flex items-center justify-center w-10 h-14 mb-4 bg-cover bg-center"
                                 style={{ backgroundImage: `url(${item.logo})` }}
                             ></div>
 

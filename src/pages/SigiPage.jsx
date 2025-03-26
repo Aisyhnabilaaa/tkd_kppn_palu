@@ -1,7 +1,7 @@
 import { GiCurledLeaf } from "react-icons/gi"
 
 
-const SultengPage = () => {
+const SigiPage = () => {
   return (
     <div className='hero'>
       <div className='relative flex flex-row justify-between itmes-center p-16 md:px-32 px-5 text-white py-44 rounded-lg'
@@ -63,4 +63,4 @@ const SultengPage = () => {
   )
 }
 
-export default SultengPage
+export default SigiPage

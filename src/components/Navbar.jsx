@@ -20,7 +20,7 @@ const Navbar = () => {
 
     // Daftar menu navbar
     const menuItems = [
-        { name: "Home", to: "home" },
+        { name: "Home", to: "src/pages/Beranda.jsx" },
         { name: "About", to: "about" },
         { name: "Services", to: "services" },
         { name: "Contact", to: "contact" },
