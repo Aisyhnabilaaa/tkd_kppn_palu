@@ -41,7 +41,7 @@ const PaluPage = () => {
       <div className='relative flex flex-row justify-between p-8 md:px-16 px-5 text-white py-20 rounded-lg'>
         <div className='absolute inset-0 bg-sky-300 rounded-lg'></div>
         
-        <div className="relative flex flex-col w-1/2">
+        <div className="relative flex flex-col w-1/3">
           <h1 className="lg:text-5xl text-2xl text-orange-50">SULAWESI TENGAH</h1>
           <p className="mt-4 text-lg font-bold">Sulawesi Tengah: Keindahan Alam dan Keberagaman Budaya dalam Satu Kesatuan</p>
           <p className="mt-4 text-lg text-justify">
@@ -53,7 +53,7 @@ const PaluPage = () => {
         </div>
 
         <div className="relative flex justify-end">
-        <img src="/src/assets/img/sultengpeta.jpeg" alt="sulawesi tengah" className="w-96 mt-4"/>
+        <img src="/src/assets/img/kota-palu.jpg" alt="sulawesi tengah" className="w-30 mt-20"/>
         </div>
       </div>
 

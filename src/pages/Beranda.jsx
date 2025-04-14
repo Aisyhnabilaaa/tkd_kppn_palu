@@ -1,6 +1,7 @@
 import { FaChartSimple, FaChartPie } from "react-icons/fa6";
-
+import { useNavigate } from "react-router-dom";
 const Beranda = () => {
+    const navigate = useNavigate();
     return (
         <div className="beranda pd-10 rounded-lg">
             <div className="relative flex flex-row justify-between items-center p-5 md:px-32 px-5 text-white py-40 rounded-lg"
@@ -68,31 +69,35 @@ const Beranda = () => {
                             description: "Provinsi yang terletak di jantung Pulau Sulawesi, Indonesia, yang menawarkan lanskap alam yang memukau, mulai dari pegunungan yang menjulang tinggi, lembah yang hijau subur, hingga garis pantai yang indah. ",
                             bgImage: "/src/assets/img/sultengpeta.jpeg",
                             logo: "src/assets/img/Logo_Provinsi_Sulawesi_Tengah.png",
-                            link: "src/pages/SultengPage.jsx"
+                            link: "/sulteng" 
                         },
                         {
                             title: "Kota Palu",
                             description: " Ibu kota Provinsi Sulawesi Tengah, terletak di Teluk Palu, dengan Sungai Palu yang membelah kota. Merupakan pusat pemerintahan, ekonomi, dan pendidikan di Sulawesi Tengah.",
                             bgImage: "/src/assets/img/palugubernur.jpg",
                             logo: "/src/assets/img/Lambang_Kota_Palu.png",
+                            link: "/Palu"
                         },
                         {
                             title: "Parigi Moutong",
                             description: " Parigi Moutong adalah salah satu daerah di Sulawesi Tengah yang menerima transfer ke daerah. Daerah ini memiliki potensi ekonomi dari sektor perikanan dan pertanian.",
                             bgImage: "/src/assets/img/kantor-bupati-parimo.jpg",
                             logo: "/src/assets/img/Lambang_Kabupaten_Parigi_Moutong.png",
+                            link: "/ParigiMoutong"
                         },
                         {
                             title: "Donggala",
                             description: " Terletak di pesisir barat Sulawesi Tengah, dikenal dengan keindahan pantainya, seperti Pantai Tanjung Karang, Memiliki potensi wisata bahari yang besar. ",
                             bgImage: "src/assets/img/donggala.jpg",
                             logo: "/src/assets/img/Lambang_Kabupaten_Donggala.png",
+                            link: "/Donggala"
                         },
                         {
                             title: "Sigi",
                             description: " Kabupaten Sigi, yang terletak di selatan Palu, menawarkan lanskap pegunungan dan lembah yang subur, yang menjadikannya daerah yang kaya akan potensi wisata alam dan pertanian.",
                             bgImage: "src/assets/img/kantor-bupatii-sigii.jpg",
                             logo: "/src/assets/img/Logo_sigi.png",
+                            link: "/Sigi"
                         },
                     ].map((item, index) => (
                         <div
@@ -113,11 +118,15 @@ const Beranda = () => {
 
                             <p className="text-sm text-white mt-2 bg-black/50 p-2 rounded-lg">{item.description}</p>
 
-                            <button 
-                                onClick={() => (window.location.href = item.link)}
-                                className="mt-4 px-4 py-2 rounded-lg font-medium shadow-md transition-all duration-300 bg-sky-500 text-white hover:bg-sky-600 hover:shadow-lg">
-                                Selengkapnya
-                            </button>
+                            <div>
+            {/* ... */}
+            <button 
+                onClick={() => navigate(item.link)} // Ganti window.location.href
+                className="mt-4 px-4 py-2 rounded-lg font-medium shadow-md transition-all duration-300 bg-sky-500 text-white hover:bg-sky-600 hover:shadow-lg">
+                Selengkapnya
+            </button>
+            {/* ... */}
+        </div>
 
                         </div>
                     ))}
