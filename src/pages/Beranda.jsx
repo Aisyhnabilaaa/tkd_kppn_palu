@@ -59,69 +59,71 @@ const Beranda = () => {
             </div>
 
             <div>
-                <h1 className="font-bold text-5xl text-center  text-cyan-800 mb-5">Daftar Pemerintah Daerah</h1>
-                <p className="text-center">Silahkan pilih untuk mengakses info tiap pemerintah daerah</p>
-                <div className="grid gris-cols-1 md:grid-cols-3 gap-6 p-6">
-                    {[
-                        {
-                            title: "Sulawesi Tengah",
-                            description: "Provinsi yang terletak di jantung Pulau Sulawesi, Indonesia, yang menawarkan lanskap alam yang memukau, mulai dari pegunungan yang menjulang tinggi, lembah yang hijau subur, hingga garis pantai yang indah. ",
-                            bgImage: "/src/assets/img/sultengpeta.jpeg",
-                            logo: "src/assets/img/Logo_Provinsi_Sulawesi_Tengah.png",
-                            link: "src/pages/SultengPage.jsx"
-                        },
-                        {
-                            title: "Kota Palu",
-                            description: " Ibu kota Provinsi Sulawesi Tengah, terletak di Teluk Palu, dengan Sungai Palu yang membelah kota. Merupakan pusat pemerintahan, ekonomi, dan pendidikan di Sulawesi Tengah.",
-                            bgImage: "/src/assets/img/palugubernur.jpg",
-                            logo: "/src/assets/img/Lambang_Kota_Palu.png",
-                        },
-                        {
-                            title: "Parigi Moutong",
-                            description: " Parigi Moutong adalah salah satu daerah di Sulawesi Tengah yang menerima transfer ke daerah. Daerah ini memiliki potensi ekonomi dari sektor perikanan dan pertanian.",
-                            bgImage: "/src/assets/img/kantor-bupati-parimo.jpg",
-                            logo: "/src/assets/img/Lambang_Kabupaten_Parigi_Moutong.png",
-                        },
-                        {
-                            title: "Donggala",
-                            description: " Terletak di pesisir barat Sulawesi Tengah, dikenal dengan keindahan pantainya, seperti Pantai Tanjung Karang, Memiliki potensi wisata bahari yang besar. ",
-                            bgImage: "src/assets/img/donggala.jpg",
-                            logo: "/src/assets/img/Lambang_Kabupaten_Donggala.png",
-                        },
-                        {
-                            title: "Sigi",
-                            description: " Kabupaten Sigi, yang terletak di selatan Palu, menawarkan lanskap pegunungan dan lembah yang subur, yang menjadikannya daerah yang kaya akan potensi wisata alam dan pertanian.",
-                            bgImage: "src/assets/img/kantor-bupatii-sigii.jpg",
-                            logo: "/src/assets/img/Logo_sigi.png",
-                        },
-                    ].map((item, index) => (
-                        <div
-                            key={index}
-                            className="p-6 rounded-lg shadow-lg bg-sky-300 text-neutral-950 relative"
-                            style={{
-                                backgroundImage: `url(${item.bgImage})`,
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                            }}
-                        >
+                <div>
+                    <h1 className="font-bold text-5xl text-center  text-cyan-800 mb-5">Daftar Pemerintah Daerah</h1>
+                    <p className="text-center">Silahkan pilih untuk mengakses info tiap pemerintah daerah</p>
+                    <div className="grid gris-cols-1 md:grid-cols-3 gap-6 p-6">
+                        {[
+                            {
+                                title: "Sulawesi Tengah",
+                                description: "Provinsi yang terletak di jantung Pulau Sulawesi, Indonesia, yang menawarkan lanskap alam yang memukau, mulai dari pegunungan yang menjulang tinggi, lembah yang hijau subur, hingga garis pantai yang indah. ",
+                                bgImage: "/src/assets/img/sultengpeta.jpeg",
+                                logo: "src/assets/img/Logo_Provinsi_Sulawesi_Tengah.png",
+                                link: "src/pages/SultengPage.jsx"
+                            },
+                            {
+                                title: "Kota Palu",
+                                description: " Ibu kota Provinsi Sulawesi Tengah, terletak di Teluk Palu, dengan Sungai Palu yang membelah kota. Merupakan pusat pemerintahan, ekonomi, dan pendidikan di Sulawesi Tengah.",
+                                bgImage: "/src/assets/img/palugubernur.jpg",
+                                logo: "/src/assets/img/Lambang_Kota_Palu.png",
+                            },
+                            {
+                                title: "Parigi Moutong",
+                                description: " Parigi Moutong adalah salah satu daerah di Sulawesi Tengah yang menerima transfer ke daerah. Daerah ini memiliki potensi ekonomi dari sektor perikanan dan pertanian.",
+                                bgImage: "/src/assets/img/kantor-bupati-parimo.jpg",
+                                logo: "/src/assets/img/Lambang_Kabupaten_Parigi_Moutong.png",
+                            },
+                            {
+                                title: "Donggala",
+                                description: " Terletak di pesisir barat Sulawesi Tengah, dikenal dengan keindahan pantainya, seperti Pantai Tanjung Karang, Memiliki potensi wisata bahari yang besar. ",
+                                bgImage: "src/assets/img/donggala.jpg",
+                                logo: "/src/assets/img/Lambang_Kabupaten_Donggala.png",
+                            },
+                            {
+                                title: "Sigi",
+                                description: " Kabupaten Sigi, yang terletak di selatan Palu, menawarkan lanskap pegunungan dan lembah yang subur, yang menjadikannya daerah yang kaya akan potensi wisata alam dan pertanian.",
+                                bgImage: "src/assets/img/kantor-bupatii-sigii.jpg",
+                                logo: "/src/assets/img/Logo_sigi.png",
+                            },
+                        ].map((item, index) => (
                             <div
-                                className="flex items-center justify-center w-10 h-14 mb-4 bg-cover bg-center"
-                                style={{ backgroundImage: `url(${item.logo})` }}
-                            ></div>
+                                key={index}
+                                className="p-6 rounded-lg shadow-lg bg-sky-300 text-neutral-950 relative"
+                                style={{
+                                    backgroundImage: `url(${item.bgImage})`,
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                }}
+                            >
+                                <div
+                                    className="flex items-center justify-center w-10 h-14 mb-4 bg-cover bg-center"
+                                    style={{ backgroundImage: `url(${item.logo})` }}
+                                ></div>
 
-                            <h2 className="text-xl font-bold text-white bg-cyan-900 rounded-full py-3 px-6 text-center">{item.title}</h2>
+                                <h2 className="text-xl font-bold text-white bg-cyan-900 rounded-full py-3 px-6 text-center">{item.title}</h2>
 
-                            <p className="text-sm text-white mt-2 bg-black/50 p-2 rounded-lg">{item.description}</p>
+                                <p className="text-sm text-white mt-2 bg-black/50 p-2 rounded-lg">{item.description}</p>
 
-                            <button 
-                                onClick={() => (window.location.href = item.link)}
-                                className="mt-4 px-4 py-2 rounded-lg font-medium shadow-md transition-all duration-300 bg-sky-500 text-white hover:bg-sky-600 hover:shadow-lg">
-                                Selengkapnya
-                            </button>
+                                <button
+                                    onClick={() => (window.location.href = item.link)}
+                                    className="mt-4 px-4 py-2 rounded-lg font-medium shadow-md transition-all duration-300 bg-sky-500 text-white hover:bg-sky-600 hover:shadow-lg">
+                                    Selengkapnya
+                                </button>
 
-                        </div>
-                    ))}
+                            </div>
+                        ))}
 
+                    </div>
                 </div>
             </div>
 

@@ -1,4 +1,5 @@
-import { GiCurledLeaf } from "react-icons/gi"
+import { IoLeafSharp } from "react-icons/io5";
+
 
 
 const SultengPage = () => {
@@ -15,10 +16,13 @@ const SultengPage = () => {
 
         <div className='absolute inset-0 bg-sky-600 opacity-30 rounded-lg'></div>
 
-        <div className="relative flex items-center justify-center space-x-4 text-center w-full">
-          <GiCurledLeaf className="text-sky-500 text-6xl" />
-          <h1 className="lg:text-5xl text-2xl font-bold">SULAWESI TENGAH</h1>
-          <GiCurledLeaf className="text-sky-500 text-6xl scale-x-[-1]" />
+        <div className="items-center justify-center text-center w-full">
+          <div className="relative flex items-center justify-center space-x-4 text-center">
+            <IoLeafSharp className="text-sky-500 text-6xl" />
+            <h1 className="lg:text-5xl text-2xl font-bold">SULAWESI TENGAH</h1>
+            <IoLeafSharp className="text-sky-500 text-6xl scale-x-[-1]" />
+          </div>
+          <p>Sebuah provinsi di bagian tengah Pulau Sulawesi, Indonesia.</p>
         </div>
       </div>
 
@@ -40,20 +44,20 @@ const SultengPage = () => {
 
       <div className='relative flex flex-row justify-between p-8 md:px-16 px-5 text-white py-20 rounded-lg'>
         <div className='absolute inset-0 bg-sky-300 rounded-lg'></div>
-        
+
         <div className="relative flex flex-col w-1/2">
           <h1 className="lg:text-5xl text-2xl text-orange-50">SULAWESI TENGAH</h1>
           <p className="mt-4 text-lg font-bold">Sulawesi Tengah: Keindahan Alam dan Keberagaman Budaya dalam Satu Kesatuan</p>
           <p className="mt-4 text-lg text-justify">
-          Sulawesi Tengah adalah provinsi terluas di Pulau Sulawesi dengan ibu kota di Palu. Memiliki lanskap yang beragam, dari pegunungan, lembah subur, hingga pantai eksotis. <br />
-          Secara ekonomi, daerah ini ditopang oleh pertanian, kehutanan, perikanan, pertambangan, dan perkebunan. Kekayaan sumber daya alamnya menjadikannya salah satu pusat ekonomi di wilayah tengah Indonesia. <br />
-          Keberagaman budaya juga menjadi ciri khas Sulawesi Tengah, dengan suku asli seperti Kaili, Pamona, dan Banggai, serta pendatang seperti Bugis, Jawa, dan Tionghoa. Semboyan Nosarara Nosabatutu mencerminkan semangat persatuan dalam keberagaman. <br />
-          Dengan keindahan alam dan kekayaan budayanya, Sulawesi Tengah terus berkembang sebagai daerah potensial dalam berbagai sektor.
+            Sulawesi Tengah adalah provinsi terluas di Pulau Sulawesi dengan ibu kota di Palu. Memiliki lanskap yang beragam, dari pegunungan, lembah subur, hingga pantai eksotis. <br />
+            Secara ekonomi, daerah ini ditopang oleh pertanian, kehutanan, perikanan, pertambangan, dan perkebunan. Kekayaan sumber daya alamnya menjadikannya salah satu pusat ekonomi di wilayah tengah Indonesia. <br />
+            Keberagaman budaya juga menjadi ciri khas Sulawesi Tengah, dengan suku asli seperti Kaili, Pamona, dan Banggai, serta pendatang seperti Bugis, Jawa, dan Tionghoa. Semboyan Nosarara Nosabatutu mencerminkan semangat persatuan dalam keberagaman. <br />
+            Dengan keindahan alam dan kekayaan budayanya, Sulawesi Tengah terus berkembang sebagai daerah potensial dalam berbagai sektor.
           </p>
         </div>
 
         <div className="relative flex justify-end">
-        <img src="/src/assets/img/sultengpeta.jpeg" alt="sulawesi tengah" className="w-96 mt-4"/>
+          <img src="/src/assets/img/sultengpeta.jpeg" alt="sulawesi tengah" className="w-96 mt-4" />
         </div>
       </div>
 
