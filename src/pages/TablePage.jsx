@@ -97,30 +97,30 @@ const AdminTKDTable = ({ hideAccessCheck = false }) => {
           </div>
 
           {/* Tabel Efisiensi */}
-          <div className="overflow-auto mb-10 bg-white p-4 rounded-lg shadow">
+          <div className="overflow-auto mb-10 bg-gray-100 p-4 rounded-lg shadow">
             <h3 className="text-xl font-semibold mb-2">Tabel Efisiensi</h3>
             <table className="w-full border border-black text-sm">
-              <thead className="bg-blue-100">
+              <thead className="bg-blue-800 text-white">
                 <tr>
-                  <th className="border border-black p-2">Jenis TKD</th>
-                  <th className="border border-black p-2">Semula</th>
-                  <th className="border border-black p-2">Menjadi</th>
-                  <th className="border border-black p-2">Pencadangan</th>
-                  <th className="border border-black p-2">Pagu</th>
-                  <th className="border border-black p-2">Efisiensi (%)</th>
-                  <th className="border border-black p-2">Aksi</th>
+                  <th className="border p-2">Jenis TKD</th>
+                  <th className="border p-2">Semula</th>
+                  <th className="border p-2">Menjadi</th>
+                  <th className="border p-2">Pencadangan</th>
+                  <th className="border p-2">Pagu</th>
+                  <th className="border p-2">Efisiensi (%)</th>
+                  <th className="border p-2">Aksi</th>
                 </tr>
               </thead>
               <tbody>
                 {efisiensiData.map((item, index) => (
-                  <tr key={index} className="text-center">
-                    <td className="border border-black p-2">{item.jenis_tkd}</td>
-                    <td className="border border-black p-2">{item.semula.toLocaleString("id-ID")}</td>
-                    <td className="border border-black p-2">{item.menjadi.toLocaleString("id-ID")}</td>
-                    <td className="border border-black p-2">{item.pencadangan.toLocaleString("id-ID")}</td>
-                    <td className="border border-black p-2">{item.pagu.toLocaleString("id-ID")}</td>
-                    <td className="border border-black p-2">{item.efisiensi}%</td>
-                    <td className="border border-black p-2">
+                  <tr key={index} className="text-center bg-white font-medium text-gray-600">
+                    <td className="border p-2">{item.jenis_tkd}</td>
+                    <td className="border p-2">{item.semula.toLocaleString("id-ID")}</td>
+                    <td className="border p-2">{item.menjadi.toLocaleString("id-ID")}</td>
+                    <td className="border p-2">{item.pencadangan.toLocaleString("id-ID")}</td>
+                    <td className="border p-2">{item.pagu.toLocaleString("id-ID")}</td>
+                    <td className="border p-2">{item.efisiensi}%</td>
+                    <td className="border p-2">
                       <button className="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded mx-2">
                         HAPUS
                       </button>
@@ -135,28 +135,28 @@ const AdminTKDTable = ({ hideAccessCheck = false }) => {
           </div>
 
           {/* Tabel Realisasi */}
-          <div className="overflow-auto bg-white p-4 rounded-lg shadow">
+          <div className="overflow-auto mb-10 bg-gray-100 p-4 rounded-lg shadow">
             <h3 className="text-xl font-semibold mb-2">Tabel Realisasi</h3>
             <table className="w-full border border-black text-sm">
-              <thead className="bg-blue-100">
+              <thead className="bg-blue-800 text-white">
                 <tr>
-                  <th className="border border-black p-2">Jenis TKD</th>
-                  <th className="border border-black p-2">Pagu</th>
-                  <th className="border border-black p-2">Realisasi</th>
-                  <th className="border border-black p-2">Sisa Pagu</th>
-                  <th className="border border-black p-2">Persentase (%)</th>
-                  <th className="border border-black p-2">Aksi</th>
+                  <th className="border p-2">Jenis TKD</th>
+                  <th className="border p-2">Pagu</th>
+                  <th className="border p-2">Realisasi</th>
+                  <th className="border p-2">Sisa Pagu</th>
+                  <th className="border p-2">Persentase (%)</th>
+                  <th className="border p-2">Aksi</th>
                 </tr>
               </thead>
               <tbody>
                 {realisasiData.map((item, index) => (
-                  <tr key={index} className="text-center">
-                    <td className="border border-black p-2">{item.jenis_tkd}</td>
-                    <td className="border border-black p-2">{item.pagu.toLocaleString("id-ID")}</td>
-                    <td className="border border-black p-2">{item.realisasi.toLocaleString("id-ID")}</td>
-                    <td className="border border-black p-2">{item.sisa_pagu.toLocaleString("id-ID")}</td>
-                    <td className="border border-black p-2">{item.persentase}%</td>
-                    <td className="border border-black p-2">
+                  <tr key={index} className="text-center text-center bg-white font-medium text-gray-600">
+                    <td className="border p-2">{item.jenis_tkd}</td>
+                    <td className="border p-2">{item.pagu.toLocaleString("id-ID")}</td>
+                    <td className="border p-2">{item.realisasi.toLocaleString("id-ID")}</td>
+                    <td className="border p-2">{item.sisa_pagu.toLocaleString("id-ID")}</td>
+                    <td className="border p-2">{item.persentase}%</td>
+                    <td className="border p-2">
                       <button className="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded mx-2">
                         HAPUS
                       </button>
