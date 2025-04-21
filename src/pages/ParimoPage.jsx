@@ -10,8 +10,8 @@ const SultengPage = () => {
   const [efisiensiData, setEfisiensiData] = useState([]);
 
   const currentYear = new Date().getFullYear()
-  const yearOptions = Array.from({length: 5}, (_, i) =>
-    String(currentYear - 3 + i )
+  const yearOptions = Array.from({ length: 5 }, (_, i) =>
+    String(currentYear - 3 + i)
   )
   const [tahun, setTahun] = useState(new Date().getFullYear());
 
@@ -44,8 +44,8 @@ const SultengPage = () => {
   }, [tahun]);
 
   return (
-    <div className='hero'>
-      <div className='relative flex flex-row justify-between itmes-center p-16 md:px-32 px-5 text-white py-44 rounded-lg'
+    <div className='hero bg-blue-50'>
+      <div className='relative flex flex-row justify-between itmes-center p-16 md:px-32 px-5 text-white py-44'
         style={{
           backgroundImage: `url('src/assets/img/sulteng_alam.jpg')`,
           backgroundSize: "cover",
@@ -54,7 +54,7 @@ const SultengPage = () => {
         }}
       >
 
-        <div className='absolute inset-0 bg-sky-600 opacity-30 rounded-lg'></div>
+<div className='absolute inset-0 bg-sky-600 opacity-30'></div>
 
         <div className="items-center justify-center text-center w-full">
           <div className="relative flex items-center justify-center space-x-4 text-center">
@@ -82,10 +82,50 @@ const SultengPage = () => {
           </div>
         </div>
 
-        <div className="w-full bg-blue-900 py-10">
+        <div className=" ">
+          {/* <h2 className="text-white text-5xl text-center mb-12">Ada apa di Kota Palu</h2> */}
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-12">
+            {/* Geografis dan Topografi */}
+            <div className="bg-blue-500 text-center rounded-xl p-6 shadow-md">
+              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+                <img src="src/assets/img/geo_palu.jpeg" alt="Geografis" className="object-cover w-full h-full" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-yellow-300">Geografis & Topografi</h3>
+              <p className="text-sm text-gray-200">
+                Parigi Moutong memiliki luas sekitar 6.231 km2 dengan bentangan wilayah dari pesisir Teluk Tomini hingga pegunungan di selatan. Kondisi geografisnya beragam sumber daya alam dan pemandangan indah (pantai, sungai, hutan tropis).
+              </p>
+            </div>
+
+            {/* Mata Pencaharian dan Ekonomi */}
+            <div className="bg-amber-400 text-center rounded-xl p-6 shadow-md">
+              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+                <img src="src/assets/img/umkm_palu.jpg" alt="Ekonomi" className="object-cover w-full h-full" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-blue-700">Ekonomi & UMKM</h3>
+              <p className="text-sm text-gray-700">
+                Ekonomi Parigi Moutong bertumpu pada pertanian dan perkebunan (kelapa, kakao, cengkeh, jagung) serta perikanan laut di Teluk Tomini, dengan kontribusi dari peternakan, kehutanan, UMKM, dan perdagangan.
+              </p>
+            </div>
+
+            {/* Sosial Budaya */}
+            <div className="bg-blue-500 text-center rounded-xl p-6 shadow-md">
+              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+                <img src="/images/palu3.jpg" alt="Budaya" className="object-cover w-full h-full" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-yellow-300">Sosial & Budaya</h3>
+              <p className="text-sm text-gray-200">
+                Parigi Moutong memiliki 23 kecamatan dari Moutong hingga Sausu, dihuni sekitar 450 ribu jiwa (2023) dengan beragam etnis (Kaili, Tolitoli, Tomini, Bugis) yang hidup harmonis, menggunakan Bahasa Indonesia namun melestarikan bahasa daerah (Kaili, Tomini).
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+        {/* <div className="w-full bg-blue-900 py-10">
           <h2 className="text-white text-5xl text-center mb-10">Ada apa di Parigi Moutong</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-12">
-            {/* Kolom Kiri */}
             <div className="shadow p-6 bg-white">
               <h2 className="text-xl font-semibold mb-2">Geografis dan Topografi</h2>
               <p>Kabupaten Parigi Moutong memiliki luas wilayah sekitar 6.231 km<sup>2</sup>, membentang sepanjang garis pantai
@@ -111,15 +151,6 @@ const SultengPage = () => {
                 bahasa pengantar, namun bahasa daerah seperti Kaili dan Tomini masih dipertahankan di berbagai komunitas.</p>
             </div>
 
-            {/* <div className="flex justify-center items-start order-1 md:order-2">
-      <img
-        src="src/assets/img/sulteng-removebg.png"
-        alt="Sulawesi Tengah"
-        className="w-52 h-auto mt-4"
-      />
-    </div> */}
-
-            {/* Kolom Kanan (1, 2, 3, 4) */}
             <div className="shadow p-6 bg-white">
               <h2 className="text-xl font-semibold mb-2">Pariwisata</h2>
               <ul className="list-disc pl-5">
@@ -143,18 +174,18 @@ const SultengPage = () => {
               <p>Luas: 6.231,85 km<sup>2</sup><br /> Penduduk (2023): ± 457.031 jiwa<br /> Kecamatan: 23 <br />Desa/Kelurahan: 283</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
 
-        <div className="p-16">
+        <div className="p-8 bg-yellow-400 mt-20 drop-shadow-md">
           {/* Teks Judul */}
-          <h1 className="relative font-bold text-4xl text-cyan-800 p-6 text-center"
-          >
+          <h1 className="font-serif font-bold text-center text-xl text-blue-500">Yuk Tahu!</h1>
+          <h1 className="relative font-bold text-4xl text-blue-800 p-2 text-center">
             Transfer ke Daerah Sulawesi Tengah
           </h1>
           <hr class="border-t-2 border-gray-300 w-1/2 mx-auto " />
 
-          <div className="flex items-center justify-center space-x-8 mt-8">
+          <div className="flex items-center justify-center space-x-8 mt-5 mx-8">
             {/* Paragraf */}
             <p className=" text-gray-500 text-justify">
               Transfer ke daerah merupakan salah satu mekanisme pendanaan yang diberikan oleh pemerintah pusat kepada pemerintah daerah guna mendukung pelaksanaan pembangunan serta penyelenggaraan pemerintahan daerah. Di Sulawesi Tengah, transfer ke daerah mencakup berbagai jenis pendanaan seperti Dana Alokasi Umum (DAU), Dana Alokasi Khusus (DAK), Dana Bagi Hasil (DBH), serta Dana Insentif Fiskal. Dana ini bertujuan untuk meningkatkan kesejahteraan masyarakat, mempercepat pembangunan infrastruktur, serta mendukung pelayanan publik di tingkat provinsi dan kabupaten/kota.
@@ -162,7 +193,7 @@ const SultengPage = () => {
           </div>
         </div>
 
-        <div className="p-6 space-y-10 bg-gray-50 min-h-screen">
+        <div className="p-6 space-y-10 bg-gray-50 min-h-screen pt-14">
           <h1 className="text-3xl font-bold text-center text-gray-800">
             Visualisasi Anggaran TKD - PARIGI MOUTONG
           </h1>

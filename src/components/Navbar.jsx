@@ -27,7 +27,7 @@ const Navbar = () => {
     ];
 
     return (
-        <div className="flex flex-row justify-between items-center p-3 md:px-32 px-5 relative text-white">
+        <div className="flex flex-row justify-between bg-blue-900 items-center p-3 md:px-32 px-5 relative text-white">
             <div className="flex items-center">
                 <img src="src\assets\kppnlogo.png" alt="kppn" className="w-24 "/>
             </div>
@@ -41,7 +41,7 @@ const Navbar = () => {
                         spy={true}
                         smooth={true}
                         duration={500}
-                        className="hover:text-yellow-200 transition-all cursor-pointer text-black"
+                        className="hover:text-yellow-400 transition-all cursor-pointer text-white"
                     >
                         {item.name}
                     </Link>

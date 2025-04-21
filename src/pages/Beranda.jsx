@@ -50,10 +50,10 @@ const Beranda = () => {
     ];
 
     return (
-        <div className="beranda pd-10 rounded-lg">
+        <div className="beranda pd-10 bg-neutral-100">
             {/* Hero Section */}
             <div
-                className="relative flex flex-row justify-between items-center p-5 md:px-32 px-5 text-white py-40 rounded-lg"
+                className="relative flex flex-row justify-between items-center p-5 md:px-32 px-5 text-white py-48"
                 style={{
                     backgroundImage: `url('src/assets/KPPN.jpg')`,
                     backgroundSize: "cover",
@@ -61,17 +61,17 @@ const Beranda = () => {
                     backgroundRepeat: "no-repeat",
                 }}
             >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black opacity-80 rounded-lg" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black opacity-80" />
                 <div className="grid grid-cols-2 gap-12 items-center z-10">
-                    <div></div>
+                    <div>                    </div>
                     <div className="text-right max-w-[600px]">
                         <h1 className="lg:text-4xl text-2xl">Selamat Datang di Situs</h1>
                         <h3 className="mt-2 text-4xl lg:text-5xl font-bold leading-loose">
                             Transfer ke Daerah Lingkup KPPN Palu
                         </h3>
                         <a
-                            href="#"
-                            className="mt-4 inline-block bg-sky-900 hover:bg-sky-800 transition-all py-2 px-4 text-white shadow rounded"
+                            href="#tentang"
+                            className="mt-4 inline-block bg-yellow-500 hover:bg-yellow-700 transition-all py-2 px-4 text-blue-900 hover:text-white shadow rounded"
                         >
                             Tentang Kami <i className="ri-eye-line ms-1"></i>
                         </a>
@@ -80,22 +80,40 @@ const Beranda = () => {
             </div>
 
             {/* Tentang Section */}
-            <div className="p-16">
-                <h1 className="font-bold text-3xl text-cyan-800 p-6 text-center">
-                    Tentang Transfer ke Daerah
-                </h1>
-                <hr className="border-t-2 border-gray-300 w-1/2 mx-auto" />
-                <div className="flex items-center justify-center mb-10 space-x-8 mt-5">
-                    <FaChartSimple className="text-sky-500 text-6xl" />
-                    <p className="max-w-lg text-gray-500 text-justify text-sm">
-                        Situs ini menyediakan informasi mengenai alokasi dan realisasi dana transfer ke daerah di wilayah Sulawesi Tengah yang meliputi Palu, Donggala, Parigi Moutong, Sigi, dan satu daerah lainnya. Anda dapat mengakses data keuangan daerah, profil masing-masing daerah, serta dokumen terkait kebijakan transfer ke daerah.
-                    </p>
-                    <FaChartPie className="text-sky-500 text-6xl" />
+            <div className="relative flex flex-row justify-between items-center p-5 md:px-32 px-5 text-white"
+                style={{
+                    height: "450px",
+                    backgroundImage: `url('src/assets/img/bg-indo.png')`,
+                    backgroundSize: "100% 450px",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                }}
+            >
+                {/* Overlay agar teks terlihat jelas */}
+                <div className="absolute inset-0 bg-gray-300/80 z-0 h-[450px]" />
+
+                {/* Konten utama dengan posisi relatif dan z-index lebih tinggi */}
+                <div id="tentang" className="relative z-10 w-full">
+                    <div className="p-16">
+                        <h1 className="font-bold text-3xl text-blue-900 p-6 text-center drop-shadow-lg">
+                            Tentang <span className="text-yellow-600">Transfer ke Daerah</span>
+                        </h1>
+                        <hr className="border-t-2 border-gray-300 w-1/2 mx-auto" />
+                        <div className="flex items-center justify-center mb-10 space-x-8 mt-5">
+                            <FaChartSimple className="text-sky-400 text-9xl drop-shadow-md" />
+                            <p className="text-blue-950 text-justify text-lg drop-shadow-sm">
+                                Situs ini menyediakan informasi mengenai alokasi dan realisasi dana transfer ke daerah di wilayah Sulawesi Tengah yang meliputi Palu, Donggala, Parigi Moutong, Sigi, dan satu daerah lainnya. Anda dapat mengakses data keuangan daerah, profil masing-masing daerah, serta dokumen terkait kebijakan transfer ke daerah.
+                            </p>
+                            <FaChartPie className="text-sky-400 text-9xl drop-shadow-md" />
+                        </div>
+                    </div>
                 </div>
             </div>
 
+
+
             {/* Daftar Pemerintah Daerah */}
-            <div>
+            <div className="pt-16 bg-white">
                 <h1 className="font-bold text-4xl text-center text-cyan-800 mb-5">
                     Daftar Pemerintah Daerah
                 </h1>
@@ -104,35 +122,36 @@ const Beranda = () => {
                 </p>
 
                 {/* style daftar pemda */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4 p-6">
                     {daerahList.map((item, index) => (
                         <div
                             key={index}
-                            className="relative rounded-xl overflow-hidden shadow-md cursor-pointer group transform transition duration-500 hover:scale-105"
                             onClick={() => navigate(item.link)}
+                            className={`relative rounded-xl overflow-hidden shadow-md cursor-pointer group transform transition duration-500 hover:scale-105
+                            ${index === 0 ? 'col-span-2 row-span-2 h-[400px]' : 'h-[190px]'}`}
                             style={{
                                 backgroundImage: `url(${item.bgImage})`,
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
-                                height: "300px",
                             }}
                         >
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent transition duration-300" />
-                            <div className="absolute bottom-10 left-4 text-white text-2xl font-semibold rounded-lg px-4 py-2 text-center">
+                            <div className="absolute bottom-10 left-4 text-white text-lg font-semibold rounded-lg px-4 py-2 text-shadow">
                                 {item.title}
                             </div>
-                            <div className="absolute bottom-4 left-4 px-4 py-2 text-xs text-white mt-2 p-2 rounded-lg">
+                            <div className="absolute bottom-4 left-4 px-4 py-1 text-xs text-white mt-2 rounded-lg bg-black/30">
                                 {item.description}
                             </div>
                             <button
                                 onClick={() => navigate(item.link)}
-                                className="absolute bottom-4 right-4 px-4 py-2 rounded-lg font-medium shadow-md transition-all duration-300 text-white hover:bg-sky-600 hover:shadow-lg"
+                                className="absolute bottom-4 right-4 px-2 py-2 rounded-lg font-medium text-white bg-sky-500 hover:bg-sky-600 transition"
                             >
-                                <FaRegArrowAltCircleRight size={28} />
+                                <FaRegArrowAltCircleRight size={20} />
                             </button>
                         </div>
                     ))}
                 </div>
+
             </div>
         </div>
     );

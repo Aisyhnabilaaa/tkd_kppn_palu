@@ -10,8 +10,8 @@ const SigiPage = () => {
   const [efisiensiData, setEfisiensiData] = useState([]);
 
   const currentYear = new Date().getFullYear()
-  const yearOptions = Array.from({length: 5}, (_, i) =>
-    String(currentYear - 3 + i )
+  const yearOptions = Array.from({ length: 5 }, (_, i) =>
+    String(currentYear - 3 + i)
   )
   const [tahun, setTahun] = useState(new Date().getFullYear());
 
@@ -45,7 +45,7 @@ const SigiPage = () => {
 
   return (
     <div className='hero bg-blue-50'>
-      <div className='relative flex flex-row justify-between itmes-center p-16 md:px-32 px-5 text-white py-44 rounded-lg'
+      <div className='relative flex flex-row justify-between itmes-center p-16 md:px-32 px-5 text-white py-44'
         style={{
           backgroundImage: `url('src/assets/img/alamsigi.jpg')`,
           backgroundSize: "cover",
@@ -54,7 +54,7 @@ const SigiPage = () => {
         }}
       >
 
-        <div className='absolute inset-0 bg-sky-600 opacity-30 rounded-lg'></div>
+        <div className='absolute inset-0 bg-sky-600 opacity-30'></div>
 
         <div className="items-center justify-center text-center w-full">
           <div className="relative flex items-center justify-center space-x-4 text-center">
@@ -71,22 +71,67 @@ const SigiPage = () => {
 
 
       {/* INFORMASI MENGENAI SIGI */}
-      <div className="container mx-auto py-8 text-justify">
+      <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center gap-6 mx-12 my-8">
           <img src="src/assets/img/Logo_sigi.png" alt="sigilogo" className="w-28 h-auto" />
           <div className="text-center md:text-left">
-            <h1 className="text-5xl font-bold text-center mb-2">Informasi Kabupaten Sigi</h1>
-            <p className="mb-10 text-center mt-6 mx-12 text-xl text-justify">Kabupaten Sigi merupakan salah satu kabupaten di Provinsi Sulawesi
+            <div className="bg-yellow-100 rounded-tr-full w-96">
+              <h6 className="text-2xl text-amber-400 ml-2">Sekilas <span className="text-blue-800">Tentang</span></h6>
+              <h1 className="text-4xl font-bold ml-4">Kabupaten Sigi</h1>
+            </div>
+            <p className="mb-10 text-center mt-3 mx-5 text-base text-justify">
+              Kabupaten Sigi merupakan salah satu kabupaten di Provinsi Sulawesi
               Tengah yang dibentuk pada tahun 2008 sebagai hasil pemekaran dari Kabupaten Donggala. Ibu kotanya terletak di Bora,
               Kecamatan Sigi Biromaru. Kabupaten ini dikenal dengan wilayahnya yang subur, serta kedekatannya dengan Kota Palu.
             </p>
           </div>
         </div>
 
-          <div className="w-full bg-blue-900 py-10">
+        {/* tampilan card */}
+        <div className=" ">
+          {/* <h2 className="text-white text-5xl text-center mb-12">Ada apa di Kota Palu</h2> */}
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-12">
+            {/* Geografis dan Topografi */}
+            <div className="bg-amber-400 text-center rounded-xl p-6 shadow-md">
+              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+                <img src="src/assets/img/geo_palu.jpeg" alt="Geografis" className="object-cover w-full h-full" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-blue-700">Geografis & Topografi</h3>
+              <p className="text-sm text-gray-700">
+                Donggala, kabupaten di Sulawesi Tengah, termasuk yang terluas, terpadat, dan paling banyak penduduknya keempat di provinsi sulawesi tengah. Letaknya mengelilingi Kota Palu dan berbatasan dengan beberapa kabupaten lain di sekitarnya.
+              </p>
+            </div>
+
+            {/* Mata Pencaharian dan Ekonomi */}
+            <div className="bg-amber-400 text-center rounded-xl p-6 shadow-md">
+              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+                <img src="src/assets/img/umkm_palu.jpg" alt="Ekonomi" className="object-cover w-full h-full" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-blue-700">Ekonomi & UMKM</h3>
+              <p className="text-sm text-gray-700">
+                Ekonomi Donggala terutama ditopang oleh pertanian (padi, jagung, kakao, kelapa, cengkeh), perikanan (hasil laut), perkebunan, kehutanan, dan UMKM.
+              </p>
+            </div>
+
+            {/* Sosial Budaya */}
+            <div className="bg-amber-400 text-center rounded-xl p-6 shadow-md">
+              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+                <img src="/images/palu3.jpg" alt="Budaya" className="object-cover w-full h-full" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-blue-700">Sosial & Budaya</h3>
+              <p className="text-sm text-gray-700">
+                Donggala dulunya adalah pusat pemerintahan kolonial dan pelabuhan dagang, yang jejaknya masih terlihat pada bangunan tua dan pelabuhan lama. Kabupaten ini juga kaya akan tradisi adat, seperti upacara Kaili, musik, dan tarian tradisional.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+        {/* <div className="w-full bg-blue-900 py-10">
             <h2 className="text-white text-5xl text-center mb-10">Ada apa di Sigi</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-12">
-              {/* Kolom Kiri */}
               <div className="shadow p-6 bg-white">
                 <h2 className="text-xl font-semibold mb-2">Geografis dan Topografi</h2>
                 <p>Wilayah Sigi memiliki topografi yang sangat bervariasi, mulai dari dataran rendah hingga pegunungan
@@ -112,15 +157,6 @@ const SigiPage = () => {
                   Kristen dan Hindu.</p>
               </div>
 
-              {/* <div className="flex justify-center items-start order-1 md:order-2">
-      <img
-        src="src/assets/img/sulteng-removebg.png"
-        alt="Sulawesi Tengah"
-        className="w-52 h-auto mt-4"
-      />
-    </div> */}
-
-              {/* Kolom Kanan (1, 2, 3, 4) */}
               <div className="shadow p-6 bg-white">
                 <h2 className="text-xl font-semibold mb-2">Pariwisata</h2>
                 <ul className="list-disc pl-5">
@@ -146,10 +182,10 @@ const SigiPage = () => {
                 <p>Luas: 5.196,02 km <sup>2</sup><br /> Penduduk (2023 est.): ± 266.656 jiwa <br /> Kecamatan: 16 <br /> Desa: 177 </p>
               </div>
             </div>
-          </div>
+          </div> */}
 
 
-          {/* <div className='relative flex flex-row justify-between p-8 md:px-16 px-5 text-white py-20 rounded-lg'>
+        {/* <div className='relative flex flex-row justify-between p-8 md:px-16 px-5 text-white py-20 rounded-lg'>
         <div className='absolute inset-0 bg-sky-300 rounded-lg'></div>
 
         <div className="relative flex flex-col w-1/2">
@@ -168,55 +204,56 @@ const SigiPage = () => {
         </div>
       </div> */}
 
-          <div className="p-16 bg-gray-50">
-            {/* Teks Judul */}
-            <h1 className="relative font-bold text-4xl text-cyan-800 p-6 text-center"
-            >
-              Transfer ke Daerah Sulawesi Tengah
-            </h1>
-            <hr class="border-t-2 border-gray-300 w-1/2 mx-auto " />
+        <div className="p-8 bg-blue-500 mt-20 drop-shadow-md">
+          {/* Teks Judul */}
+          <h1 className="font-serif font-bold text-center text-xl text-yellow-100">Yuk Tahu!</h1>
+          <h1 className="relative font-bold text-4xl text-yellow-300 p-2 text-center">
+            Transfer ke Daerah Kota Palu
+          </h1>
+          <hr className="border-t-2 border-yellow-300 w-1/2 mx-auto" />
 
-            <div className="flex items-center justify-center space-x-8 mt-8">
-              {/* Paragraf */}
-              <p className=" text-gray-500 text-justify">
-                Transfer ke daerah merupakan salah satu mekanisme pendanaan yang diberikan oleh pemerintah pusat kepada pemerintah daerah guna mendukung pelaksanaan pembangunan serta penyelenggaraan pemerintahan daerah. Di Sulawesi Tengah, transfer ke daerah mencakup berbagai jenis pendanaan seperti Dana Alokasi Umum (DAU), Dana Alokasi Khusus (DAK), Dana Bagi Hasil (DBH), serta Dana Insentif Fiskal. Dana ini bertujuan untuk meningkatkan kesejahteraan masyarakat, mempercepat pembangunan infrastruktur, serta mendukung pelayanan publik di tingkat provinsi dan kabupaten/kota.
-              </p>
-            </div>
+          <div className="flex items-center justify-center space-x-8 mt-5 mx-8">
+            {/* Paragraf */}
+            <p className=" text-gray-100 text-justify">
+              Transfer ke daerah merupakan salah satu mekanisme pendanaan yang diberikan oleh pemerintah pusat kepada pemerintah daerah guna mendukung pelaksanaan pembangunan serta penyelenggaraan pemerintahan daerah. Di Sulawesi Tengah, transfer ke daerah mencakup berbagai jenis pendanaan seperti Dana Alokasi Umum (DAU), Dana Alokasi Khusus (DAK), Dana Bagi Hasil (DBH), serta Dana Insentif Fiskal. Dana ini bertujuan untuk meningkatkan kesejahteraan masyarakat, mempercepat pembangunan infrastruktur, serta mendukung pelayanan publik di tingkat provinsi dan kabupaten/kota.
+            </p>
+          </div>
+        </div>
+
+        {/* GRAFIK TKD PALU */}
+        <div className="p-6 space-y-10 bg-gray-50 min-h-screen pt-14">
+          <h1 className="text-3xl font-bold text-center text-gray-800">
+            Visualisasi Anggaran TKD - KOTA PALU
+          </h1>
+
+          {/* Dropdown Tahun */}
+          <div className="flex justify-end mb-4">
+            <select
+              className="border rounded px-2 py-1"
+              value={tahun}
+              onChange={(e) => setTahun(e.target.value)}
+            >
+              {yearOptions.map((t) => (
+                <option key={t} value={t}>
+                  {t}
+                </option>
+              ))}
+            </select>
           </div>
 
-          <div className="p-6 space-y-10 bg-gray-50 min-h-screen">
-            <h1 className="text-3xl font-bold text-center text-gray-800">
-              Visualisasi Anggaran TKD - SIGI
-            </h1>
+          <div className="bg-white rounded-2xl shadow p-4">
+            <h2 className="text-xl font-semibold mb-2">Efisiensi Anggaran Tahun {tahun}</h2>
+            <EfisiensiChart data={efisiensiData} />
+          </div>
 
-            {/* Dropdown Tahun */}
-            <div className="flex justify-end mb-4">
-              <select
-                className="border rounded px-2 py-1"
-                value={tahun}
-                onChange={(e) => setTahun(e.target.value)}
-              >
-                {yearOptions.map((t) => (
-                  <option key={t} value={t}>
-                    {t}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow p-4">
-              <h2 className="text-xl font-semibold mb-2">Efisiensi Anggaran Tahun {tahun}</h2>
-              <EfisiensiChart data={efisiensiData} />
-            </div>
-
-            <div className="bg-white rounded-2xl shadow p-4">
-              <h2 className="text-xl font-semibold mb-2">Realisasi Tahun {tahun}</h2>
-              <RealisasiChart data={realisasiData} />
-            </div>
+          <div className="bg-white rounded-2xl shadow p-4">
+            <h2 className="text-xl font-semibold mb-2">Realisasi Tahun {tahun}</h2>
+            <RealisasiChart data={realisasiData} />
           </div>
         </div>
       </div>
-      )
+    </div>
+  )
 }
 
-      export default SigiPage
+export default SigiPage
