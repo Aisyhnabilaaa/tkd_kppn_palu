@@ -6,7 +6,7 @@ import { MdDelete } from "react-icons/md";
 
 const ADMIN_API_KEY = import.meta.env.VITE_ADMIN_API_KEY;
 
-const AdminTKDTable = () => {
+const AdminTKDTable = ({ hideAccessCheck = false }) => {
   const [apiKeyInput, setApiKeyInput] = useState("");
   const [hasAccess, setHasAccess] = useState(false);
   const [tahun, setTahun] = useState("");
@@ -39,7 +39,7 @@ const AdminTKDTable = () => {
   const handleAccessSubmit = (e) => {
     e.preventDefault();
     if (apiKeyInput === ADMIN_API_KEY) {
-      setHasAccess(true);
+      if (!hideAccessCheck) setHasAccess(true)
     } else {
       setMessage("❌ Kode akses salah!");
     }
@@ -47,7 +47,8 @@ const AdminTKDTable = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-6 ">
-      {!hasAccess ? (
+      {!hasAccess && !hideAccessCheck ? (
+
         <div className="max-w-md mx-auto bg-white p-6 rounded-xl shadow">
           <h2 className="text-xl font-bold text-center mb-4">Masukkan Kode Akses Admin</h2>
           <form onSubmit={handleAccessSubmit} className="space-y-4">

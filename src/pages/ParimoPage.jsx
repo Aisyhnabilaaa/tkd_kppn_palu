@@ -70,11 +70,16 @@ const SultengPage = () => {
 
       {/* INFORMASI MENGENAI SULAWESI TENGAH */}
       <div className="container mx-auto px-4 py-8">
+
         <div className="flex flex-col md:flex-row items-center gap-6 mx-12 my-8">
           <img src="src/assets/img/Lambang_Kabupaten_Parigi_Moutong.png" alt="sigilogo" className="w-28 h-auto" />
           <div className="text-center md:text-left">
-            <h1 className="text-3xl font-bold text-center mb-2">Informasi Kabupaten Parigi Moutong</h1>
-            <p className="mb-10 text-center mt-6 mx-12 text-lg text-justify">Kabupaten Parigi Moutong merupakan
+          <div className="bg-yellow-100 rounded-tr-full w-96">
+            <h6 className="text-2xl text-amber-400 ml-2">Sekilas <span className="text-blue-800">Tentang</span></h6>
+            <h1 className="text-3xl font-bold ml-4">Kabupaten Parigi Moutong</h1>
+            </div>
+            <p className="mb-10 text-center mt-3 mx-5 text-lg text-justify">
+              Kabupaten Parigi Moutong merupakan
               salah satu daerah administratif di Provinsi Sulawesi Tengah yang memiliki posisi strategis di pesisir
               utara Pulau Sulawesi. Ibu kota kabupatennya berada di Parigi. Kabupaten ini secara resmi terbentuk
               pada tahun 2002 melalui pemekaran dari wilayah Kabupaten Donggala.
@@ -183,11 +188,11 @@ const SultengPage = () => {
           <h1 className="relative font-bold text-4xl text-blue-800 p-2 text-center">
             Transfer ke Daerah Sulawesi Tengah
           </h1>
-          <hr class="border-t-2 border-gray-300 w-1/2 mx-auto " />
+          <hr class="border-t-2 border-blue-300 w-1/2 mx-auto " />
 
           <div className="flex items-center justify-center space-x-8 mt-5 mx-8">
             {/* Paragraf */}
-            <p className=" text-gray-500 text-justify">
+            <p className=" text-gray-800 text-justify">
               Transfer ke daerah merupakan salah satu mekanisme pendanaan yang diberikan oleh pemerintah pusat kepada pemerintah daerah guna mendukung pelaksanaan pembangunan serta penyelenggaraan pemerintahan daerah. Di Sulawesi Tengah, transfer ke daerah mencakup berbagai jenis pendanaan seperti Dana Alokasi Umum (DAU), Dana Alokasi Khusus (DAK), Dana Bagi Hasil (DBH), serta Dana Insentif Fiskal. Dana ini bertujuan untuk meningkatkan kesejahteraan masyarakat, mempercepat pembangunan infrastruktur, serta mendukung pelayanan publik di tingkat provinsi dan kabupaten/kota.
             </p>
           </div>

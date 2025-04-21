@@ -3,7 +3,8 @@ import axios from 'axios'
 
 const ADMIN_API_KEY = import.meta.env.VITE_ADMIN_API_KEY
 
-const FormInputTKD = () => {
+const FormInputTKD = ({ hideAccessCheck = false }) => {
+
   const [apiKeyInput, setApiKeyInput] = useState('')
   const [hasAccess, setHasAccess] = useState(false)
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ const FormInputTKD = () => {
   const handleAccessSubmit = e => {
     e.preventDefault()
     if (apiKeyInput === ADMIN_API_KEY) {
-      setHasAccess(true)
+      if (!hideAccessCheck) setHasAccess(true)
     } else {
       setMessage('❌ Kode akses salah!')
     }
@@ -62,7 +63,7 @@ const FormInputTKD = () => {
 
   return (
     <div className='max-w-xl mx-auto bg-white p-6 rounded-xl shadow-md'>
-      {!hasAccess ? (
+      {!hasAccess && !hideAccessCheck ? (
         <>
           <h2 className='text-xl font-bold mb-4 text-center'>
             Masukkan Kode Akses Admin

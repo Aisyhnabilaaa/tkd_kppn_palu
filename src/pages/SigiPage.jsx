@@ -79,7 +79,7 @@ const SigiPage = () => {
               <h6 className="text-2xl text-amber-400 ml-2">Sekilas <span className="text-blue-800">Tentang</span></h6>
               <h1 className="text-4xl font-bold ml-4">Kabupaten Sigi</h1>
             </div>
-            <p className="mb-10 text-center mt-3 mx-5 text-base text-justify">
+            <p className="mb-10 text-center mt-3 mx-5 text-lg text-justify">
               Kabupaten Sigi merupakan salah satu kabupaten di Provinsi Sulawesi
               Tengah yang dibentuk pada tahun 2008 sebagai hasil pemekaran dari Kabupaten Donggala. Ibu kotanya terletak di Bora,
               Kecamatan Sigi Biromaru. Kabupaten ini dikenal dengan wilayahnya yang subur, serta kedekatannya dengan Kota Palu.

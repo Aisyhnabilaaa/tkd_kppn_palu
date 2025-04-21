@@ -81,7 +81,7 @@ const SultengPage = () => {
                 <h6 className="text-2xl text-amber-400 ml-2">Sekilas <span className="text-blue-800">Tentang</span></h6>
                 <h1 className="text-5xl font-bold ml-4">Kota Palu</h1>
               </div>
-              <p className="mb-10 text-center mt-3 mx-5 text-base text-justify">
+              <p className="mb-10 text-center mt-3 mx-5 text-lg text-justify">
                 Kota Palu merupakan pusat pemerintahan,
                 ekonomi, pendidikan, dan kebudayaan di Provinsi Sulawesi Tengah. Terletak di pesisir barat Pulau Sulawesi,
                 kota ini menghadap langsung ke Teluk Palu dan dikelilingi oleh pegunungan, menjadikannya daerah dengan

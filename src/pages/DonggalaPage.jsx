@@ -77,7 +77,7 @@ const SultengPage = () => {
               <h6 className="text-2xl text-amber-400 ml-2">Sekilas <span className="text-blue-800">Tentang</span></h6>
               <h1 className="text-3xl font-bold ml-4">Kabupaten Donggala</h1>
             </div>
-            <p className="mb-10 text-center mt-3 mx-5 text-base text-justify">
+            <p className="mb-10 text-center mt-3 mx-5 text-lg text-justify">
               Kabupaten Donggala merupakan salah
               satu kabupaten tertua di Provinsi Sulawesi Tengah, yang memiliki sejarah panjang dan peran penting
               dalam perkembangan wilayah ini. Ibu kota kabupatennya adalah Banawa, yang terletak di pesisir barat

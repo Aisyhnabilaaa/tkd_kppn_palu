@@ -17,6 +17,8 @@ import ParimoChartPage from "./pages/ParimoChartPage";
 import SigiChartPage from "./pages/SigiChartPage";
 import TablePage from "./pages/TablePage";
 
+import AdminDashboard from "./pages/Admin/AdminDashboard";
+
 function App() {
   return (
     <Router>
@@ -36,6 +38,7 @@ function App() {
         <Route path="/Palucharts" element={<PaluChartPage />} />
         <Route path="/input" element={<FormInputTKD />} />
         <Route path="/table" element={<TablePage />} />
+        <Route path="/admin" element={<AdminDashboard />} />
 
       </Routes>
       
