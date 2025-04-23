@@ -124,56 +124,6 @@ const SultengPage = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="w-full bg-blue-900 py-10">
-          <h2 className="text-white text-5xl text-center mb-10">Ada apa di Sulawesi Tengah</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-12">
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Geografis dan Topografi</h2>
-              <p>Sulawesi Tengah memiliki bentang alam yang bervariasi, mulai dari pegunungan, dataran rendah, hingga garis pantai yang panjang.
-                Wilayah ini juga memiliki danau besar seperti Danau Poso dan kawasan konservasi seperti Taman Nasional Lore Lindu.
-                Iklimnya tropis dengan musim hujan dan kemarau.</p>
-            </div>
-
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Mata Pencaharian dan Ekonomi</h2>
-              <ul className="list-disc pl-5">
-                <li>Pertanian: kakao, padi, kelapa</li>
-                <li>Perikanan: tangkap & budidaya</li>
-                <li>Pertambangan: nikel, emas</li>
-                <li>UMKM dan perdagangan lokal</li>
-              </ul>
-            </div>
-
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Sosial dan Budaya</h2>
-              <p>Masyarakat Sulawesi Tengah terdiri dari berbagai suku seperti Kaili, Bugis, Pamona, dan Balantak.
-                Bahasa daerah masih aktif digunakan dalam kehidupan sehari-hari.
-                Berbagai upacara adat dan tarian tradisional masih dilestarikan, termasuk Mombowa dan Dero.</p>
-            </div>
-
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Pariwisata</h2>
-              <ul className="list-disc pl-5">
-                <li><strong>Taman Nasional Lore Lindu</strong> – rumah bagi berbagai spesies endemik</li>
-                <li><strong>Danau Poso</strong> – danau tektonik yang indah dan dalam</li>
-                <li><strong>Pusentasi</strong> – sumur laut unik di Donggala</li>
-                <li><strong>Pantai Tanjung Karang</strong> – pantai pasir putih yang cocok untuk snorkeling</li>
-              </ul>
-            </div>
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Infrastruktur dan Transportasi</h2>
-              <p>
-                Akses transportasi cukup baik melalui Bandara Mutiara SIS Al-Jufrie di Palu dan pelabuhan Pantoloan.
-                Jalan antar kabupaten sebagian besar sudah terhubung dan terus diperbaiki.
-              </p>
-            </div>
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Data Statistik</h2>
-              <p>Jumlah penduduk: 3,0 juta (2023)<br /> IPM: 70,21 (2023)<br /> PDRB per kapita: Rp 47 juta</p>
-            </div>
-          </div>
-        </div> */}
       </div>
 
 
@@ -220,6 +170,7 @@ const SultengPage = () => {
 
         <div className="bg-white rounded-2xl shadow p-4">
           <h2 className="text-xl font-semibold mb-2">Efisiensi Anggaran Tahun {tahun}</h2>
+          <p>Efisiensi adalah</p>
           <EfisiensiChart data={efisiensiData} />
         </div>
       </div>

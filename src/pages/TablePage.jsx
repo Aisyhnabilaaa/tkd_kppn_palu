@@ -1,8 +1,6 @@
 // src/pages/AdminTKDTable.jsx
 import { useState, useCallback, useEffect } from "react";
 import axios from "axios";
-import { MdDelete } from "react-icons/md";
-
 
 const ADMIN_API_KEY = import.meta.env.VITE_ADMIN_API_KEY;
 
@@ -44,6 +42,45 @@ const AdminTKDTable = ({ hideAccessCheck = false }) => {
       setMessage("❌ Kode akses salah!");
     }
   };
+
+  const handleDeleteEfisiensi = async (id) => {
+    if (!confirm("Yakin ingin menghapus data ini?")) return;
+
+    try {
+      await axios.delete(`http://localhost:3000/tkd/delete/${id}`, {
+        headers: {
+          'x-api-key': ADMIN_API_KEY, // Jika diperlukan oleh middleware isAdmin
+        },
+      });
+
+      // Perbarui data setelah penghapusan
+      setEfisiensiData((prevData) => prevData.filter((item) => item.id !== id));
+      setMessage("✅ Data berhasil dihapus");
+    } catch (error) {
+      console.error("Gagal menghapus data:", error);
+      setMessage("❌ Gagal menghapus data");
+    }
+  };
+
+  const handleDeleteRealisasi = async (id) => {
+    if (!confirm("Yakin ingin menghapus data ini?")) return;
+  
+    try {
+      await axios.delete(`http://localhost:3000/tkd/delete/${id}`, {
+        headers: {
+          'x-api-key': ADMIN_API_KEY,
+        },
+      });
+  
+      // Perbarui state setelah hapus
+      setRealisasiData((prevData) => prevData.filter((item) => item.id !== id));
+      setMessage("✅ Data realisasi berhasil dihapus");
+    } catch (error) {
+      console.error("Gagal menghapus data realisasi:", error);
+      setMessage("❌ Gagal menghapus data realisasi");
+    }
+  };
+  
 
   return (
     <div className="max-w-7xl mx-auto p-6 ">
@@ -112,24 +149,31 @@ const AdminTKDTable = ({ hideAccessCheck = false }) => {
                 </tr>
               </thead>
               <tbody>
-                {efisiensiData.map((item, index) => (
-                  <tr key={index} className="text-center bg-white font-medium text-gray-600">
-                    <td className="border p-2">{item.jenis_tkd}</td>
-                    <td className="border p-2">{item.semula.toLocaleString("id-ID")}</td>
-                    <td className="border p-2">{item.menjadi.toLocaleString("id-ID")}</td>
-                    <td className="border p-2">{item.pencadangan.toLocaleString("id-ID")}</td>
-                    <td className="border p-2">{item.pagu.toLocaleString("id-ID")}</td>
-                    <td className="border p-2">{item.efisiensi}%</td>
-                    <td className="border p-2">
-                      <button className="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded mx-2">
-                        HAPUS
-                      </button>
-                      <button className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded ">
-                        EDIT
-                      </button>
-                    </td>
-                  </tr>
-                ))}
+                {efisiensiData.map((item, index) => {
+                  console.log(item); // Tambahkan ini untuk memastikan 'id' ada
+                  return (
+
+                    <tr key={index} className="text-center bg-white font-medium text-gray-600">
+                      <td className="border p-2">{item.jenis_tkd}</td>
+                      <td className="border p-2">{item.semula.toLocaleString("id-ID")}</td>
+                      <td className="border p-2">{item.menjadi.toLocaleString("id-ID")}</td>
+                      <td className="border p-2">{item.pencadangan.toLocaleString("id-ID")}</td>
+                      <td className="border p-2">{item.pagu.toLocaleString("id-ID")}</td>
+                      <td className="border p-2">{item.efisiensi}%</td>
+                      <td className="border p-2">
+                        <button
+                          onClick={() => handleDeleteEfisiensi(item.id)}
+                          className="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded mx-2">
+                          HAPUS
+                        </button>
+
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded ">
+                          EDIT
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
@@ -157,10 +201,13 @@ const AdminTKDTable = ({ hideAccessCheck = false }) => {
                     <td className="border p-2">{item.sisa_pagu.toLocaleString("id-ID")}</td>
                     <td className="border p-2">{item.persentase}%</td>
                     <td className="border p-2">
-                      <button className="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded mx-2">
-                        HAPUS
-                      </button>
-                      <button className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded ">
+                        <button
+                          onClick={() => handleDeleteEfisiensi(item.id)}
+                          className="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded mx-2">
+                          HAPUS
+                        </button>
+
+                      <button className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded ">
                         EDIT
                       </button>
                     </td>
