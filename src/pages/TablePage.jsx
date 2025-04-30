@@ -1,4 +1,3 @@
-// src/pages/AdminTKDTable.jsx
 import { useState, useCallback, useEffect } from "react";
 import axios from "axios";
 
@@ -43,18 +42,18 @@ const AdminTKDTable = ({ hideAccessCheck = false }) => {
     }
   };
 
-  const handleDeleteEfisiensi = async (id) => {
+  const handleDeleteTKD = async (id) => {
     if (!confirm("Yakin ingin menghapus data ini?")) return;
 
     try {
       await axios.delete(`http://localhost:3000/tkd/delete/${id}`, {
         headers: {
-          'x-api-key': ADMIN_API_KEY, // Jika diperlukan oleh middleware isAdmin
+          'x-api-key': ADMIN_API_KEY,
         },
       });
 
-      // Perbarui data setelah penghapusan
-      setEfisiensiData((prevData) => prevData.filter((item) => item.id !== id));
+      setEfisiensiData((prev) => prev.filter((item) => item.id !== id));
+      setRealisasiData((prev) => prev.filter((item) => item.id !== id));
       setMessage("✅ Data berhasil dihapus");
     } catch (error) {
       console.error("Gagal menghapus data:", error);
@@ -62,25 +61,7 @@ const AdminTKDTable = ({ hideAccessCheck = false }) => {
     }
   };
 
-  const handleDeleteRealisasi = async (id) => {
-    if (!confirm("Yakin ingin menghapus data ini?")) return;
-  
-    try {
-      await axios.delete(`http://localhost:3000/tkd/delete/${id}`, {
-        headers: {
-          'x-api-key': ADMIN_API_KEY,
-        },
-      });
-  
-      // Perbarui state setelah hapus
-      setRealisasiData((prevData) => prevData.filter((item) => item.id !== id));
-      setMessage("✅ Data realisasi berhasil dihapus");
-    } catch (error) {
-      console.error("Gagal menghapus data realisasi:", error);
-      setMessage("❌ Gagal menghapus data realisasi");
-    }
-  };
-  
+
 
   return (
     <div className="max-w-7xl mx-auto p-6 ">
@@ -162,7 +143,8 @@ const AdminTKDTable = ({ hideAccessCheck = false }) => {
                       <td className="border p-2">{item.efisiensi}%</td>
                       <td className="border p-2">
                         <button
-                          onClick={() => handleDeleteEfisiensi(item.id)}
+                          onClick={() => handleDeleteTKD(item.id)}
+
                           className="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded mx-2">
                           HAPUS
                         </button>
@@ -201,11 +183,11 @@ const AdminTKDTable = ({ hideAccessCheck = false }) => {
                     <td className="border p-2">{item.sisa_pagu.toLocaleString("id-ID")}</td>
                     <td className="border p-2">{item.persentase}%</td>
                     <td className="border p-2">
-                        <button
-                          onClick={() => handleDeleteEfisiensi(item.id)}
-                          className="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded mx-2">
-                          HAPUS
-                        </button>
+                      <button
+                        onClick={() => handleDeleteTKD(item.id)}
+                        className="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded mx-2">
+                        HAPUS
+                      </button>
 
                       <button className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded ">
                         EDIT

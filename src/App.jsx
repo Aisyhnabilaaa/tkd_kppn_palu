@@ -17,7 +17,11 @@ import ParimoChartPage from "./pages/ParimoChartPage";
 import SigiChartPage from "./pages/SigiChartPage";
 import TablePage from "./pages/TablePage";
 
+import FormAlokasi from "./pages/FormAlokasi";
+import AlokasiPage from "./pages/AlokasiPage";
+
 import AdminDashboard from "./pages/Admin/AdminDashboard";
+import { ImPower } from "react-icons/im";
 
 function App() {
   return (
@@ -39,6 +43,10 @@ function App() {
         <Route path="/input" element={<FormInputTKD />} />
         <Route path="/table" element={<TablePage />} />
         <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/alokasiIsi" element={<FormAlokasi/>}/>
+        <Route path="/alokasi" element={<AlokasiPage/>}/>
+
+
 
       </Routes>
       

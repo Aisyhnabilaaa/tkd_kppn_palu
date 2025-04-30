@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import FormInputTKD from '../FormInputTKD'
 import TablePage from '../TablePage'
+import AlokasiPage from '../AlokasiPage'
 
 const ADMIN_API_KEY = import.meta.env.VITE_ADMIN_API_KEY
 
@@ -56,10 +57,20 @@ const AdminDashboard = () => {
             >
               Lihat Tabel
             </button>
+            <button
+              onClick={() => setActiveTab('chart')}
+              className={`px-4 py-2 rounded-md font-semibold ${activeTab === 'chart' ? 'bg-blue-600 text-white' : 'bg-white border'}`}
+            >
+              Grafik Alokasi
+            </button>
           </div>
 
+
           {/* Halaman Aktif */}
-          {activeTab === 'form' ? <FormInputTKD hideAccessCheck={true} /> : <TablePage hideAccessCheck={true} />}
+          {activeTab === 'form' && <FormInputTKD hideAccessCheck={true} />}
+          {activeTab === 'table' && <TablePage hideAccessCheck={true} />}
+          {activeTab === 'chart' && <AlokasiPage />}
+
         </div>
       )}
     </div>

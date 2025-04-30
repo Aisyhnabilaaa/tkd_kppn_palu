@@ -2,6 +2,9 @@ import { FaChartSimple, FaChartPie } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
+import AlokasiChart from "../components/AlokasiChart";
+
+
 
 const Beranda = () => {
     const navigate = useNavigate();
@@ -150,6 +153,11 @@ const Beranda = () => {
                             </button>
                         </div>
                     ))}
+                </div>
+
+                {/* Tampilkan Chart */}
+                <div className="max-w-4xl mx-auto">
+                    <AlokasiChart />
                 </div>
 
             </div>
