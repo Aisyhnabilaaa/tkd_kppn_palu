@@ -75,9 +75,9 @@ const SigiPage = () => {
         <div className="flex flex-col md:flex-row items-center gap-6 mx-12 my-8">
           <img src="src/assets/img/Logo_sigi.png" alt="sigilogo" className="w-28 h-auto" />
           <div className="text-center md:text-left">
-            <div className="bg-yellow-100 rounded-tr-full w-96">
-              <h6 className="text-2xl text-amber-400 ml-2">Sekilas <span className="text-blue-800">Tentang</span></h6>
-              <h1 className="text-4xl font-bold ml-4">Kabupaten Sigi</h1>
+            <div className="bg-yellow-200 rounded-tr-full w-96">
+              <h6 className="text-2xl text-amber-600 ml-2">Sekilas <span className="text-blue-800">Tentang</span></h6>
+              <h1 className="text-3xl font-bold text-indigo-700 te ml-4">Kabupaten Sigi</h1>
             </div>
             <p className="mb-10 text-center mt-3 mx-5 text-lg text-justify">
               Kabupaten Sigi merupakan salah satu kabupaten di Provinsi Sulawesi
@@ -222,7 +222,7 @@ const SigiPage = () => {
 
         {/* GRAFIK TKD PALU */}
         <div className="p-6 space-y-10 bg-gray-50 min-h-screen pt-14">
-          <h1 className="text-3xl font-bold text-center text-gray-800">
+          <h1 className="text-3xl font-bold text-center text-indigo-700">
             Visualisasi Anggaran TKD - KOTA PALU
           </h1>
 

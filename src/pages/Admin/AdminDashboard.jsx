@@ -49,19 +49,19 @@ const AdminDashboard = () => {
               onClick={() => setActiveTab('form')}
               className={`px-4 py-2 rounded-md font-semibold ${activeTab === 'form' ? 'bg-blue-600 text-white' : 'bg-white border'}`}
             >
-              Input Data
+              Input Data TKD
             </button>
             <button
               onClick={() => setActiveTab('table')}
               className={`px-4 py-2 rounded-md font-semibold ${activeTab === 'table' ? 'bg-blue-600 text-white' : 'bg-white border'}`}
             >
-              Lihat Tabel
+              Tabel TKD
             </button>
             <button
               onClick={() => setActiveTab('chart')}
               className={`px-4 py-2 rounded-md font-semibold ${activeTab === 'chart' ? 'bg-blue-600 text-white' : 'bg-white border'}`}
             >
-              Grafik Alokasi
+              Input Data Alokasi
             </button>
           </div>
 

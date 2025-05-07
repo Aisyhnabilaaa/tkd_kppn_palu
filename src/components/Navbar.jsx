@@ -21,9 +21,7 @@ const Navbar = () => {
 
     // Daftar menu navbar
     const menuItems = [
-        { name: "Home", to: "src/pages/Beranda.jsx" },
-        { name: "About", to: "about" },
-        { name: "Services", to: "services" },
+        { name: "Home", to: "/Beranda" },
         { name: "Contact", to: "contact" },
     ];
 
@@ -116,6 +114,30 @@ const Navbar = () => {
                     <h1 className="hover:text-yellow-200 transition-all cursor-pointer text-white">Registrasi</h1>
                     <Button title="Login" />
                 </div> */}
+                    <button
+                        onClick={() => setIsDaerahOpen(!isDaerahOpen)}
+                        className="flex items-center space-x-2 hover:bg-blue-700 px-4 py-2 rounded"
+                    >
+                        <span>Daftar Daerah TKD</span>
+                        <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    {isDaerahOpen && (
+                        <div className="absolute right-0 mt-2 w-56 bg-white text-black rounded shadow-md z-50">
+                            <a href="/Sulteng" className="block px-4 py-2 hover:bg-gray-100">Sulawesi Tengah</a>
+                            <a href="/Palu" className="block px-4 py-2 hover:bg-gray-100">Palu</a>
+                            <a href="/Sigi" className="block px-4 py-2 hover:bg-gray-100">Sigi</a>
+                            <a href="/ParigiMoutong" className="block px-4 py-2 hover:bg-gray-100">Parigi Moutong</a>
+                            <a href="/Donggala" className="block px-4 py-2 hover:bg-gray-100">Donggala</a>
+                        </div>
+                    )}
             </div>
         </div>
     );

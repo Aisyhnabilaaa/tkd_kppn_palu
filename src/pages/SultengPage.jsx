@@ -71,11 +71,11 @@ const SultengPage = () => {
       <div className="container mx-auto px-4 py-8">
 
         <div className="flex flex-col md:flex-row items-center gap-6 mx-12 my-8">
-          <img src="src/assets/img/Logo_Provinsi_Sulawesi_Tengah.png" alt="sigilogo" className="w-28 h-auto" />
+          <img src="src/assets/img/Logo_Provinsi_Sulawesi_Tengah.png" alt="sultenglogo" className="w-28 h-auto" />
           <div className="text-center md:text-left">
-            <div className="bg-yellow-100 rounded-tr-full w-96">
-              <h6 className="text-2xl text-amber-400 ml-2">Sekilas <span className="text-blue-800">Tentang</span></h6>
-              <h1 className="text-3xl font-bold ml-4">Sulawesi Tengah</h1>
+            <div className="bg-yellow-200 rounded-tr-full w-96">
+              <h6 className="text-2xl text-amber-600 ml-2">Sekilas <span className="text-indigo-900">Tentang</span></h6>
+              <h1 className="text-3xl font-bold text-indigo-800 ml-4">Sulawesi Tengah</h1>
             </div>
             <p className="mb-10 text-center mt-3 mx-5 text-lg text-justify">
               Sulawesi Tengah adalah salah satu provinsi di Pulau Sulawesi dengan ibu kota di Kota Palu.
@@ -94,7 +94,7 @@ const SultengPage = () => {
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
                 <img src="src/assets/img/geo_palu.jpeg" alt="Geografis" className="object-cover w-full h-full" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-blue-700">Geografis & Topografi</h3>
+              <h3 className="text-xl font-semibold mb-2 text-blue-900">Geografis & Topografi</h3>
               <p className="text-sm text-gray-700">
               Sulawesi Tengah memiliki bentang alam yang bervariasi, mulai dari pegunungan, dataran rendah, hingga garis pantai yang panjang.
               </p>
@@ -105,7 +105,7 @@ const SultengPage = () => {
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
                 <img src="src/assets/img/umkm_palu.jpg" alt="Ekonomi" className="object-cover w-full h-full" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-yellow-300">Ekonomi & UMKM</h3>
+              <h3 className="text-xl font-semibold mb-2 text-amber-400">Ekonomi & UMKM</h3>
               <p className="text-sm text-gray-200">
               Masyarakat Sulawesi Tengah banyak bergantung pada pertanian, perikanan, pertambangan, serta UMKM dan perdagangan lokal.
               </p>
@@ -116,7 +116,7 @@ const SultengPage = () => {
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
                 <img src="/images/palu3.jpg" alt="Budaya" className="object-cover w-full h-full" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-blue-700">Sosial & Budaya</h3>
+              <h3 className="text-xl font-semibold mb-2 text-blue-900">Sosial & Budaya</h3>
               <p className="text-sm text-gray-700">
               Masyarakat Sulawesi Tengah terdiri dari berbagai suku seperti Kaili, Bugis, Pamona, dan Balantak.
                 Berbagai upacara adat dan tarian tradisional masih dilestarikan, termasuk Mombowa dan Dero.
@@ -144,7 +144,7 @@ const SultengPage = () => {
       </div>
 
       <div className="p-6 space-y-10 bg-gray-50 min-h-screen pt-14">
-        <h1 className="text-3xl font-bold text-center text-gray-800">
+        <h1 className="text-3xl font-bold text-center text-indigo-700">
           Visualisasi Anggaran TKD - SULAWESI TENGAH
         </h1>
 

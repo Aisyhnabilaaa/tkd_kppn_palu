@@ -17,11 +17,10 @@ import ParimoChartPage from "./pages/ParimoChartPage";
 import SigiChartPage from "./pages/SigiChartPage";
 import TablePage from "./pages/TablePage";
 
-import FormAlokasi from "./pages/FormAlokasi";
-import AlokasiPage from "./pages/AlokasiPage";
+// import AlokasiPage from "./pages/AlokasiPage";
 
 import AdminDashboard from "./pages/Admin/AdminDashboard";
-import { ImPower } from "react-icons/im";
+// import { ImPower } from "react-icons/im";
 
 function App() {
   return (
@@ -29,7 +28,7 @@ function App() {
       <Navbar /> {/* Navbar tetap di atas untuk semua halaman */}
       
       <Routes>
-        <Route path="/" element={<Beranda />} />
+        <Route path="/Beranda" element={<Beranda />} />
         <Route path="/Sulteng" element={<SultengPage />} />
         <Route path="/Palu" element={<PaluPage />} />
         <Route path="/Donggala" element={<DonggalaPage />} />
@@ -43,8 +42,7 @@ function App() {
         <Route path="/input" element={<FormInputTKD />} />
         <Route path="/table" element={<TablePage />} />
         <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/alokasiIsi" element={<FormAlokasi/>}/>
-        <Route path="/alokasi" element={<AlokasiPage/>}/>
+        {/* <Route path="/alokasi" element={<AlokasiPage/>}/> */}
 
 
 
