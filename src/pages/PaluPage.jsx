@@ -47,25 +47,31 @@ const SultengPage = () => {
     <div className='hero bg-gray-50'>
       <div className='relative flex flex-row justify-between itmes-center p-16 md:px-32 px-5 text-white py-44'
         style={{
-          backgroundImage: `url('src/assets/img/wisatapalu.jpg')`,
+          backgroundImage: `url('src/assets/img/geo_palu.jpeg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"
         }}
       >
 
-        <div className='absolute inset-0 bg-black opacity-40'></div>
+        <div className='absolute inset-0 bg-blue-900 opacity-40'></div>
 
         <div className="items-center justify-center text-center w-full">
-          <div className="relative flex items-center justify-center space-x-4 text-center">
+          <div className="relative flex items-center justify-center space-x-4">
             <IoLeafSharp className="text-sky-500 text-6xl" />
-            <h1 className="lg:text-5xl text-2xl font-bold">Kota Palu</h1>
+            {/* Teks gambar tengah */}
+            <div className="flex flex-col items-center leading-none">
+              <div className="inline-block bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 rounded-full pt-3 px-4 hover:shadow-lg transition duration-300 mb-2 ">
+                <img src="src/assets/logo/Selamat Datang di.png" alt="selamatdatang" className="w-48 mb-3" />
+              </div>
+              <img src="src/assets/logo/KOTA PALU.png" alt="sulawesitengah" className="w-auto" />
+            </div>
             <IoLeafSharp className="text-sky-500 text-6xl scale-x-[-1]" />
           </div>
-          <div className=" space-y-1">
+          {/* <div className=" space-y-1 mt-5">
             <p className="text-sky-400 drop-shadow">"Maliu Ntinuvu"</p>
             <p className="text-sky-400 drop-shadow">Kenangan yang memudar</p>
-          </div>
+          </div> */}
         </div>
       </div>
 

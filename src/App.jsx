@@ -25,7 +25,7 @@ import AdminDashboard from "./pages/Admin/AdminDashboard";
 function App() {
   return (
     <Router>
-      <Navbar /> {/* Navbar tetap di atas untuk semua halaman */}
+      {/* <Navbar /> Navbar tetap di atas untuk semua halaman */}
       
       <Routes>
         <Route path="/Beranda" element={<Beranda />} />

@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import RealisasiChart from "../components/RealisasiChart";
 import EfisiensiChart from "../components/EfisiensiChart";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const SultengPage = () => {
   const [realisasiData, setRealisasiData] = useState([]);
@@ -40,6 +43,12 @@ const SultengPage = () => {
       }
     };
 
+    AOS.init({ 
+      duration: 500,
+      easting: "ease-in-out",
+      once: true,
+     });
+
     fetchData();
   }, [tahun]);
 
@@ -54,29 +63,35 @@ const SultengPage = () => {
         }}
       >
 
-        <div className='absolute inset-0 bg-sky-600 opacity-30'></div>
+        <div className='absolute inset-0 bg-blue-900 opacity-30'></div>
 
         <div className="items-center justify-center text-center w-full">
-          <div className="relative flex items-center justify-center space-x-4 text-center">
+          <div className="relative flex items-center justify-center space-x-4">
             <IoLeafSharp className="text-sky-500 text-6xl" />
-            <h1 className="lg:text-5xl text-2xl font-bold">Kabupaten Donggala</h1>
+            {/* Teks gambar tengah */}
+            <div className="flex flex-col items-center leading-none">
+              <div className="inline-block bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 rounded-full pt-3 px-4 hover:shadow-lg transition duration-300 mb-2 ">
+                <img src="src/assets/logo/Selamat Datang di.png" alt="selamatdatang" className="w-48 mb-3" />
+              </div>
+              <img src="src/assets/logo/KABUPATEN DONGGALA.png" alt="sulawesitengah" className="w-auto mt-3" />
+            </div>
             <IoLeafSharp className="text-sky-500 text-6xl scale-x-[-1]" />
           </div>
-          <p>"Roso, Risi, Rasa"</p>
-          <p>Kuat, berwibawa, dan penuh kesadaran</p>
+          {/* <p>"Roso, Risi, Rasa"</p>
+          <p>Kuat, berwibawa, dan penuh kesadaran</p> */}
         </div>
       </div>
 
 
       {/* INFORMASI MENGENAI SULAWESI TENGAH */}
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row items-center gap-6 mx-12 my-8">
-          <img src="src/assets/img/Lambang_Kabupaten_Donggala.png" alt="sigilogo" className="w-32 h-auto" />
-          <div className="text-center md:text-left">
-            <div className="bg-yellow-200 rounded-tr-full w-96">
+        <div className="flex flex-col md:flex-row items-center gap-6 mx-10 mb-10 bg-gray-200 drop-shadow-xl p-10 rounded-3xl" data-aos="fade-up" data-aos-duration="1000">
+          <img src="src/assets/img/logo_donggala.png" alt="donggalalogo" className="w-72 h-auto" />
+          <div className="text-center md:text-left bg-white p-5 rounded-2xl">
+            <div className="bg-yellow-200 w-52 ml-4 rounded-full">
               <h6 className="text-2xl text-amber-600 ml-2">Sekilas <span className="text-indigo-900">Tentang</span></h6>
-              <h1 className="text-3xl font-bold ml-4 text-indigo-800">Kabupaten Donggala</h1>
             </div>
+            <h1 className="text-3xl font-bold ml-4 text-indigo-800 mt-2">Kabupaten Donggala</h1>
             <p className="mb-10 text-center mt-3 mx-5 text-lg text-justify">
               Kabupaten Donggala merupakan salah
               satu kabupaten tertua di Provinsi Sulawesi Tengah, yang memiliki sejarah panjang dan peran penting
@@ -88,15 +103,15 @@ const SultengPage = () => {
         </div>
 
         {/* tampilan card */}
-        <div className=" ">
+        <div className="">
           {/* <h2 className="text-white text-5xl text-center mb-12">Ada apa di Kota Palu</h2> */}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-12">
             {/* Geografis dan Topografi */}
-            <div className="bg-amber-400 text-center rounded-xl p-6 shadow-md">
-              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+            <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
+              {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
                 <img src="src/assets/img/geo_palu.jpeg" alt="Geografis" className="object-cover w-full h-full" />
-              </div>
+              </div> */}
               <h3 className="text-xl font-semibold mb-2 text-blue-700">Geografis & Topografi</h3>
               <p className="text-sm text-gray-700">
                 Donggala, kabupaten di Sulawesi Tengah, termasuk yang terluas, terpadat, dan paling banyak penduduknya keempat di provinsi sulawesi tengah. Letaknya mengelilingi Kota Palu dan berbatasan dengan beberapa kabupaten lain di sekitarnya.
@@ -104,21 +119,21 @@ const SultengPage = () => {
             </div>
 
             {/* Mata Pencaharian dan Ekonomi */}
-            <div className="bg-blue-500 text-center rounded-xl p-6 shadow-md">
-              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+            <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
+              {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
                 <img src="src/assets/img/umkm_palu.jpg" alt="Ekonomi" className="object-cover w-full h-full" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-yellow-300">Ekonomi & UMKM</h3>
-              <p className="text-sm text-gray-200">
+              </div> */}
+              <h3 className="text-xl font-semibold mb-2 text-amber-500">Ekonomi & UMKM</h3>
+              <p className="text-sm text-gray-700">
                 Ekonomi Donggala terutama ditopang oleh pertanian (padi, jagung, kakao, kelapa, cengkeh), perikanan (hasil laut), perkebunan, kehutanan, dan UMKM.
               </p>
             </div>
 
             {/* Sosial Budaya */}
-            <div className="bg-amber-400 text-center rounded-xl p-6 shadow-md">
-              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+            <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
+              {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
                 <img src="/images/palu3.jpg" alt="Budaya" className="object-cover w-full h-full" />
-              </div>
+              </div> */}
               <h3 className="text-xl font-semibold mb-2 text-blue-700">Sosial & Budaya</h3>
               <p className="text-sm text-gray-700">
                 Donggala dulunya adalah pusat pemerintahan kolonial dan pelabuhan dagang, yang jejaknya masih terlihat pada bangunan tua dan pelabuhan lama. Kabupaten ini juga kaya akan tradisi adat, seperti upacara Kaili, musik, dan tarian tradisional.
@@ -126,48 +141,6 @@ const SultengPage = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="w-full bg-blue-900 py-10">
-          <h2 className="text-white text-5xl text-center mb-10">Ada apa di Donggala</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-12">
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Geografis dan Topografi</h2>
-              <p></p>
-            </div>
-
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Mata Pencaharian dan Ekonomi</h2>
-              <p>Perekonomian Donggala mayoritas bergerak di sektor pertanian, perikanan, dan perkebunan. Hasil utama dari sektor pertanian mencakup padi, jagung, kakao, kelapa, dan cengkeh. Sedangkan wilayah pesisirnya mengandalkan hasil laut dari penangkapan dan budidaya ikan. Selain itu, sektor kehutanan dan UMKM juga ikut menopang ekonomi masyarakat.</p>
-            </div>
-
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Sosial dan Budaya</h2>
-              <p>Donggala memiliki peran penting sebagai bekas pusat pemerintahan kolonial dan pelabuhan dagang pada masa lalu. Bangunan-bangunan tua dan pelabuhan lama menjadi saksi sejarah masa penjajahan Belanda. Selain itu, Donggala juga masih melestarikan berbagai tradisi adat, seperti upacara adat Kaili, musik tradisional, serta tari-tarian daerah.</p>
-            </div>
-
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Pariwisata</h2>
-              <ul className="list-disc pl-5">
-                <li><strong>Pantai Tanjung Karang</strong> – Pantai dengan pasir putih dan air laut yang jernih</li>
-                <li><strong>Pantai Boneoge</strong> – Danau air tawar yang terletak tidak jauh dari ibu kota kabupaten</li>
-                <li><strong>Air Terjun Bidadari</strong> – Air terjun dengan pemandangan alam yang asri</li>
-                <li><strong>Bukit Mandiangin</strong> – Menawarkan pemandangan Teluk Tomini yang indah</li>
-                <li><strong>Wisata Bahari di sepanjang pesisir Teluk Tomini</strong> – Potensi untuk diving, snorkeling, dan wisata pantai lainnya</li>
-              </ul>
-            </div>
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Infrastruktur</h2>
-              <p>
-                Donggala memiliki sejumlah sekolah dari jenjang dasar hingga menengah, serta fasilitas kesehatan seperti puskesmas dan rumah sakit daerah di Banawa. Meski begitu, beberapa wilayah terpencil masih memerlukan peningkatan infrastruktur dan layanan publik.
-              </p>
-            </div>
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Data Statistik</h2>
-              <p>Luas Wilayah: 4.208,43 km<sup>2</sup><br /> Jumlah Penduduk (Estimasi 2023): ± 310.000 jiwa<br /> Kecamatan: 16 <br />Desa/Kelurahan: 167 <br />Kepadatan Penduduk (Estimasi 2023): ± 73,7 jiwa/km<sup>2</sup></p>
-            </div>
-          </div>
-        </div> */}
-
 
         <div className="p-8 bg-blue-500 mt-20 drop-shadow-md">
           {/* Teks Judul */}

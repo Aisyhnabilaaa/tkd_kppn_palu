@@ -54,15 +54,25 @@ const SultengPage = () => {
         }}
       >
 
-        <div className='absolute inset-0 bg-sky-600 opacity-30'></div>
+        <div className='absolute inset-0 bg-blue-900 opacity-30'></div>
 
-        <div className="items-center justify-center text-center w-full">
-          <div className="relative flex items-center justify-center space-x-4 text-center">
+        <div className="flex flex-col items-center justify-center text-center w-full">
+          <div className="relative flex items-center justify-center space-x-4">
             <IoLeafSharp className="text-sky-500 text-6xl" />
-            <h1 className="lg:text-5xl text-2xl font-bold">SULAWESI TENGAH</h1>
+            {/* Teks gambar tengah */}
+            <div className="flex flex-col items-center leading-none">
+              <div className="inline-block bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 rounded-full pt-3 px-4 hover:shadow-lg transition duration-300 mb-2 ">
+                <img src="src/assets/logo/Selamat Datang di.png" alt="selamatdatang" className="w-48 mb-3" />
+              </div>
+              <img src="src/assets/logo/SULAWESI TENGAH.png" alt="sulawesitengah" className="w-auto" />
+            </div>
             <IoLeafSharp className="text-sky-500 text-6xl scale-x-[-1]" />
           </div>
-          <p>Sebuah provinsi di bagian tengah Pulau Sulawesi, Indonesia.</p>
+
+          {/* Deskripsi bawah */}
+          <p className="mt-4 text-base">
+            Sebuah provinsi di bagian tengah Pulau Sulawesi, Indonesia.
+          </p>
         </div>
       </div>
 
@@ -96,7 +106,7 @@ const SultengPage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2 text-blue-900">Geografis & Topografi</h3>
               <p className="text-sm text-gray-700">
-              Sulawesi Tengah memiliki bentang alam yang bervariasi, mulai dari pegunungan, dataran rendah, hingga garis pantai yang panjang.
+                Sulawesi Tengah memiliki bentang alam yang bervariasi, mulai dari pegunungan, dataran rendah, hingga garis pantai yang panjang.
               </p>
             </div>
 
@@ -107,7 +117,7 @@ const SultengPage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2 text-amber-400">Ekonomi & UMKM</h3>
               <p className="text-sm text-gray-200">
-              Masyarakat Sulawesi Tengah banyak bergantung pada pertanian, perikanan, pertambangan, serta UMKM dan perdagangan lokal.
+                Masyarakat Sulawesi Tengah banyak bergantung pada pertanian, perikanan, pertambangan, serta UMKM dan perdagangan lokal.
               </p>
             </div>
 
@@ -118,7 +128,7 @@ const SultengPage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2 text-blue-900">Sosial & Budaya</h3>
               <p className="text-sm text-gray-700">
-              Masyarakat Sulawesi Tengah terdiri dari berbagai suku seperti Kaili, Bugis, Pamona, dan Balantak.
+                Masyarakat Sulawesi Tengah terdiri dari berbagai suku seperti Kaili, Bugis, Pamona, dan Balantak.
                 Berbagai upacara adat dan tarian tradisional masih dilestarikan, termasuk Mombowa dan Dero.
               </p>
             </div>
