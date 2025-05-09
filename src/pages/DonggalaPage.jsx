@@ -43,11 +43,11 @@ const SultengPage = () => {
       }
     };
 
-    AOS.init({ 
+    AOS.init({
       duration: 500,
       easting: "ease-in-out",
       once: true,
-     });
+    });
 
     fetchData();
   }, [tahun]);
@@ -83,9 +83,9 @@ const SultengPage = () => {
       </div>
 
 
-      {/* INFORMASI MENGENAI SULAWESI TENGAH */}
+      {/* INFORMASI MENGENAI DONGGALA */}
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row items-center gap-6 mx-10 mb-10 bg-gray-200 drop-shadow-xl p-10 rounded-3xl" data-aos="fade-up" data-aos-duration="1000">
+        {/* <div className="flex flex-col md:flex-row items-center gap-6 mx-10 mb-10 bg-gray-200 drop-shadow-xl p-10 rounded-3xl" data-aos="fade-up" data-aos-duration="1000">
           <img src="src/assets/img/logo_donggala.png" alt="donggalalogo" className="w-72 h-auto" />
           <div className="text-center md:text-left bg-white p-5 rounded-2xl">
             <div className="bg-yellow-200 w-52 ml-4 rounded-full">
@@ -100,13 +100,30 @@ const SultengPage = () => {
               Parigi Moutong dan Sigi di sisi lainnya.
             </p>
           </div>
+        </div> */}
+
+        <div className="flex flex-col md:flex-row items-center gap-6 mx-10 p-10 rounded-3xl">
+          <img src="src/assets/img/logo_donggala.png" alt="donggalalogo" className="w-72 h-auto" />
+          <div className="w-5 h-60 ml-5 rounded-full h-32 bg-blue-500"></div>
+
+          <div className="text-center md:text-left p-5 rounded-2xl">
+            <div className="bg-yellow-200 w-52 ml-4 rounded-full">
+              <h6 className="text-2xl text-amber-600 ml-2">Sekilas <span className="text-indigo-900">Tentang</span></h6>
+            </div>
+            <h1 className="text-3xl font-bold ml-4 text-indigo-800 mt-2">Kabupaten Donggala</h1>
+            <p className=" text-center mt-3 mx-5 text-lg text-justify">
+              Kabupaten Donggala merupakan salah
+              satu kabupaten tertua di Provinsi Sulawesi Tengah, yang memiliki sejarah panjang dan peran penting
+              dalam perkembangan wilayah ini. Ibu kota kabupatennya adalah Banawa, yang terletak di pesisir barat
+              Teluk Palu. Kabupaten ini berbatasan langsung dengan Kota Palu di sebelah timur, serta Kabupaten
+              Parigi Moutong dan Sigi di sisi lainnya.
+            </p>
+          </div>
         </div>
 
         {/* tampilan card */}
-        <div className="">
-          {/* <h2 className="text-white text-5xl text-center mb-12">Ada apa di Kota Palu</h2> */}
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-12">
+        <div className="" data-aos="fade-up" data-aos-duration="1000">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-10">
             {/* Geografis dan Topografi */}
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
               {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
@@ -141,24 +158,26 @@ const SultengPage = () => {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="p-8 bg-blue-500 mt-20 drop-shadow-md">
-          {/* Teks Judul */}
-          <h1 className="font-serif font-bold text-center text-xl text-yellow-200">Yuk Tahu!</h1>
-          <h1 className="relative font-bold text-4xl text-yellow-400 p-2 text-center">
-            Transfer ke Daerah Sulawesi Tengah
-          </h1>
-          <hr class="border-t-2 border-gray-300 w-1/2 mx-auto " />
+      <div className="p-6 space-y-10 bg-gray-50 min-h-screen pt-14 mt-16">
+        <div className="flex items-start bg-gray-100 p-10 rounded-xl space-x-8">
+          {/* Kiri: Judul dan garis */}
+          <div className="w-1/3">
+            <p className="text-xl text-blue-500 font-bold mb-2 bg-blue-100 w-32">Yuk Tahu!</p>
+            <h1 className="text-4xl font-bold text-blue-900 leading-tight">Transfer ke<br />Daerah Donggala</h1>
+            <div className="mt-2 h-1 w-16 bg-blue-400 rounded-full" />
+          </div>
 
-          <div className="flex items-center justify-center space-x-8 mt-8">
-            {/* Paragraf */}
-            <p className=" text-gray-200 text-justify">
+          {/* Kanan: Paragraf */}
+          <div className="w-2/3">
+            <p className="text-gray-700 text-base text-justify">
               Transfer ke daerah merupakan salah satu mekanisme pendanaan yang diberikan oleh pemerintah pusat kepada pemerintah daerah guna mendukung pelaksanaan pembangunan serta penyelenggaraan pemerintahan daerah. Di Sulawesi Tengah, transfer ke daerah mencakup berbagai jenis pendanaan seperti Dana Alokasi Umum (DAU), Dana Alokasi Khusus (DAK), Dana Bagi Hasil (DBH), serta Dana Insentif Fiskal. Dana ini bertujuan untuk meningkatkan kesejahteraan masyarakat, mempercepat pembangunan infrastruktur, serta mendukung pelayanan publik di tingkat provinsi dan kabupaten/kota.
             </p>
           </div>
         </div>
 
-        <div className="p-6 space-y-10 bg-gray-50 min-h-screen pt-14">
+        <div className=" ">
           <h1 className="text-3xl font-bold text-center text-amber-500">
             Visualisasi Anggaran TKD - Donggala
           </h1>
@@ -178,14 +197,16 @@ const SultengPage = () => {
             </select>
           </div>
 
-          <div className="bg-white rounded-2xl shadow p-4">
-            <h2 className="text-xl font-semibold mb-2">Efisiensi Anggaran Tahun {tahun}</h2>
-            <EfisiensiChart data={efisiensiData} />
+          <div className="bg-white rounded-2xl shadow p-4 mb-5">
+          <h2 className="text-xl font-semibold mb-2">Realisasi Tahun {tahun}</h2>
+            <p>Grafik berikut menampilkan pagu, realisasi, serta sisa pagu dari masing masing jenis transfer ke daerah pada Pemda Kabupaten Donggal</p>
+            <RealisasiChart data={realisasiData} />
           </div>
 
           <div className="bg-white rounded-2xl shadow p-4">
-            <h2 className="text-xl font-semibold mb-2">Realisasi Tahun {tahun}</h2>
-            <RealisasiChart data={realisasiData} />
+          <h2 className="text-xl font-semibold mb-2">Efisiensi Anggaran Tahun {tahun}</h2>
+            <p>Grafik berikut menampilkan seberapa efisien penyerapan Transfer ke Daerah lingkup pemda Kabupaten Donggala</p>
+            <EfisiensiChart data={efisiensiData} />
           </div>
         </div>
       </div>

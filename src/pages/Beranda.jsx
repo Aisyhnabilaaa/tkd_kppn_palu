@@ -57,7 +57,7 @@ const Beranda = () => {
 
     const daerahList = [
         {
-            title: "Sulawesi Tengah",
+            title: "Provinsi Sulawesi Tengah",
             description:
                 "Sulawesi, Indonesia",
             bgImage: "/src/assets/img/Tari-Raego.jpg",
@@ -73,7 +73,7 @@ const Beranda = () => {
             link: "/Palu",
         },
         {
-            title: "Parigi Moutong",
+            title: " Kabupaten Parigi Moutong",
             description:
                 "Sulawesi Tengah",
             bgImage: "/src/assets/img/kantor-bupati-parimo.jpg",
@@ -81,7 +81,7 @@ const Beranda = () => {
             link: "/ParigiMoutong",
         },
         {
-            title: "Donggala",
+            title: "Kabupaten Donggala",
             description:
                 "Sulawesi Tengah",
             bgImage: "src/assets/img/donggala-kotawisata.jpg",
@@ -89,7 +89,7 @@ const Beranda = () => {
             link: "/Donggala",
         },
         {
-            title: "Sigi",
+            title: "Kabupaten Sigi",
             description:
                 "Sulawesi Tengah",
             bgImage: "src/assets/img/kantor-bupatii-sigii.jpg",
@@ -99,10 +99,10 @@ const Beranda = () => {
     ];
 
     return (
-        <div className="beranda pd-10 bg-neutral-100">
+        <div className="beranda bg-neutral-100">
             {/* Hero Section */}
             <div
-                className="relative flex flex-row justify-between items-center p-5 md:px-32 px-5 text-white py-48"
+                className="relative min-h-screen flex items-center justify-between p-5 md:px-32 px-5 text-white py-48"
                 style={{
                     backgroundImage: `url('src/assets/KPPN.jpg')`,
                     backgroundSize: "cover",
@@ -110,7 +110,7 @@ const Beranda = () => {
                     backgroundRepeat: "no-repeat",
                 }}
             >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black to-black opacity-60" />
                 <div className="grid grid-cols-2 gap-12 items-center z-10">
                     <div>                    </div>
                     <div className="text-right max-w-[600px]">
@@ -145,13 +145,13 @@ const Beranda = () => {
                 <div id="tentang" className="relative z-10 w-full">
                     <div className="p-16">
                         <h1 className="font-bold text-3xl text-blue-900 p-6 text-center drop-shadow-lg">
-                            Tentang <span className="text-amber-400">Transfer ke Daerah</span>
+                            Tentang Situs <span className="text-amber-400">Transfer ke Daerah</span>
                         </h1>
                         <hr className="border-t-2 border-gray-300 w-1/2 mx-auto" />
                         <div className="flex items-center justify-center mb-10 space-x-8 mt-5">
                             <FaChartSimple className="text-blue-700 text-9xl drop-shadow-md" />
                             <p className="text-blue-900 text-justify text-lg drop-shadow-sm">
-                                Situs ini menyediakan informasi mengenai alokasi dan realisasi dana transfer ke daerah di wilayah Sulawesi Tengah yang meliputi Palu, Donggala, Parigi Moutong, Sigi, dan satu daerah lainnya. Anda dapat mengakses data keuangan daerah, profil masing-masing daerah, serta dokumen terkait kebijakan transfer ke daerah.
+                                Situs ini menyediakan informasi mengenai alokasi dan realisasi dana transfer ke daerah di wilayah Sulawesi Tengah yang meliputi Kota Palu, Kabupaten Sigi, Kabupaten Donggala, Kabupaten Parigi Moutong, dan Provinsi Sulawesi Tengah.
                             </p>
                             <FaChartPie className="text-blue-700 text-9xl drop-shadow-md" />
                         </div>
@@ -200,9 +200,9 @@ const Beranda = () => {
                     <Tooltip />
                     <Legend />
                     <Bar dataKey="dbh" fill="#f97316" name="DBH" />
-                    <Bar dataKey="dau" fill="#10b981" name="DAU" />
+                    <Bar dataKey="dau" fill="#00A808" name="DAU" />
                     <Bar dataKey="dakFisik" fill="#3b82f6" name="DAK Fisik" />
-                    <Bar dataKey="dakNonfisik" fill="#6366f1" name="DAK Nonfisik" />
+                    <Bar dataKey="dakNonfisik" fill="#7F0088" name="DAK Nonfisik" />
                     <Bar dataKey="danaDesa" fill="#eab308" name="Dana Desa" />
                     <Bar dataKey="infis" fill="#ec4899" name="INFIS" />
                     <Bar dataKey="total" fill="#1d4ed8" name="Total Alokasi" />
@@ -216,7 +216,7 @@ const Beranda = () => {
                     Daftar Pemerintah Daerah
                 </h1>
                 <p className="text-center text-sm">
-                    Silahkan pilih untuk mengakses info tiap pemerintah daerah
+                    Silahkan pilih untuk mengakses informasi tiap pemerintah daerah
                 </p>
 
                 {/* style daftar pemda */}

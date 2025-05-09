@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { AiOutlineMenu } from "react-icons/ai";
 
-// Komponen Button untuk Login
+// Komponen Button untuk Login (opsional)
 const Button = ({ title }) => {
     return (
         <button className="px-4 py-2 rounded-lg text-black hover:bg-yellow-300 transition-all">
@@ -14,6 +14,8 @@ const Button = ({ title }) => {
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
     const [isDaerahOpen, setIsDaerahOpen] = useState(false);
+    const [showNavbar, setShowNavbar] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     const handleChange = () => {
         setMenu(!menu);
@@ -25,14 +27,38 @@ const Navbar = () => {
         { name: "Contact", to: "contact" },
     ];
 
+    // Deteksi arah scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                // Scroll ke bawah, sembunyikan navbar
+                setShowNavbar(false);
+            } else {
+                // Scroll ke atas, tampilkan navbar
+                setShowNavbar(true);
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [lastScrollY]);
+
     return (
-        <div className="flex flex-row justify-between bg-blue-900 items-center p-3 md:px-32 px-5 relative text-white">
+        <div
+            className={`fixed top-1 left-0 right-0 z-50 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'
+                } bg-gradient-to-r from-blue-900 to-blue-400 flex flex-row justify-between items-center p-2 px-6 md:px-10 text-white shadow-md rounded-full max-w-6xl mx-auto`}
+        >
+
             <div className="flex items-center">
-                <img src="src\assets\kppnlogo.png" alt="kppn" className="w-24 " />
+                <img src="src/assets/kppnlogo.png" alt="kppn" className="w-24" />
             </div>
 
-            {/* Navbar untuk desktop */}
-            <nav className="hidden lg:flex flex-row items-center gap-6">
+            {/* Desktop Navbar */}
+            <nav className="hidden lg:flex flex-row items-center gap-6 text-sm font-medium">
                 {menuItems.map((item, index) => (
                     <Link
                         key={index}
@@ -40,31 +66,25 @@ const Navbar = () => {
                         spy={true}
                         smooth={true}
                         duration={500}
-                        className="flex items-center space-x-2 hover:bg-blue-700 px-4 py-2 rounded"
+                        className="hover:text-yellow-300 transition-colors cursor-pointer"
                     >
                         {item.name}
                     </Link>
                 ))}
 
-
                 <div className="relative">
                     <button
                         onClick={() => setIsDaerahOpen(!isDaerahOpen)}
-                        className="flex items-center space-x-2 hover:bg-blue-700 px-4 py-2 rounded"
+                        className="flex items-center gap-1 hover:text-yellow-300"
                     >
                         <span>Daftar Daerah TKD</span>
-                        <svg
-                            className="w-4 h-4"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
 
                     {isDaerahOpen && (
-                        <div className="absolute right-0 mt-2 w-56 bg-white text-black rounded shadow-md z-50">
+                        <div className="absolute right-0 mt-2 w-56 bg-white text-black rounded shadow-lg z-50 text-sm">
                             <a href="/Sulteng" className="block px-4 py-2 hover:bg-gray-100">Sulawesi Tengah</a>
                             <a href="/Palu" className="block px-4 py-2 hover:bg-gray-100">Palu</a>
                             <a href="/Sigi" className="block px-4 py-2 hover:bg-gray-100">Sigi</a>
@@ -75,25 +95,16 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            {/* <div className="hidden lg:flex flex-row items-center gap-4">
-                <div className= "rounded-xl border-solid border-2 border-light-blue-500">
-                    <Button title="Registrasi" />
-                </div>
-                <div className="bg-blue-400 rounded-lg">
-                    <Button title="Login" />
-                </div>
-            </div> */}
-
-
-            {/* Tombol menu untuk mobile */}
-            <div className="lg:hidden flex items-center p-2 text-white" onClick={handleChange}>
+            {/* Mobile Toggle */}
+            <div className="lg:hidden flex items-center" onClick={handleChange}>
                 <AiOutlineMenu size={25} />
             </div>
 
-            {/* Menu navbar untuk mobile */}
+            {/* Mobile Menu */}
             <div
-                className={`${menu ? "translate-x-0" : "-translate-x-full"
-                    } lg:hidden flex flex-col absolute bg-cyan-900 text-white left-0 top-[4rem] z-50 text-2xl text-center pt-8 pb-5 gap-8 w-full transition-transform duration-300`}
+                className={`${menu ? "translate-x-0" : "-translate-x-full"} 
+                lg:hidden flex flex-col absolute bg-gradient-to-b from-blue-900 to-blue-500 text-white 
+                left-0 top-[4rem] z-50 text-lg text-center pt-8 pb-5 gap-6 w-full transition-transform duration-300`}
             >
                 {menuItems.map((item, index) => (
                     <Link
@@ -102,35 +113,27 @@ const Navbar = () => {
                         spy={true}
                         smooth={true}
                         duration={500}
-                        className="hover:text-yellow-200 transition-all cursor-pointer text-white"
-                        onClick={() => setMenu(false)} // Tutup menu setelah diklik
+                        className="hover:text-yellow-200"
+                        onClick={() => setMenu(false)}
                     >
                         {item.name}
                     </Link>
                 ))}
 
-                {/* Registrasi & Login juga ada di navbar mobile */}
-                {/* <div className="flex flex-col items-center gap-4">
-                    <h1 className="hover:text-yellow-200 transition-all cursor-pointer text-white">Registrasi</h1>
-                    <Button title="Login" />
-                </div> */}
+                {/* Dropdown Mobile */}
+                <div className="relative">
                     <button
                         onClick={() => setIsDaerahOpen(!isDaerahOpen)}
-                        className="flex items-center space-x-2 hover:bg-blue-700 px-4 py-2 rounded"
+                        className="flex items-center justify-center gap-1 hover:text-yellow-300"
                     >
                         <span>Daftar Daerah TKD</span>
-                        <svg
-                            className="w-4 h-4"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
 
                     {isDaerahOpen && (
-                        <div className="absolute right-0 mt-2 w-56 bg-white text-black rounded shadow-md z-50">
+                        <div className="mt-2 w-56 mx-auto bg-white text-black rounded shadow-md z-50 text-base">
                             <a href="/Sulteng" className="block px-4 py-2 hover:bg-gray-100">Sulawesi Tengah</a>
                             <a href="/Palu" className="block px-4 py-2 hover:bg-gray-100">Palu</a>
                             <a href="/Sigi" className="block px-4 py-2 hover:bg-gray-100">Sigi</a>
@@ -138,6 +141,7 @@ const Navbar = () => {
                             <a href="/Donggala" className="block px-4 py-2 hover:bg-gray-100">Donggala</a>
                         </div>
                     )}
+                </div>
             </div>
         </div>
     );
