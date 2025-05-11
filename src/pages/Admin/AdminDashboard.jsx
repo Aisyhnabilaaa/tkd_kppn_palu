@@ -22,7 +22,7 @@ const AdminDashboard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
+    <div className="min-h-screen bg-gray-50 p-6 mt-16">
       {!hasAccess ? (
         <div className="max-w-md mx-auto bg-white p-6 rounded-xl shadow">
           <h2 className="text-xl font-bold text-center mb-4">Masukkan Kode Akses Admin</h2>

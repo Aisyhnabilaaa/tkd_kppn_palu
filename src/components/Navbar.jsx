@@ -23,8 +23,7 @@ const Navbar = () => {
 
     // Daftar menu navbar
     const menuItems = [
-        { name: "Home", to: "/Beranda" },
-        { name: "Contact", to: "contact" },
+        { name: "Home", to: "/" },
     ];
 
     // Deteksi arah scroll
@@ -85,11 +84,11 @@ const Navbar = () => {
 
                     {isDaerahOpen && (
                         <div className="absolute right-0 mt-2 w-56 bg-white text-black rounded shadow-lg z-50 text-sm">
-                            <a href="/Sulteng" className="block px-4 py-2 hover:bg-gray-100">Sulawesi Tengah</a>
-                            <a href="/Palu" className="block px-4 py-2 hover:bg-gray-100">Palu</a>
-                            <a href="/Sigi" className="block px-4 py-2 hover:bg-gray-100">Sigi</a>
-                            <a href="/ParigiMoutong" className="block px-4 py-2 hover:bg-gray-100">Parigi Moutong</a>
-                            <a href="/Donggala" className="block px-4 py-2 hover:bg-gray-100">Donggala</a>
+                            <a href="/Sulteng" className="block px-4 py-2 hover:bg-gray-100">Provinsi Sulawesi Tengah</a>
+                            <a href="/Palu" className="block px-4 py-2 hover:bg-gray-100">Kota Palu</a>
+                            <a href="/Sigi" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Sigi</a>
+                            <a href="/Donggala" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Donggala</a>
+                            <a href="/ParigiMoutong" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Parigi Moutong</a>
                         </div>
                     )}
                 </div>

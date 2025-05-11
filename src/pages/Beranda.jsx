@@ -1,6 +1,8 @@
-import { FaChartSimple, FaChartPie } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+
+import { ResponsiveContainer } from 'recharts';
+
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -30,18 +32,27 @@ const Beranda = () => {
                     },
                 }
             );
-            // const parseNumber = (value) => {
-            //     const clean = value.replace(',', '.');
-            //     const parsed = parseFloat(clean);
-            //     return isNaN(parsed) ? 0 : parsed;
-            // };
 
+            const order = [
+                "Provinsi Sulawesi Tengah",
+                "Kota Palu",
+                "Kabupaten Sigi",
+                "Kabupaten Donggala",
+                "Kabupaten Parigi Moutong"
+            ];
 
-            setData(res.data);
+            const sortedData = Array.isArray(res.data)
+                ? res.data.sort((a, b) =>
+                    order.indexOf(a.daerah) - order.indexOf(b.daerah)
+                )
+                : [];
+
+            setData(sortedData);
         } catch (err) {
             console.error('Gagal ambil data chart', err);
         }
     };
+
 
     const currentYear = new Date().getFullYear()
     const yearOptions = Array.from({ length: 5 }, (_, i) =>
@@ -99,7 +110,7 @@ const Beranda = () => {
     ];
 
     return (
-        <div className="beranda bg-neutral-100">
+        <div className="beranda bg-neutral-100" >
             {/* Hero Section */}
             <div
                 className="relative min-h-screen flex items-center justify-between p-5 md:px-32 px-5 text-white py-48"
@@ -133,7 +144,7 @@ const Beranda = () => {
                 style={{
                     height: "450px",
                     backgroundImage: `url('src/assets/img/bg-indo.png')`,
-                    backgroundSize: "100% 450px",
+                    backgroundSize: "100%",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                 }}
@@ -144,16 +155,22 @@ const Beranda = () => {
                 {/* Konten utama dengan posisi relatif dan z-index lebih tinggi */}
                 <div id="tentang" className="relative z-10 w-full">
                     <div className="p-16">
-                        <h1 className="font-bold text-3xl text-blue-900 p-6 text-center drop-shadow-lg">
-                            Tentang Situs <span className="text-amber-400">Transfer ke Daerah</span>
-                        </h1>
-                        <hr className="border-t-2 border-gray-300 w-1/2 mx-auto" />
-                        <div className="flex items-center justify-center mb-10 space-x-8 mt-5">
-                            <FaChartSimple className="text-blue-700 text-9xl drop-shadow-md" />
-                            <p className="text-blue-900 text-justify text-lg drop-shadow-sm">
-                                Situs ini menyediakan informasi mengenai alokasi dan realisasi dana transfer ke daerah di wilayah Sulawesi Tengah yang meliputi Kota Palu, Kabupaten Sigi, Kabupaten Donggala, Kabupaten Parigi Moutong, dan Provinsi Sulawesi Tengah.
-                            </p>
-                            <FaChartPie className="text-blue-700 text-9xl drop-shadow-md" />
+                        <div className="flex items-start bg-gray-100 p-10 rounded-xl space-x-8">
+                            {/* Kiri: Judul dan garis */}
+                            <div className="w-1/3">
+                                <p className="text-xl text-blue-500 font-bold mb-2 bg-blue-100 w-32">Yuk Tahu!</p>
+                                <h1 className="text-4xl font-bold text-blue-900 leading-tight">
+                                    Tentang Situs <span className="text-amber-400">Transfer ke Daerah</span>
+                                </h1>
+                                <div className="mt-2 h-1 w-16 bg-blue-400 rounded-full" />
+                            </div>
+
+                            {/* Kanan: Paragraf */}
+                            <div className="w-2/3">
+                                <p className="text-gray-700 text-base text-justify mt-16">
+                                    Situs ini menyediakan informasi mengenai alokasi dan realisasi dana transfer ke daerah di wilayah Sulawesi Tengah yang meliputi Kota Palu, Kabupaten Sigi, Kabupaten Donggala, Kabupaten Parigi Moutong, dan Provinsi Sulawesi Tengah.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -177,47 +194,52 @@ const Beranda = () => {
             </div>
 
             <div className="mb-8">
-
-            {/* <div className="items-center bg-sky-900 opacity-30" /> */}
-
-
-                    <h1 className="font-bold text-3xl text-amber-400 p-6 text-center drop-shadow-lg">
-                        Pencadangan Alokasi TKD <span className="text-blue-900">Lingkup KPPN Palu</span>
-                    </h1>
+                <h1 className="font-bold text-3xl text-amber-400 p-6 text-center drop-shadow-lg">
+                    Pencadangan Alokasi TKD <span className="text-blue-900">Lingkup KPPN Palu</span>
+                </h1>
                 <p className="text-center text-lg text-gray-700">
                     Data Tahun: <span className="font-bold">{tahun}</span>
                 </p>
-                <BarChart
-                    width={1000}
-                    height={400}
-                    data={data}
-                    margin={{ top: 20, right: 30, left: 100, bottom: 5 }}
-                    className="items-center justify-center ml-20"
-                >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="daerah" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Bar dataKey="dbh" fill="#f97316" name="DBH" />
-                    <Bar dataKey="dau" fill="#00A808" name="DAU" />
-                    <Bar dataKey="dakFisik" fill="#3b82f6" name="DAK Fisik" />
-                    <Bar dataKey="dakNonfisik" fill="#7F0088" name="DAK Nonfisik" />
-                    <Bar dataKey="danaDesa" fill="#eab308" name="Dana Desa" />
-                    <Bar dataKey="infis" fill="#ec4899" name="INFIS" />
-                    <Bar dataKey="total" fill="#1d4ed8" name="Total Alokasi" />
-                </BarChart>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 py-4">
+                    {data.map((daerahData, idx) => (
+                        <div key={idx} className="bg-white rounded-xl shadow-md p-4">
+                            <h2 className="text-lg font-bold text-center mb-2 text-blue-800">{daerahData.daerah}</h2>
+                            <ResponsiveContainer width="100%" height={250}>
+                                <BarChart data={[daerahData]}>
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <XAxis dataKey="daerah" hide />
+                                    <YAxis />
+                                    <Tooltip />
+                                    <Legend />
+                                    <Bar dataKey="dbh" fill="#f97316" name="DBH" />
+                                    <Bar dataKey="dau" fill="#00A808" name="DAU" />
+                                    <Bar dataKey="dakFisik" fill="#3b82f6" name="DAK Fisik" />
+                                    <Bar dataKey="dakNonfisik" fill="#7F0088" name="DAK Nonfisik" />
+                                    <Bar dataKey="danaDesa" fill="#eab308" name="Dana Desa" />
+                                    <Bar dataKey="infis" fill="#ec4899" name="INFIS" />
+                                    <Bar dataKey="total" fill="#1d4ed8" name="Total Alokasi" />
+                                </BarChart>
+                            </ResponsiveContainer>
+                        </div>
+                    ))}
+                </div>
 
             </div>
 
             {/* Daftar Pemerintah Daerah */}
-            <div className="pt-10 bg-white">
-                <h1 className="font-bold text-4xl text-center text-blue-800 mb-5">
-                    Daftar Pemerintah Daerah
-                </h1>
-                <p className="text-center text-sm">
-                    Silahkan pilih untuk mengakses informasi tiap pemerintah daerah
-                </p>
+            <div
+                className="pt-10 bg-cover bg-center"
+                style={{ backgroundImage: `url('src/assets/img/bg-batikbiru.png')` }}
+
+            >
+                <div>
+                    <h1 className="font-bold text-4xl text-center text-blue-800 mb-5">
+                        Daftar Pemerintah Daerah
+                    </h1>
+                    <p className="text-center text-sm">
+                        Silahkan pilih untuk mengakses informasi tiap pemerintah daerah
+                    </p>
+                </div>
 
                 {/* style daftar pemda */}
                 <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4 p-6">

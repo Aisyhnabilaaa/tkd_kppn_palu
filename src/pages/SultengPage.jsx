@@ -84,7 +84,7 @@ const SultengPage = () => {
       <div className="container mx-auto px-4 py-8">
 
         <div className="flex flex-col md:flex-row items-center gap-6 mx-10 p-10 rounded-3xl">
-          <img src="src/assets/img/sultenglogo.png" alt="donggalalogo" className="w-80 h-auto" />
+          <img src="src/assets/img/sultenglogo.png" alt="sulawesi tengah logo" className="w-80 h-auto" />
           <div className="w-5 h-60 ml-5 rounded-full h-32 bg-blue-500"></div>
 
           <div className="text-center md:text-left p-5 rounded-2xl">
@@ -131,27 +131,14 @@ const SultengPage = () => {
         </div>
       </div>
 
-
-      {/* <div className="p-8 bg-yellow-400 mt-20 drop-shadow-md">
-        <h1 className="font-serif font-bold text-center text-xl text-blue-500">Yuk Tahu!</h1>
-        <h1 className="relative font-bold text-4xl text-blue-800 p-2 text-center">
-          Transfer ke Daerah Kota Palu
-        </h1>
-        <hr className="border-t-2 border-blue-300 w-1/2 mx-auto" />
-
-        <div className="flex items-center justify-center space-x-8 mt-5 mx-8">
-          <p className=" text-gray-800 text-justify">
-            Transfer ke daerah merupakan salah satu mekanisme pendanaan yang diberikan oleh pemerintah pusat kepada pemerintah daerah guna mendukung pelaksanaan pembangunan serta penyelenggaraan pemerintahan daerah. Di Sulawesi Tengah, transfer ke daerah mencakup berbagai jenis pendanaan seperti Dana Alokasi Umum (DAU), Dana Alokasi Khusus (DAK), Dana Bagi Hasil (DBH), serta Dana Insentif Fiskal. Dana ini bertujuan untuk meningkatkan kesejahteraan masyarakat, mempercepat pembangunan infrastruktur, serta mendukung pelayanan publik di tingkat provinsi dan kabupaten/kota.
-          </p>
-        </div>
-      </div> */}
-
       <div className="p-6 space-y-10 bg-gray-50 min-h-screen pt-14 mt-16">
         <div className="flex items-start bg-gray-100 p-10 rounded-xl space-x-8">
           {/* Kiri: Judul dan garis */}
           <div className="w-1/3">
-            <p className="text-xl text-blue-500 font-bold mb-2 bg-blue-100 w-32">Yuk Tahu!</p>
-            <h1 className="text-4xl font-bold text-blue-900 leading-tight">Transfer ke<br />Daerah Donggala</h1>
+            <div className="text-xl text-blue-500 font-bold mb-2 bg-amber-200 w-32">
+              <p className="ml-3">Yuk Tahu!</p>
+            </div>
+            <h1 className="text-4xl font-bold text-blue-900 leading-tight">Transfer ke Daerah </h1>
             <div className="mt-2 h-1 w-16 bg-blue-400 rounded-full" />
           </div>
 
@@ -162,8 +149,9 @@ const SultengPage = () => {
             </p>
           </div>
         </div>
-        <h1 className="text-3xl font-bold text-center text-indigo-700">
-          Visualisasi Anggaran TKD - SULAWESI TENGAH
+        <h1 className="text-3xl font-bold text-center text-blue-900">
+          Visualisasi Anggaran TKD <br />
+          <span className="text-amber-400 mt-10"> Sulawesi Tengah </span>
         </h1>
 
         {/* Dropdown Tahun */}

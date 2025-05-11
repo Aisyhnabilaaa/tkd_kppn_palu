@@ -164,8 +164,10 @@ const SultengPage = () => {
         <div className="flex items-start bg-gray-100 p-10 rounded-xl space-x-8">
           {/* Kiri: Judul dan garis */}
           <div className="w-1/3">
-            <p className="text-xl text-blue-500 font-bold mb-2 bg-blue-100 w-32">Yuk Tahu!</p>
-            <h1 className="text-4xl font-bold text-blue-900 leading-tight">Transfer ke<br />Daerah Donggala</h1>
+            <div className="text-xl text-amber-200 font-bold mb-2 bg-blue-500 w-32">
+              <p className="ml-3">Yuk Tahu!</p>
+            </div>
+            <h1 className="text-4xl font-bold text-blue-900 leading-tight">Transfer ke Daerah</h1>
             <div className="mt-2 h-1 w-16 bg-blue-400 rounded-full" />
           </div>
 
@@ -178,8 +180,9 @@ const SultengPage = () => {
         </div>
 
         <div className=" ">
-          <h1 className="text-3xl font-bold text-center text-amber-500">
-            Visualisasi Anggaran TKD - Donggala
+          <h1 className="text-3xl font-bold text-center text-blue-900">
+            Visualisasi Anggaran TKD <br />
+            <span className="text-amber-400">Kabupaten Donggala</span>
           </h1>
 
           {/* Dropdown Tahun */}
@@ -198,13 +201,13 @@ const SultengPage = () => {
           </div>
 
           <div className="bg-white rounded-2xl shadow p-4 mb-5">
-          <h2 className="text-xl font-semibold mb-2">Realisasi Tahun {tahun}</h2>
+            <h2 className="text-xl font-semibold mb-2">Realisasi Tahun {tahun}</h2>
             <p>Grafik berikut menampilkan pagu, realisasi, serta sisa pagu dari masing masing jenis transfer ke daerah pada Pemda Kabupaten Donggal</p>
             <RealisasiChart data={realisasiData} />
           </div>
 
           <div className="bg-white rounded-2xl shadow p-4">
-          <h2 className="text-xl font-semibold mb-2">Efisiensi Anggaran Tahun {tahun}</h2>
+            <h2 className="text-xl font-semibold mb-2">Efisiensi Anggaran Tahun {tahun}</h2>
             <p>Grafik berikut menampilkan seberapa efisien penyerapan Transfer ke Daerah lingkup pemda Kabupaten Donggala</p>
             <EfisiensiChart data={efisiensiData} />
           </div>
