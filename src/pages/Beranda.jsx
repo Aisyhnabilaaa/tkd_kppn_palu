@@ -3,10 +3,11 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 import { ResponsiveContainer } from 'recharts';
 
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Beranda = () => {
@@ -61,6 +62,12 @@ const Beranda = () => {
     const [tahun, setTahun] = useState(String(currentYear))
 
     useEffect(() => {
+
+        AOS.init({
+            duration: 500,
+            easting: "ease-in-out",
+        });
+
         fetchChart();
     }, [tahun]);
 
@@ -140,6 +147,7 @@ const Beranda = () => {
             </div>
 
             {/* Tentang Section */}
+
             <div className="relative flex flex-row justify-between items-center p-5 md:px-32 px-5 text-white"
                 style={{
                     height: "450px",
@@ -155,21 +163,23 @@ const Beranda = () => {
                 {/* Konten utama dengan posisi relatif dan z-index lebih tinggi */}
                 <div id="tentang" className="relative z-10 w-full">
                     <div className="p-16">
-                        <div className="flex items-start bg-gray-100 p-10 rounded-xl space-x-8">
-                            {/* Kiri: Judul dan garis */}
-                            <div className="w-1/3">
-                                <p className="text-xl text-blue-500 font-bold mb-2 bg-blue-100 w-32">Yuk Tahu!</p>
-                                <h1 className="text-4xl font-bold text-blue-900 leading-tight">
-                                    Tentang Situs <span className="text-amber-400">Transfer ke Daerah</span>
-                                </h1>
-                                <div className="mt-2 h-1 w-16 bg-blue-400 rounded-full" />
-                            </div>
+                        <div data-aos="fade-up" data-aos-duration="1000">
+                            <div className="flex items-start bg-gray-100 p-10 rounded-xl space-x-8">
+                                {/* Kiri: Judul dan garis */}
+                                <div className="w-1/3">
+                                    <p className="text-xl text-blue-500 font-bold mb-2 bg-blue-100 w-32">Yuk Tahu!</p>
+                                    <h1 className="text-4xl font-bold text-blue-900 leading-tight">
+                                        Tentang Situs <span className="text-amber-400">Transfer ke Daerah</span>
+                                    </h1>
+                                    <div className="mt-2 h-1 w-16 bg-blue-400 rounded-full" />
+                                </div>
 
-                            {/* Kanan: Paragraf */}
-                            <div className="w-2/3">
-                                <p className="text-gray-700 text-base text-justify mt-16">
-                                    Situs ini menyediakan informasi mengenai alokasi dan realisasi dana transfer ke daerah di wilayah Sulawesi Tengah yang meliputi Kota Palu, Kabupaten Sigi, Kabupaten Donggala, Kabupaten Parigi Moutong, dan Provinsi Sulawesi Tengah.
-                                </p>
+                                {/* Kanan: Paragraf */}
+                                <div className="w-2/3">
+                                    <p className="text-gray-700 text-base text-justify mt-16">
+                                        Situs ini menyediakan informasi mengenai alokasi dan realisasi dana transfer ke daerah di wilayah Sulawesi Tengah yang meliputi Kota Palu, Kabupaten Sigi, Kabupaten Donggala, Kabupaten Parigi Moutong, dan Provinsi Sulawesi Tengah.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -177,7 +187,6 @@ const Beranda = () => {
             </div>
 
             {/* Tampilkan Chart */}
-
             {/* Dropdown Tahun */}
             <div className="flex justify-end mb-4">
                 <select

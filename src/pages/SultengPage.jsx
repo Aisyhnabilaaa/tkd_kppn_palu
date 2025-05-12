@@ -106,8 +106,8 @@ const SultengPage = () => {
             {/* Geografis dan Topografi */}
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
               <h3 className="text-xl font-semibold mb-2 text-blue-900">Geografis & Topografi</h3>
-              <p className="text-sm text-gray-700">
-                Sulawesi Tengah memiliki bentang alam yang bervariasi, mulai dari pegunungan, dataran rendah, hingga garis pantai yang panjang.
+              <p className="text-sm text-gray-700"> Secara geografis, Sulawesi Tengah terletak di tengah Pulau Sulawesi, membentang antara 0°14' LU - 3°17' LS dan 119°21' BT - 124°22' BT. Luas wilayahnya sekitar 61.841,29 km<sup>2</sup>.
+                Dalam sudut pandang topografis, Sulawesi Tengah memiliki bentang alam yang bervariasi, mulai dari pegunungan, dataran rendah, hingga garis pantai yang panjang.
               </p>
             </div>
 
@@ -115,7 +115,7 @@ const SultengPage = () => {
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
               <h3 className="text-xl font-semibold mb-2 text-amber-400">Ekonomi & UMKM</h3>
               <p className="text-sm text-gray-700">
-                Masyarakat Sulawesi Tengah banyak bergantung pada pertanian, perikanan, pertambangan, serta UMKM dan perdagangan lokal.
+                Perekonomian Sulawesi Tengah didukung oleh sektor pertanian, pertambangan nikel, industri pengolahan, perdagangan, dan jasa. Mayoritas penduduk bekerja di sektor pertanian, disusul perdagangan dan industri. UMKM penopang utama ekonomi daerah dalam bidang olahan hasil pertanian, kerajinan, kuliner, dan jasa.
               </p>
             </div>
 
@@ -123,8 +123,7 @@ const SultengPage = () => {
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
               <h3 className="text-xl font-semibold mb-2 text-blue-900">Sosial & Budaya</h3>
               <p className="text-sm text-gray-700">
-                Masyarakat Sulawesi Tengah terdiri dari berbagai suku seperti Kaili, Bugis, Pamona, dan Balantak.
-                Berbagai upacara adat dan tarian tradisional masih dilestarikan, termasuk Mombowa dan Dero.
+                Sulawesi Tengah memiliki keberagaman suku, budaya, dan bahasa daerah yang kaya, di antaranya suku Kaili, Bugis, Balantak, dan Mori. Tradisi lokal, seperti upacara adat dan seni tari, masih dijaga dan dilestarikan. Masyarakatnya menjunjung tinggi nilai kekeluargaan, gotong royong, serta hidup berdampingan secara harmonis dalam keragaman agama dan budaya.
               </p>
             </div>
           </div>

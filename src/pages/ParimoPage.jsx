@@ -108,94 +108,30 @@ const SultengPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-12">
             {/* Geografis dan Topografi */}
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
-              {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
-                <img src="src/assets/img/geo_palu.jpeg" alt="Geografis" className="object-cover w-full h-full" />
-              </div> */}
               <h3 className="text-xl font-semibold mb-2 text-amber-600">Geografis & Topografi</h3>
               <p className="text-sm text-gray-700">
-                Parigi Moutong memiliki luas sekitar 6.231 km2 dengan bentangan wilayah dari pesisir Teluk Tomini hingga pegunungan di selatan. Kondisi geografisnya beragam sumber daya alam dan pemandangan indah (pantai, sungai, hutan tropis).
+              Kabupaten Parigi Moutong terletak di pesisir timur Sulawesi Tengah dengan luas sekitar 6.231,85 km<sup>2</sup> dan garis pantai sepanjang 472 km. Wilayahnya membentang dari dataran rendah hingga pegunungan setinggi 2.900 meter di atas permukaan laut, mendukung sektor pertanian, perikanan, dan pariwisata alam.
               </p>
             </div>
 
             {/* Mata Pencaharian dan Ekonomi */}
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
-              {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
-                <img src="src/assets/img/umkm_palu.jpg" alt="Ekonomi" className="object-cover w-full h-full" />
-              </div> */}
               <h3 className="text-xl font-semibold mb-2 text-blue-700">Ekonomi & UMKM</h3>
               <p className="text-sm text-gray-700">
-                Ekonomi Parigi Moutong bertumpu pada pertanian dan perkebunan (kelapa, kakao, cengkeh, jagung) serta perikanan laut di Teluk Tomini, dengan kontribusi dari peternakan, kehutanan, UMKM, dan perdagangan.
+              Perekonomian Parigi Moutong ditopang oleh sektor pertanian dengan komoditas utama. Potensi perikanan dan kelautannya tinggi berkat garis pantai yang panjang. Sektor pariwisata, terutama wisata bahari dan pegunungan, mulai berkembang. UMKM di bidang pengolahan hasil pertanian, perikanan, dan kerajinan turut mendukung ekonomi daerah.
               </p>
             </div>
 
             {/* Sosial Budaya */}
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
-              {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
-                <img src="/images/palu3.jpg" alt="Budaya" className="object-cover w-full h-full" />
-              </div> */}
               <h3 className="text-xl font-semibold mb-2 text-amber-600">Sosial & Budaya</h3>
               <p className="text-sm text-gray-700">
-                Parigi Moutong memiliki 23 kecamatan dari Moutong hingga Sausu, dihuni sekitar 450 ribu jiwa (2023) dengan beragam etnis (Kaili, Tolitoli, Tomini, Bugis) yang hidup harmonis, menggunakan Bahasa Indonesia namun melestarikan bahasa daerah (Kaili, Tomini).
+              Kabupaten Parigi Moutong memiliki keragaman sosial budaya yang kaya. Tradisi dan kesenian lokal seperti tari Yele Fulang dan musik bambu masih lestari. Pelestarian budaya dilakukan melalui upacara adat dan festival budaya, mencerminkan harmoni sosial dan kekuatan budaya lokal di tengah keberagaman.
               </p>
             </div>
           </div>
         </div>
         </div>
-
-
-
-        {/* <div className="w-full bg-blue-900 py-10">
-          <h2 className="text-white text-5xl text-center mb-10">Ada apa di Parigi Moutong</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-12">
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Geografis dan Topografi</h2>
-              <p>Kabupaten Parigi Moutong memiliki luas wilayah sekitar 6.231 km<sup>2</sup>, membentang sepanjang garis pantai
-                Teluk Tomini. Wilayah ini mencakup kombinasi antara dataran rendah pesisir, perbukitan, hingga
-                pegunungan di bagian selatan. Kondisi geografis ini menjadikan kabupaten ini kaya akan sumber daya
-                alam dan pemandangan alam yang indah, termasuk pantai, sungai, dan kawasan hutan tropis.</p>
-            </div>
-
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Mata Pencaharian dan Ekonomi</h2>
-              <p>Perekonomian Kabupaten Parigi Moutong didominasi oleh sektor pertanian dan perkebunan. Komoditas
-                unggulan mencakup kelapa, kakao, cengkeh, dan jagung. Selain itu, sektor perikanan laut menjadi
-                penggerak ekonomi utama di wilayah pesisir, terutama di Teluk Tomini yang kaya akan hasil laut.
-                Aktivitas peternakan, kehutanan, serta sektor UMKM dan perdagangan juga tumbuh secara bertahap.</p>
-            </div>
-
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Sosial dan Budaya</h2>
-              <p>Parigi Moutong terdiri dari 23 kecamatan, yang tersebar dari wilayah barat (Moutong) hingga
-                wilayah timur (Sausu). Jumlah penduduknya mencapai sekitar 450.000 jiwa (data 2023), dengan komposisi
-                etnis yang cukup beragam. Suku Kaili, Tolitoli, Tomini, dan Bugis merupakan sebagian besar dari
-                populasi lokal, dan mereka hidup berdampingan secara harmonis. Bahasa Indonesia digunakan sebagai
-                bahasa pengantar, namun bahasa daerah seperti Kaili dan Tomini masih dipertahankan di berbagai komunitas.</p>
-            </div>
-
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Pariwisata</h2>
-              <ul className="list-disc pl-5">
-                <li><strong>Pantai Mosing</strong> – Pantai dengan pasir putih dan air laut yang jernih</li>
-                <li><strong>Danau Parigi</strong> – Danau air tawar yang terletak tidak jauh dari ibu kota kabupaten</li>
-                <li><strong>Air Terjun Bidadari</strong> – Air terjun dengan pemandangan alam yang asri</li>
-                <li><strong>Bukit Mandiangin</strong> – Menawarkan pemandangan Teluk Tomini yang indah</li>
-                <li><strong>Wisata Bahari di sepanjang pesisir Teluk Tomini</strong> – Potensi untuk diving, snorkeling, dan wisata pantai lainnya</li>
-              </ul>
-            </div>
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Infrastruktur</h2>
-              <p>
-                Kabupaten Parigi Moutong terus mengalami perkembangan. Jalan penghubung antar kecamatan dan akses ke
-                wilayah pedalaman telah diperbaiki secara bertahap. Beberapa proyek nasional juga telah menjangkau
-                wilayah ini, termasuk pembangunan pelabuhan dan peningkatan layanan transportasi laut.
-              </p>
-            </div>
-            <div className="shadow p-6 bg-white">
-              <h2 className="text-xl font-semibold mb-2">Data Statistik</h2>
-              <p>Luas: 6.231,85 km<sup>2</sup><br /> Penduduk (2023): ± 457.031 jiwa<br /> Kecamatan: 23 <br />Desa/Kelurahan: 283</p>
-            </div>
-          </div>
-        </div> */}
 
         <div className="p-6 space-y-10 bg-gray-50 min-h-screen pt-14 mt-16">
           <div className="flex items-start bg-gray-100 p-10 rounded-xl space-x-8">

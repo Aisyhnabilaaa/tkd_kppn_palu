@@ -112,7 +112,7 @@ const SigiPage = () => {
               </div> */}
               <h3 className="text-xl font-semibold mb-2 text-blue-700">Geografis & Topografi</h3>
               <p className="text-sm text-gray-700">
-                Donggala, kabupaten di Sulawesi Tengah, termasuk yang terluas, terpadat, dan paling banyak penduduknya keempat di provinsi sulawesi tengah. Letaknya mengelilingi Kota Palu dan berbatasan dengan beberapa kabupaten lain di sekitarnya.
+                Kabupaten Sigi, yang terletak di Provinsi Sulawesi Tengah, memiliki luas sekitar 5.196,02 km<sup>2</sup>. Topografi Kabupaten Sigi bervariasi dengan didominasi oleh pegunungan dan hutan tropis, dengan beberapa dataran rendah. Kabupaten ini juga memiliki Taman Nasional Lore Lindu yang kaya akan keanekaragaman hayati, serta aliran sungai besar seperti Sungai Palu.
               </p>
             </div>
 
@@ -123,7 +123,7 @@ const SigiPage = () => {
               </div> */}
               <h3 className="text-xl font-semibold mb-2 text-blue-700">Ekonomi & UMKM</h3>
               <p className="text-sm text-gray-700">
-                Ekonomi Donggala terutama ditopang oleh pertanian (padi, jagung, kakao, kelapa, cengkeh), perikanan (hasil laut), perkebunan, kehutanan, dan UMKM.
+              Ekonomi Kabupaten Sigi didominasi oleh sektor pertanian, peternakan, serta perkebunan dan kehutanan. Sebagian besar penduduk bekerja di sektor ini. Sektor perdagangan dan konstruksi turut memberi kontribusi, sementara pariwisata mulai berkembang dengan memanfaatkan potensi alam dan budaya.
               </p>
             </div>
 
@@ -134,89 +134,13 @@ const SigiPage = () => {
               </div> */}
               <h3 className="text-xl font-semibold mb-2 text-blue-700">Sosial & Budaya</h3>
               <p className="text-sm text-gray-700">
-                Donggala dulunya adalah pusat pemerintahan kolonial dan pelabuhan dagang, yang jejaknya masih terlihat pada bangunan tua dan pelabuhan lama. Kabupaten ini juga kaya akan tradisi adat, seperti upacara Kaili, musik, dan tarian tradisional.
+              Kabupaten Sigi memiliki kekayaan budaya yang kuat, didominasi oleh suku Kaili dan sub-etnisnya yang menjunjung tinggi nilai-nilai adat dan kearifan lokal. Tradisi seperti pemimpin adat (Tetu’a Ngata), rumah adat (Bantaya), serta seni budaya seperti batik Valiri, musik Lalove, dan tarian Moraego menjadi identitas masyarakat. Pemerintah dan dewan adat aktif menjaga kelestarian budaya serta harmoni sosial di tengah perkembangan zaman.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-
-
-      {/* <div className="w-full bg-blue-900 py-10">
-            <h2 className="text-white text-5xl text-center mb-10">Ada apa di Sigi</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-12">
-              <div className="shadow p-6 bg-white">
-                <h2 className="text-xl font-semibold mb-2">Geografis dan Topografi</h2>
-                <p>Wilayah Sigi memiliki topografi yang sangat bervariasi, mulai dari dataran rendah hingga pegunungan
-                  yang menjulang tinggi. Hal ini menjadikan Kabupaten Sigi memiliki potensi besar di sektor pertanian,
-                  perkebunan, dan peternakan. Tanah yang subur membuat komoditas seperti padi, kakao, kopi, dan jagung
-                  tumbuh dengan baik. Selain itu, Sigi juga memiliki potensi kehutanan dan hasil hutan non-kayu yang
-                  mendukung mata pencaharian sebagian masyarakatnya.</p>
-              </div>
-
-              <div className="shadow p-6 bg-white">
-                <h2 className="text-xl font-semibold mb-2">Potensi Komoditas</h2>
-                <p>sektor pertanian merupakan tulang punggung utama mata pencaharian masyarakat Sigi. Komoditas
-                  pertanian utama meliputi padi, jagung, kakao, dan kopi, yang tumbuh subur berkat tanah yang kaya
-                  unsur hara dan sistem irigasi alami dari pegunungan. Selain pertanian, masyarakat juga menggantungkan hidup dari perkebunan, peternakan, serta perikanan air tawar. Industri kecil dan menengah (UMKM) terus tumbuh, terutama di bidang olahan hasil tani dan kerajinan tangan.</p>
-              </div>
-
-              <div className="shadow p-6 bg-white">
-                <h2 className="text-xl font-semibold mb-2">Sosial dan Budaya</h2>
-                <p>Kabupaten Sigi memiliki jumlah penduduk sekitar 260.000 jiwa (data 2023). Masyarakatnya terdiri
-                  dari berbagai suku dan etnis, dengan suku Kaili, Kulavi, dan Topoiyo sebagai penduduk asli. Bahasa
-                  daerah seperti Kaili Ledo dan Kulavi masih digunakan di beberapa wilayah, di samping Bahasa Indonesia
-                  sebagai bahasa resmi. Mayoritas penduduk menganut agama Islam, namun terdapat juga pemeluk agama
-                  Kristen dan Hindu.</p>
-              </div>
-
-              <div className="shadow p-6 bg-white">
-                <h2 className="text-xl font-semibold mb-2">Pariwisata</h2>
-                <ul className="list-disc pl-5">
-                  <li><strong>Taman Nasional Lore Lindu</strong> – kawasan pelestarian alam dengan berbagai flora dan fauna endemik Sulawesi, seperti Anggrek Hitam, Kuskus, Babi Rusa, dan Anoa. Di dalam taman nasional ini juga terdapat Danau Lindu.</li>
-                  <li><strong>Desa Pakuli</strong> – Dikenal sebagai tempat penangkaran burung Maleo. Terdapat juga kebun budidaya obat tradisional.</li>
-                  <li><strong>Pemandian Air Panas Bora</strong> – Pemandian air panas alami yang menjadi daya tarik wisatawan.</li>
-                  <li><strong>Paralayang Wayu</strong> – Lokasi untuk olahraga paralayang dengan pemandangan yang indah.</li>
-                  <li><strong>Air Terjun Wera dan Air Terjun Mantikole</strong> – air terjun yang menawarkan keindahan alam.</li>
-                  <li><strong>Bukit Sibedi dan Bukit Matantimali</strong> – Destinasi dengan pemandangan perbukitan yang menarik.</li>
-                  <li>Beberapa desa wisata rintisan seperti <strong>Kampung Merah Putih, Adat Toro, Air Terjun Panas Lawua, Air Terjun Saulopa, Anggrek Karunia, Bukit Satu Pohon Sibedi, Danau Lindu Tomado, Kain Kulit Kayu Mataue, </strong>dan <strong>Kaluku Tinggu</strong></li>
-                </ul>
-              </div>
-              <div className="shadow p-6 bg-white">
-                <h2 className="text-xl font-semibold mb-2">Infrastruktur</h2>
-                <p>
-                  Kabupaten Sigi telah memiliki sejumlah sekolah, madrasah, puskesmas, dan rumah sakit, meskipun
-                  distribusinya belum merata di seluruh kecamatan. Beberapa daerah pedalaman masih menghadapi tantangan
-                  dalam akses pelayanan publik akibat keterbatasan infrastruktur jalan.
-                </p>
-              </div>
-              <div className="shadow p-6 bg-white">
-                <h2 className="text-xl font-semibold mb-2">Data Statistik</h2>
-                <p>Luas: 5.196,02 km <sup>2</sup><br /> Penduduk (2023 est.): ± 266.656 jiwa <br /> Kecamatan: 16 <br /> Desa: 177 </p>
-              </div>
-            </div>
-          </div> */}
-
-
-      {/* <div className='relative flex flex-row justify-between p-8 md:px-16 px-5 text-white py-20 rounded-lg'>
-        <div className='absolute inset-0 bg-sky-300 rounded-lg'></div>
-
-        <div className="relative flex flex-col w-1/2">
-          <h1 className="lg:text-5xl text-2xl text-orange-50">SULAWESI TENGAH</h1>
-          <p className="mt-4 text-lg font-bold">Sulawesi Tengah: Keindahan Alam dan Keberagaman Budaya dalam Satu Kesatuan</p>
-          <p className="mt-4 text-lg text-justify">
-            Sulawesi Tengah adalah provinsi terluas di Pulau Sulawesi dengan ibu kota di Palu. Memiliki lanskap yang beragam, dari pegunungan, lembah subur, hingga pantai eksotis. <br />
-            Secara ekonomi, daerah ini ditopang oleh pertanian, kehutanan, perikanan, pertambangan, dan perkebunan. Kekayaan sumber daya alamnya menjadikannya salah satu pusat ekonomi di wilayah tengah Indonesia. <br />
-            Keberagaman budaya juga menjadi ciri khas Sulawesi Tengah, dengan suku asli seperti Kaili, Pamona, dan Banggai, serta pendatang seperti Bugis, Jawa, dan Tionghoa. Semboyan Nosarara Nosabatutu mencerminkan semangat persatuan dalam keberagaman. <br />
-            Dengan keindahan alam dan kekayaan budayanya, Sulawesi Tengah terus berkembang sebagai daerah potensial dalam berbagai sektor.
-          </p>
-        </div>
-
-        <div className="relative flex justify-end">
-          <img src="src/assets/img/sulteng-removebg.png" alt="sulawesi tengah" className="w-96 mt-4" />
-        </div>
-      </div> */}
 
       {/* GRAFIK TKD PALU */}
       <div className="p-6 space-y-10 bg-gray-50 min-h-screen pt-14 mt-16">

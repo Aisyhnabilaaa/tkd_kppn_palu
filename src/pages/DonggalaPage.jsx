@@ -131,7 +131,7 @@ const SultengPage = () => {
               </div> */}
               <h3 className="text-xl font-semibold mb-2 text-blue-700">Geografis & Topografi</h3>
               <p className="text-sm text-gray-700">
-                Donggala, kabupaten di Sulawesi Tengah, termasuk yang terluas, terpadat, dan paling banyak penduduknya keempat di provinsi sulawesi tengah. Letaknya mengelilingi Kota Palu dan berbatasan dengan beberapa kabupaten lain di sekitarnya.
+              Kabupaten Donggala memiliki luas sekitar 5.275 km<sup>2</sup> dengan kondisi geografis yang bervariasi, mulai dari pesisir pantai hingga wilayah pegunungan. Topografinya bervariasi, terdiri dari daerah pantai, dataran rendah, perbukitan, hingga pegunungan. Keanekaragaman kondisi geografis ini menjadikan Donggala memiliki potensi sumber daya alam yang kaya, baik di sektor kelautan, pertanian, maupun kehutanan.
               </p>
             </div>
 
@@ -142,7 +142,7 @@ const SultengPage = () => {
               </div> */}
               <h3 className="text-xl font-semibold mb-2 text-amber-500">Ekonomi & UMKM</h3>
               <p className="text-sm text-gray-700">
-                Ekonomi Donggala terutama ditopang oleh pertanian (padi, jagung, kakao, kelapa, cengkeh), perikanan (hasil laut), perkebunan, kehutanan, dan UMKM.
+              Ekonomi Donggala ditopang oleh sektor perikanan dan kelautan yang kaya, menjadikan mayoritas penduduk berprofesi sebagai nelayan dan pembudidaya hasil laut. Pariwisata bahari dan alam memiliki potensi besar, didukung pantai indah dan bawah laut menarik. UMKM, terutama pengolahan hasil laut dan kerajinan, turut berkontribusi pada ekonomi lokal.
               </p>
             </div>
 
@@ -153,7 +153,7 @@ const SultengPage = () => {
               </div> */}
               <h3 className="text-xl font-semibold mb-2 text-blue-700">Sosial & Budaya</h3>
               <p className="text-sm text-gray-700">
-                Donggala dulunya adalah pusat pemerintahan kolonial dan pelabuhan dagang, yang jejaknya masih terlihat pada bangunan tua dan pelabuhan lama. Kabupaten ini juga kaya akan tradisi adat, seperti upacara Kaili, musik, dan tarian tradisional.
+              Kabupaten Donggala memiliki kehidupan sosial budaya yang beragam, didominasi oleh suku Kaili dan etnis lainnya yang hidup berdampingan. Tradisi dan adat istiadat masih dijaga, terutama dalam upacara adat dan kegiatan masyarakat. Budaya maritim juga kuat mewarnai kehidupan sosial, khususnya di wilayah pesisir.
               </p>
             </div>
           </div>

@@ -113,7 +113,7 @@ const SultengPage = () => {
               <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
                 <h3 className="text-xl font-semibold mb-2 text-amber-500">Geografis & Topografi</h3>
                 <p className="text-sm text-gray-700">
-                  Kota Palu terletak di teluk yang diapit oleh pegunungan dan memiliki topografi yang unik berbentuk huruf U.
+                Kota Palu, ibu kota Sulawesi Tengah, memiliki luas sekitar 395,06 km<sup>2</sup>. Terletak di Teluk Palu dan dibelah Sungai Palu, dikelilingi pegunungan dan lembah dengan topografi bervariasi dari dataran rendah hingga perbukitan, dengan ketinggian antara 0 hingga 700 meter di atas permukaan laut. Posisi strategisnya menjadikan Palu sebagai pusat pemerintahan dan ekonomi regional.
                 </p>
               </div>
 
@@ -121,7 +121,7 @@ const SultengPage = () => {
               <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
                 <h3 className="text-xl font-semibold mb-2 text-blue-700">Ekonomi & UMKM</h3>
                 <p className="text-sm text-gray-700">
-                  Ekonomi ditopang oleh sektor perdagangan, jasa, pendidikan, serta UMKM seperti kuliner dan kerajinan.
+                Ekonomi Kota Palu didominasi oleh sektor jasa, perdagangan, dan industri pengolahan, dengan kontribusi signifikan dari sektor konstruksi dan pemerintahan. Mayoritas penduduk Kota Palu bekerja di sektor informal, terutama dalam perdagangan dan jasa. UMKM, yang mencakup kuliner, kerajinan, dan perdagangan, memainkan peran penting dan didukung melalui pelatihan serta akses permodalan.
                 </p>
               </div>
 
@@ -129,7 +129,7 @@ const SultengPage = () => {
               <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
                 <h3 className="text-xl font-semibold mb-2 text-amber-500">Sosial & Budaya</h3>
                 <p className="text-sm text-gray-700">
-                  Tradisi Kaili seperti Tari Raego dan makanan khas Kaledo masih dilestarikan oleh masyarakat Palu.
+                Kota Palu kaya akan keberagaman budaya, dengan suku Kaili sebagai suku asli dan suku pendatang seperti Bugis dan Toraja. Masyarakat menjunjung tinggi nilai kekeluargaan, gotong royong, dan toleransi antarumat beragama. Tradisi lokal seperti seni tari, musik lokal, dan upacara adat Kaili masih dilestarikan. menjadikan Kota Palu sebagai tempat yang harmonis dan penuh dengan kekayaan budaya.
                 </p>
               </div>
             </div>

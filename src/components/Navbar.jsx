@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 
 // Komponen Button untuk Login (opsional)
-const Button = ({ title }) => {
-    return (
-        <button className="px-4 py-2 rounded-lg text-black hover:bg-yellow-300 transition-all">
-            {title}
-        </button>
-    );
-};
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
@@ -22,16 +15,16 @@ const Navbar = () => {
     };
 
     // Daftar menu navbar
-    const menuItems = [
-        { name: "Home", to: "/" },
-    ];
+    // const menuItems = [
+    //     { name: "Home", to: "/" },
+    // ];
 
     // Deteksi arah scroll
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            if (currentScrollY > lastScrollY && currentScrollY > 300) {
                 // Scroll ke bawah, sembunyikan navbar
                 setShowNavbar(false);
             } else {
@@ -58,18 +51,12 @@ const Navbar = () => {
 
             {/* Desktop Navbar */}
             <nav className="hidden lg:flex flex-row items-center gap-6 text-sm font-medium">
-                {menuItems.map((item, index) => (
-                    <Link
-                        key={index}
-                        to={item.to}
-                        spy={true}
-                        smooth={true}
-                        duration={500}
-                        className="hover:text-yellow-300 transition-colors cursor-pointer"
-                    >
-                        {item.name}
+                <div className="flex space-x-4">
+                    <Link to="/" className="hover:text-yellow-300 transition-colors cursor-pointer">
+                        Home
                     </Link>
-                ))}
+                </div>
+
 
                 <div className="relative">
                     <button
@@ -105,19 +92,17 @@ const Navbar = () => {
                 lg:hidden flex flex-col absolute bg-gradient-to-b from-blue-900 to-blue-500 text-white 
                 left-0 top-[4rem] z-50 text-lg text-center pt-8 pb-5 gap-6 w-full transition-transform duration-300`}
             >
-                {menuItems.map((item, index) => (
-                    <Link
-                        key={index}
-                        to={item.to}
-                        spy={true}
-                        smooth={true}
-                        duration={500}
-                        className="hover:text-yellow-200"
-                        onClick={() => setMenu(false)}
-                    >
-                        {item.name}
-                    </Link>
-                ))}
+                <Link
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-70}
+                    className="hover:text-yellow-200"
+                    onClick={() => setMenu(false)}
+                >
+                    Home
+                </Link>
 
                 {/* Dropdown Mobile */}
                 <div className="relative">
