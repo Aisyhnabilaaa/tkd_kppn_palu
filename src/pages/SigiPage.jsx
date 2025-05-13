@@ -53,7 +53,7 @@ const SigiPage = () => {
 
   return (
     <div className='hero bg-blue-50'>
-      <div className='relative flex flex-row justify-between itmes-center p-16 md:px-32 px-5 text-white py-44'
+      <div className='relative flex flex-row justify-between itmes-center p-12 md:px-24 px-5 text-white py-36'
         style={{
           backgroundImage: `url('src/assets/img/alamsigi.jpg')`,
           backgroundSize: "cover",

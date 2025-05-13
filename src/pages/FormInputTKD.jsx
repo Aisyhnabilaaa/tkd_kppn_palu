@@ -62,7 +62,7 @@ const FormInputTKD = ({ hideAccessCheck = false }) => {
   }
 
   return (
-    <div className='max-w-xl mx-auto bg-white p-6 rounded-xl shadow-md'>
+    <div className=''>
       {!hasAccess && !hideAccessCheck ? (
         <>
           <h2 className='text-xl font-bold mb-4 text-center'>
@@ -90,78 +90,130 @@ const FormInputTKD = ({ hideAccessCheck = false }) => {
           <h2 className='text-xl font-bold mb-4 text-center'>
             Form Input Data TKD
           </h2>
-          <form onSubmit={handleSubmit} className='space-y-4'>
-            <Input
-              name='jenis_tkd'
-              value={formData.jenis_tkd}
-              onChange={handleChange}
-              placeholder='Jenis TKD'
-            />
-            <Input
-              name='semula'
-              value={formData.semula}
-              onChange={handleChange}
-              placeholder='Semula (Rp)'
-              type='number'
-            />
-            <Input
-              name='menjadi'
-              value={formData.menjadi}
-              onChange={handleChange}
-              placeholder='Menjadi (Rp)'
-              type='number'
-            />
-            <Input
-              name='pencadangan'
-              value={formData.pencadangan}
-              onChange={handleChange}
-              placeholder='Pencadangan (Rp)'
-              type='number'
-            />
-            <Input
-              name='pagu'
-              value={formData.pagu}
-              onChange={handleChange}
-              placeholder='Pagu (Rp)'
-              type='number'
-            />
-            <Input
-              name='realisasi'
-              value={formData.realisasi}
-              onChange={handleChange}
-              placeholder='Realisasi (Rp)'
-              type='number'
-            />
-            <Input
-              name='tahun'
-              value={formData.tahun}
-              onChange={handleChange}
-              placeholder='Tahun'
-              type='number'
-            />
+          <form onSubmit={handleSubmit} className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 
-            <select
-              name='daerah'
-              value={formData.daerah}
-              onChange={handleChange}
-              className='w-full p-2 border border-gray-300 rounded-lg'
-              required
-            >
-              <option value=''>Pilih Daerah</option>
-              <option value='Sulawesi Tengah'>Sulawesi Tengah</option>
-              <option value='Kota Palu'>Kota Palu</option>
-              <option value='Parigi Moutong'>Parigi Moutong</option>
-              <option value='Kabupaten Sigi'>Kabupaten Sigi</option>
-              <option value='Kabupaten Donggala'>Kabupaten Donggala</option>
-            </select>
+            {/* Jenis TKD */}
+            <div className='flex flex-col'>
+              <label htmlFor='jenis_tkd' className='mb-1 font-medium'>Jenis TKD</label>
+              <Input
+                id='jenis_tkd'
+                name='jenis_tkd'
+                value={formData.jenis_tkd}
+                onChange={handleChange}
+                placeholder='Jenis TKD'
+              />
+            </div>
 
-            <button
-              type='submit'
-              className='w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700'
-            >
-              Simpan Data
-            </button>
+            {/* Semula */}
+            <div className='flex flex-col'>
+              <label htmlFor='semula' className='mb-1 font-medium'>Semula</label>
+              <Input
+                id='semula'
+                name='semula'
+                value={formData.semula}
+                onChange={handleChange}
+                placeholder='(Rp)'
+                type='number'
+              />
+            </div>
+
+            {/* Menjadi */}
+            <div className='flex flex-col'>
+              <label htmlFor='menjadi' className='mb-1 font-medium'>Menjadi (Rp)</label>
+              <Input
+                id='menjadi'
+                name='menjadi'
+                value={formData.menjadi}
+                onChange={handleChange}
+                placeholder='(Rp)'
+                type='number'
+              />
+            </div>
+
+            {/* Pencadangan */}
+            <div className='flex flex-col'>
+              <label htmlFor='pencadangan' className='mb-1 font-medium'>Pencadangan (Rp)</label>
+              <Input
+                id='pencadangan'
+                name='pencadangan'
+                value={formData.pencadangan}
+                onChange={handleChange}
+                placeholder='(Rp)'
+                type='number'
+              />
+            </div>
+
+            {/* Pagu */}
+            <div className='flex flex-col'>
+              <label htmlFor='pagu' className='mb-1 font-medium'>Pagu (Rp)</label>
+              <Input
+                id='pagu'
+                name='pagu'
+                value={formData.pagu}
+                onChange={handleChange}
+                placeholder='(Rp)'
+                type='number'
+              />
+            </div>
+
+            {/* Realisasi */}
+            <div className='flex flex-col'>
+              <label htmlFor='realisasi' className='mb-1 font-medium'>Realisasi (Rp)</label>
+              <Input
+                id='realisasi'
+                name='realisasi'
+                value={formData.realisasi}
+                onChange={handleChange}
+                placeholder='(Rp)'
+                type='number'
+              />
+            </div>
+
+            {/* Tahun */}
+            <div className='flex flex-col'>
+              <label htmlFor='tahun' className='mb-1 font-medium'>Tahun</label>
+              <Input
+                id='tahun'
+                name='tahun'
+                value={formData.tahun}
+                onChange={handleChange}
+                placeholder='Tahun'
+                type='number'
+              />
+            </div>
+
+            {/* Daerah */}
+            <div className='md:col-span-2 flex flex-col'>
+              <label htmlFor='daerah' className='mb-1 font-medium'>Daerah</label>
+              <select
+                id='daerah'
+                name='daerah'
+                value={formData.daerah}
+                onChange={handleChange}
+                className='w-full p-2 border border-gray-300 rounded-lg'
+                required
+              >
+                <option value=''>Pilih Daerah</option>
+                <option value='Sulawesi Tengah'>Sulawesi Tengah</option>
+                <option value='Kota Palu'>Kota Palu</option>
+                <option value='Parigi Moutong'>Parigi Moutong</option>
+                <option value='Kabupaten Sigi'>Kabupaten Sigi</option>
+                <option value='Kabupaten Donggala'>Kabupaten Donggala</option>
+              </select>
+            </div>
+
+            {/* Tombol Submit */}
+            <div className='md:col-span-2'>
+              <button
+                type='submit'
+                className='w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700'
+              >
+                Simpan Data
+              </button>
+            </div>
+
           </form>
+
         </>
       )}
 

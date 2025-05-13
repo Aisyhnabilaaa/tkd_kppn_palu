@@ -53,9 +53,9 @@ const SultengPage = () => {
 
   return (
     <div className='hero bg-blue-50'>
-      <div className='relative flex flex-row justify-between itmes-center p-16 md:px-32 px-5 text-white py-44'
+      <div className='relative flex flex-row justify-between itmes-center p-16 md:px-32 px-5 text-white py-36'
         style={{
-          backgroundImage: `url('src/assets/img/sulteng_alam.jpg')`,
+          backgroundImage: `url('src/assets/img/kantor-bupati-parimo.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"
