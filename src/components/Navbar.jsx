@@ -88,9 +88,9 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             <div
-                className={`${menu ? "translate-x-0" : "-translate-x-full"} 
-                lg:hidden flex flex-col absolute bg-gradient-to-b from-blue-900 to-blue-500 text-white 
-                left-0 top-[4rem] z-50 text-lg text-center pt-8 pb-5 gap-6 w-full transition-transform duration-300`}
+                className={`lg:hidden flex flex-col items-center justify-center absolute bg-gradient-to-b from-blue-900 to-blue-500 text-white 
+    left-0 top-[4rem] z-50 text-lg pt-8 pb-5 gap-6 w-full transition-all duration-300 overflow-hidden
+    ${menu ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}
             >
                 <Link
                     to="home"
@@ -105,7 +105,7 @@ const Navbar = () => {
                 </Link>
 
                 {/* Dropdown Mobile */}
-                <div className="relative">
+                <div className="relative text-center">
                     <button
                         onClick={() => setIsDaerahOpen(!isDaerahOpen)}
                         className="flex items-center justify-center gap-1 hover:text-yellow-300"
@@ -118,15 +118,16 @@ const Navbar = () => {
 
                     {isDaerahOpen && (
                         <div className="mt-2 w-56 mx-auto bg-white text-black rounded shadow-md z-50 text-base">
-                            <a href="/Sulteng" className="block px-4 py-2 hover:bg-gray-100">Sulawesi Tengah</a>
-                            <a href="/Palu" className="block px-4 py-2 hover:bg-gray-100">Palu</a>
-                            <a href="/Sigi" className="block px-4 py-2 hover:bg-gray-100">Sigi</a>
-                            <a href="/ParigiMoutong" className="block px-4 py-2 hover:bg-gray-100">Parigi Moutong</a>
-                            <a href="/Donggala" className="block px-4 py-2 hover:bg-gray-100">Donggala</a>
+                            <a href="/Sulteng" className="block px-4 py-2 hover:bg-gray-100">Provinsi Sulawesi Tengah</a>
+                            <a href="/Palu" className="block px-4 py-2 hover:bg-gray-100">Kota Palu</a>
+                            <a href="/Sigi" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Sigi</a>
+                            <a href="/ParigiMoutong" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Parigi Moutong</a>
+                            <a href="/Donggala" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Donggala</a>
                         </div>
                     )}
                 </div>
             </div>
+
         </div>
     );
 };

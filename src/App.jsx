@@ -39,9 +39,9 @@ function App() {
         <Route path="/ParigiMoutongChart" element={<ParimoChartPage />} />
         <Route path="/Sultengcharts" element={<SultengChartPage />} />
         <Route path="/Palucharts" element={<PaluChartPage />} />
-        <Route path="/input" element={<FormInputTKD />} />
+        {/* <Route path="/input" element={<FormInputTKD />} />
         <Route path="/table" element={<TablePage />} />
-        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin" element={<AdminDashboard />} /> */}
         {/* <Route path="/alokasi" element={<AlokasiPage/>}/> */}
 
 

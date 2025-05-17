@@ -100,7 +100,7 @@ const Beranda = () => {
                     backgroundRepeat: "no-repeat",
                 }}
             >
-                <div className="absolute inset-0 bg-gradient-to-r from-black to-black opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black to-black opacity-50" />
                 <div className="z-10 ml-auto text-right max-w-xl pr-4 md:pr-12">
                     <h1 className="text-2xl md:text-4xl">Selamat Datang di Situs</h1>
                     <h3 className="mt-2 text-3xl md:text-5xl font-bold leading-snug">
