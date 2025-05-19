@@ -93,7 +93,7 @@ const Navbar = () => {
     ${menu ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}
             >
                 <Link
-                    to="home"
+                    to="/"
                     spy={true}
                     smooth={true}
                     duration={500}
@@ -121,8 +121,8 @@ const Navbar = () => {
                             <a href="/Sulteng" className="block px-4 py-2 hover:bg-gray-100">Provinsi Sulawesi Tengah</a>
                             <a href="/Palu" className="block px-4 py-2 hover:bg-gray-100">Kota Palu</a>
                             <a href="/Sigi" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Sigi</a>
-                            <a href="/ParigiMoutong" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Parigi Moutong</a>
                             <a href="/Donggala" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Donggala</a>
+                            <a href="/ParigiMoutong" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Parigi Moutong</a>
                         </div>
                     )}
                 </div>

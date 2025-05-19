@@ -92,15 +92,16 @@ const Beranda = () => {
 
             {/* Hero Section */}
             <div
-                className="relative min-h-screen flex flex-col justify-center items-center p-5 text-white"
+                className="relative min-h-screen flex flex-col justify-center items-center p-5 text-white
+             bg-[url('src/assets/KPPN.jpg')] bg-no-repeat bg-cover"
                 style={{
-                    backgroundImage: `url('src/assets/KPPN.jpg')`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "33% 20%",
                 }}
             >
+                {/* Overlay hitam transparan */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black to-black opacity-50" />
+
+                {/* Konten */}
                 <div className="z-10 ml-auto text-right max-w-xl pr-4 md:pr-12">
                     <h1 className="text-2xl md:text-4xl">Selamat Datang di Situs</h1>
                     <h3 className="mt-2 text-3xl md:text-5xl font-bold leading-snug">
@@ -115,6 +116,7 @@ const Beranda = () => {
                 </div>
             </div>
 
+
             {/* Tentang Section */}
             <div
                 className="relative p-4 md:px-32 text-white"
@@ -124,9 +126,9 @@ const Beranda = () => {
                     backgroundPosition: "center",
                 }}
             >
-                    <div className="absolute inset-0 bg-gray-300/60 z-0" />
+                <div className="absolute inset-0 bg-gray-300/60 z-0" />
 
-                    <div data-aos="fade-up" data-aos-duration="1000">
+                <div data-aos="fade-up" data-aos-duration="1000">
                     <div id="tentang" className="relative z-10 max-w-7xl mx-auto py-10">
                         <div className="bg-gray-100 p-6 md:p-10 rounded-xl space-y-4 md:space-y-0 md:space-x-8 md:flex">
                             <div className="md:w-1/3">
@@ -198,10 +200,11 @@ const Beranda = () => {
                 <p className="text-center text-sm mb-6">Silahkan pilih untuk mengakses informasi tiap pemerintah daerah</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">
                     {daerahList.map((item, index) => (
+
                         <div
                             key={index}
                             onClick={() => navigate(item.link)}
-                            className={`relative rounded-xl overflow-hidden shadow-md cursor-pointer group transform transition duration-500 hover:scale-105 h-[200px] ${index === 0 ? 'md:col-span-2 md:row-span-2 md:h-[400px]' : ''}`}
+                            className={`relative rounded-xl overflow-hidden  shadow-md cursor-pointer group transform transition duration-500 hover:scale-105 h-[200px] ${index === 0 ? 'md:col-span-2 md:row-span-2 md:h-[400px]' : ''}`}
                             style={{
                                 backgroundImage: `url(${item.bgImage})`,
                                 backgroundSize: "cover",

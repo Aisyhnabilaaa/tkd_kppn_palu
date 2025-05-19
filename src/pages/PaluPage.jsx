@@ -98,24 +98,43 @@ const PaluPage = () => {
 
       {/* INFORMASI MENGENAI KOTA PALU */}
       <div className="container mx-auto px-4 py-8">
-
-        <div className="flex flex-col md:flex-row items-center gap-6 p-6 md:p-10">
-          <img
-            src="src/assets/img/logokotapalu.png"
-            alt="kota palu logo"
-            className="w-60 md:w-60 h-auto"
-          />
-          <div className="w-full md:w-5 md:h-60 bg-blue-500 rounded-full md:my-0"></div>
-          <div className="text-center md:text-left p-4">
-            <div className="bg-yellow-200 w-fit mx-auto md:ml-4 px-4 rounded-full">
-              <h6 className="text-xl md:text-2xl text-amber-600">Sekilas <span className="text-indigo-900">Tentang</span></h6>
+        <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 p-4 md:p-10 mb-5 md:mb-1">
+          {/* Sekilas Tentang & Kabupaten Sigi (Mobile Only) */}
+          <div className="block md:hidden text-center mb-2">
+            <div className="bg-yellow-200 w-fit mx-auto px-4 py-1 rounded-full">
+              <h6 className="text-base text-amber-600">
+                Sekilas <span className="text-indigo-900">Tentang</span>
+              </h6>
             </div>
-            <h1 className="text-2xl md:text-3xl font-bold ml-2 text-indigo-800 mt-2">Kota Palu</h1>
-            <p className="mt-3 text-justify text-sm md:text-lg mx-2">
-              Kota Palu merupakan pusat pemerintahan,
-              ekonomi, pendidikan, dan kebudayaan di Provinsi Sulawesi Tengah. Terletak di pesisir barat Pulau Sulawesi,
-              kota ini menghadap langsung ke Teluk Palu dan dikelilingi oleh pegunungan, menjadikannya daerah dengan
-              lanskap geografis yang unik dan kontras antara laut dan pegunungan.
+            <h1 className="text-lg font-bold text-indigo-800 mt-1">
+            Kota Palu
+            </h1>
+          </div>
+
+          {/* Gambar */}
+          <img src="src/assets/img/logokotapalu.png" alt="sulawesi tengah logo" className="w-52 md:w-46 h-auto"/>
+
+          {/* Garis Vertikal / Horizontal */}
+          <div className="w-full md:w-8 h-2 md:h-60 bg-blue-500 rounded-full md:my-0 my-2"></div>
+
+          {/* Teks Penjelasan + Desktop Heading */}
+          <div className="text-center md:text-left px-2 md:p-4">
+
+            {/* Sekilas Tentang + Kabupaten Sigi (Desktop Only) */}
+            <div className="hidden md:block">
+              <div className="bg-yellow-200 w-fit md:ml-4 px-4 py-1 rounded-full">
+                <h6 className="text-2xl text-amber-600">
+                  Sekilas <span className="text-indigo-900">Tentang</span>
+                </h6>
+              </div>
+              <h1 className="text-3xl font-bold text-indigo-800 mt-2">
+              Kota Palu
+              </h1>
+            </div>
+
+            {/* Paragraf Penjelasan */}
+            <p className="mt-2 text-justify text-sm md:text-lg mx-2 md:mx-0">
+            Kota Palu merupakan pusat pemerintahan, ekonomi, pendidikan, dan kebudayaan di Provinsi Sulawesi Tengah. Terletak di pesisir barat Pulau Sulawesi, kota ini menghadap langsung ke Teluk Palu dan dikelilingi oleh pegunungan, menjadikannya daerah dengan lanskap geografis yang unik dan kontras antara laut dan pegunungan.
             </p>
           </div>
         </div>

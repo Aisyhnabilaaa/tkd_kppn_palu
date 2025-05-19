@@ -91,19 +91,47 @@ const SigiPage = () => {
 
       {/* INFORMASI MENGENAI SIGI */}
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row items-center gap-6 p-6 md:p-10">
+        <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 p-4 md:p-10 mb-5 md:mb-1">
+
+          {/* Sekilas Tentang & Kabupaten Sigi (Mobile Only) */}
+          <div className="block md:hidden text-center mb-2">
+            <div className="bg-yellow-200 w-fit mx-auto px-4 py-1 rounded-full">
+              <h6 className="text-base text-amber-600">
+                Sekilas <span className="text-indigo-900">Tentang</span>
+              </h6>
+            </div>
+            <h1 className="text-lg font-bold text-indigo-800 mt-1">
+              Kabupaten Sigi
+            </h1>
+          </div>
+
+          {/* Gambar */}
           <img
             src="src/assets/img/logosigi.png"
-            alt="sigi logo"
-            className="w-48 md:w-48 h-auto"
+            alt="sulawesi tengah logo"
+            className="w-44 md:w-52 h-auto"
           />
-          <div className="w-full md:w-5 md:h-60 bg-blue-500 rounded-full md:my-0"></div>
-          <div className="text-center md:text-left p-4">
-            <div className="bg-yellow-200 w-fit mx-auto md:ml-4 px-4 rounded-full">
-              <h6 className="text-xl md:text-2xl text-amber-600">Sekilas <span className="text-indigo-900">Tentang</span></h6>
+
+          {/* Garis Vertikal / Horizontal */}
+          <div className="w-full md:w-8 h-2 md:h-60 bg-blue-500 rounded-full md:my-0 my-2"></div>
+
+          {/* Teks Penjelasan + Desktop Heading */}
+          <div className="text-center md:text-left px-2 md:p-4">
+
+            {/* Sekilas Tentang + Kabupaten Sigi (Desktop Only) */}
+            <div className="hidden md:block">
+              <div className="bg-yellow-200 w-fit md:ml-4 px-4 py-1 rounded-full">
+                <h6 className="text-2xl text-amber-600">
+                  Sekilas <span className="text-indigo-900">Tentang</span>
+                </h6>
+              </div>
+              <h1 className="text-3xl font-bold text-indigo-800 mt-2">
+                Kabupaten Sigi
+              </h1>
             </div>
-            <h1 className="text-2xl md:text-3xl font-bold text-indigo-800 mt-2">Kabupaten Sigi</h1>
-            <p className="mt-3 text-justify text-sm md:text-lg mx-2">
+
+            {/* Paragraf Penjelasan */}
+            <p className="mt-2 text-justify text-sm md:text-lg mx-2 md:mx-0">
               Kabupaten Sigi merupakan salah satu kabupaten di Provinsi Sulawesi Tengah yang dibentuk pada tahun 2008 sebagai hasil pemekaran dari Kabupaten Donggala. Ibu kotanya terletak di Bora, Kecamatan Sigi Biromaru. Kabupaten ini dikenal dengan wilayahnya yang subur, serta kedekatannya dengan Kota Palu.
             </p>
           </div>

@@ -110,23 +110,48 @@ const SultengPage = () => {
           </div>
         </div> */}
 
-        <div className="flex flex-col md:flex-row items-center gap-6 p-6 md:p-10">
-          <img
-            src="src/assets/img/logo_donggala.png"
-            alt="sulawesi tengah logo"
-            className="w-64 md:w-72 h-auto"
-          />
-          <div className="w-full md:w-5 md:h-60 bg-blue-500 rounded-full md:my-0"></div>
-          <div className="text-center md:text-left p-4">
-            <div className="bg-yellow-200 w-fit mx-auto md:ml-4 px-4 rounded-full">
-              <h6 className="text-xl md:text-2xl text-amber-600">Sekilas <span className="text-indigo-900">Tentang</span></h6>
+        <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 p-4 md:p-10 mb-5 md:mb-1">
+          {/* Sekilas Tentang & Kabupaten Sigi (Mobile Only) */}
+          <div className="block md:hidden text-center mb-2">
+            <div className="bg-yellow-200 w-fit mx-auto px-4 py-1 rounded-full">
+              <h6 className="text-base text-amber-600">
+                Sekilas <span className="text-indigo-900">Tentang</span>
+              </h6>
             </div>
-            <h1 className="text-2xl md:text-3xl font-bold text-indigo-800 mt-2">Kabupaten Donggala</h1>
-            <p className="mt-3 text-justify text-sm md:text-lg mx-2">
+            <h1 className="text-lg font-bold text-indigo-800 mt-1">
+            Kabupaten Donggala
+            </h1>
+          </div>
+
+          {/* Gambar */}
+          <img src="src/assets/img/logo_donggala.png" alt="sulawesi tengah logo" className="w-52 md:w-64 h-auto"/>
+
+          {/* Garis Vertikal / Horizontal */}
+          <div className="w-full md:w-8 h-2 md:h-60 bg-blue-500 rounded-full md:my-0 my-2"></div>
+
+          {/* Teks Penjelasan + Desktop Heading */}
+          <div className="text-center md:text-left px-2 md:p-4">
+
+            {/* Sekilas Tentang + Kabupaten Sigi (Desktop Only) */}
+            <div className="hidden md:block">
+              <div className="bg-yellow-200 w-fit md:ml-4 px-4 py-1 rounded-full">
+                <h6 className="text-2xl text-amber-600">
+                  Sekilas <span className="text-indigo-900">Tentang</span>
+                </h6>
+              </div>
+              <h1 className="text-3xl font-bold text-indigo-800 mt-2">
+              Kabupaten Donggala
+              </h1>
+            </div>
+
+            {/* Paragraf Penjelasan */}
+            <p className="mt-2 text-justify text-sm md:text-lg mx-2 md:mx-0">
             Kabupaten Donggala merupakan salah satu kabupaten tertua di Provinsi Sulawesi Tengah, yang memiliki sejarah panjang dan peran penting dalam perkembangan wilayah ini. Ibu kota kabupatennya adalah Banawa, yang terletak di pesisir barat Teluk Palu. Kabupaten ini berbatasan langsung dengan Kota Palu di sebelah timur, serta Kabupaten Parigi Moutong dan Sigi di sisi lainnya.
             </p>
           </div>
         </div>
+
+        
 
         {/* tampilan card */}
         <div className="" data-aos="fade-up" data-aos-duration="1000">
