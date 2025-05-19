@@ -193,8 +193,8 @@ const Beranda = () => {
             </div>
 
             {/* Daftar Pemerintah Daerah */}
-            <div className="pt-10 bg-cover bg-center" style={{ backgroundImage: `url('src/assets/img/bg-batikbiru.png')` }}>
-                <h1 className="font-bold text-3xl md:text-4xl text-center text-blue-800 mb-2">
+            <div className="p-5 md:pt-10 bg-cover bg-center" style={{ backgroundImage: `url('src/assets/img/bg-batikbiru.png')` }}>
+                <h1 className="font-bold  text-3xl md:text-4xl text-center text-blue-800 mb-2">
                     Daftar Pemerintah Daerah
                 </h1>
                 <p className="text-center text-sm mb-6">Silahkan pilih untuk mengakses informasi tiap pemerintah daerah</p>
