@@ -118,7 +118,7 @@ const Beranda = () => {
 
 
             {/* Tentang Section */}
-            <div
+            <div id="tentang"
                 className="relative p-4 md:px-32 text-white"
                 style={{
                     backgroundImage: `url('src/assets/img/bg-indo.png')`,
@@ -129,7 +129,7 @@ const Beranda = () => {
                 <div className="absolute inset-0 bg-gray-300/60 z-0" />
 
                 <div data-aos="fade-up" data-aos-duration="1000">
-                    <div id="tentang" className="relative z-10 max-w-7xl mx-auto py-10">
+                    <div className="relative z-10 max-w-7xl mx-auto py-10">
                         <div className="bg-gray-100 p-6 md:p-10 rounded-xl space-y-4 md:space-y-0 md:space-x-8 md:flex">
                             <div className="md:w-1/3">
                                 <p className="text-xl text-blue-500 font-bold mb-2 bg-blue-100 w-fit px-2">Yuk Tahu!</p>
@@ -140,7 +140,7 @@ const Beranda = () => {
                             </div>
                             <div className="md:w-2/3">
                                 <p className="text-gray-700 text-justify mt-4 md:mt-16">
-                                    Situs ini menyediakan informasi mengenai alokasi dan realisasi dana transfer ke daerah di wilayah Sulawesi Tengah yang meliputi Kota Palu, Kabupaten Sigi, Kabupaten Donggala, Kabupaten Parigi Moutong, dan Provinsi Sulawesi Tengah.
+                                    Situs ini menyediakan informasi mengenai alokasi dan realisasi dana transfer ke daerah di wilayah yang meliputi Provinsi Sulawesi Tengah, Kota Palu, Kabupaten Sigi, Kabupaten Donggala, dan Kabupaten Parigi Moutong.
                                 </p>
                             </div>
                         </div>

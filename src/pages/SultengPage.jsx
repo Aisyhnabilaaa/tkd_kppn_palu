@@ -117,7 +117,7 @@ const SultengPage = () => {
           {/* Teks Penjelasan + Desktop Heading */}
           <div className="text-center md:text-left px-2 md:p-4">
 
-            {/* Sekilas Tentang + Kabupaten Sigi (Desktop Only) */}
+            {/* Sekilas Tentang + prov sulteng (Desktop Only) */}
             <div className="hidden md:block">
               <div className="bg-yellow-200 w-fit md:ml-4 px-4 py-1 rounded-full">
                 <h6 className="text-2xl text-amber-600">
@@ -131,7 +131,7 @@ const SultengPage = () => {
 
             {/* Paragraf Penjelasan */}
             <p className="mt-2 text-justify text-sm md:text-lg mx-2 md:mx-0">
-            Sulawesi Tengah adalah salah satu provinsi di Pulau Sulawesi dengan ibu kota di Kota Palu. Memiliki luas wilayah sekitar 61.841 km<sup>2</sup> dan terdiri dari 13 kabupaten serta 1 kota. Provinsi ini dikenal sebagai daerah yang kaya akan sumber daya alam dan keanekaragaman budaya.
+            Sulawesi Tengah adalah salah satu provinsi di Pulau Sulawesi dengan ibu kota di Kota Palu. Memiliki luas wilayah sekitar 61.841 km<sup>2</sup>. Provinsi ini dikenal sebagai daerah yang kaya akan sumber daya alam dan keanekaragaman budaya.
             </p>
           </div>
         </div>

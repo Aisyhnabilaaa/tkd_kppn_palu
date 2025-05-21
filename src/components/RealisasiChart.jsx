@@ -52,29 +52,19 @@
 
 // export default RealisasiChart;
 
-
 import {
-  BarChart,
-  Bar,
   PieChart,
   Pie,
   Cell,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
+import { useState } from "react";
 
 const RealisasiChart = ({ data, isMobile }) => {
-  const COLORS = ['#8884d8', '#82ca9d', '#ffc658'];
+  const COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#a28bd4', '#6fcf97'];
 
-  // Hitung nilai maksimum persentase dari data
-  const maxPersentase = Math.ceil(
-    Math.max(...data.map((item) => item.persentase ?? 0)) / 5
-  ) * 5;
-
-  const ticks = Array.from({ length: maxPersentase / 5 + 1 }, (_, i) => i * 5);
+  const [selectedData, setSelectedData] = useState(null);
 
   if (isMobile) {
     return (
@@ -89,26 +79,44 @@ const RealisasiChart = ({ data, isMobile }) => {
               cx="50%"
               cy="50%"
               outerRadius={100}
-              label
+              onClick={(entry) => setSelectedData(entry)}
             >
               {data.map((_, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
               ))}
             </Pie>
-            <Tooltip />
-            <Legend />
+            <Legend
+              layout="horizontal"
+              verticalAlign="bottom"
+              align="center"
+              formatter={(value, entry, index) => (
+                <span style={{ color: COLORS[index % COLORS.length], fontSize: 12 }}>
+                  ● {value}
+                </span>
+              )}
+            />
           </PieChart>
         </ResponsiveContainer>
+
+        {selectedData && (
+          <div className="mt-4 bg-gray-50 p-4 rounded-lg shadow-inner text-sm text-gray-800 text-center">
+            <h3 className="text-lg font-semibold mb-1">{selectedData.jenis_tkd}</h3>
+            <p className="mb-1"><strong>Pagu:</strong> Rp {selectedData.pagu.toLocaleString("id-ID")}</p>
+            <p className="mb-1"><strong>Realisasi:</strong> {selectedData.persentase}%</p>
+            <p className="mb-1"><strong>Sisa Pagu:</strong> Rp {selectedData.sisa_pagu.toLocaleString("id-ID")}</p>
+          </div>
+        )}
       </div>
     );
   }
 
+  // Desktop tetap sama seperti sebelumnya
   return (
     <div className="bg-white p-4 rounded-xl shadow-md">
       <h2 className="text-xl font-semibold mb-2 text-center">Realisasi</h2>
       <ResponsiveContainer width="100%" height={300}>
-        <BarChart 
-          data={data} 
+        <BarChart
+          data={data}
           margin={{ top: 20, right: 30, left: 80, bottom: 20 }}
         >
           <XAxis dataKey="jenis_tkd" />
@@ -123,12 +131,12 @@ const RealisasiChart = ({ data, isMobile }) => {
               }).format(value)
             }
           />
-          <YAxis 
-            yAxisId="right" 
-            orientation="right" 
-            domain={[0, maxPersentase]} 
+          <YAxis
+            yAxisId="right"
+            orientation="right"
+            domain={[0, maxPersentase]}
             ticks={ticks}
-            tickFormatter={(value) => `${value}%`} 
+            tickFormatter={(value) => `${value}%`}
           />
           <Tooltip
             formatter={(value, name) => {
