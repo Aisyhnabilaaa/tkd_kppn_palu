@@ -172,7 +172,7 @@ const SultengPage = () => {
               {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
                 <img src="src/assets/img/umkm_palu.jpg" alt="Ekonomi" className="object-cover w-full h-full" />
               </div> */}
-              <h3 className="text-xl font-semibold mb-2 text-amber-500">Ekonomi & UMKM</h3>
+              <h3 className="text-xl font-semibold mb-2 text-amber-500">Perekonomian</h3>
               <p className="text-sm text-gray-700">
                 Ekonomi Donggala ditopang oleh sektor perikanan dan kelautan yang kaya, menjadikan mayoritas penduduk berprofesi sebagai nelayan dan pembudidaya hasil laut. Pariwisata bahari dan alam memiliki potensi besar, didukung pantai indah dan bawah laut menarik. UMKM, terutama pengolahan hasil laut dan kerajinan, turut berkontribusi pada ekonomi lokal.
               </p>

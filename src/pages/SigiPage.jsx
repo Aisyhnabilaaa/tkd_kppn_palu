@@ -158,7 +158,7 @@ const SigiPage = () => {
               {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
                 <img src="src/assets/img/umkm_palu.jpg" alt="Ekonomi" className="object-cover w-full h-full" />
               </div> */}
-              <h3 className="text-xl font-semibold mb-2 text-blue-700">Ekonomi & UMKM</h3>
+              <h3 className="text-xl font-semibold mb-2 text-blue-700">Perekonomian</h3>
               <p className="text-sm text-gray-700">
                 Ekonomi Kabupaten Sigi didominasi oleh sektor pertanian, peternakan, serta perkebunan dan kehutanan. Sebagian besar penduduk bekerja di sektor ini. Sektor perdagangan dan konstruksi turut memberi kontribusi, sementara pariwisata mulai berkembang dengan memanfaatkan potensi alam dan budaya.
               </p>
@@ -171,7 +171,7 @@ const SigiPage = () => {
               </div> */}
               <h3 className="text-xl font-semibold mb-2 text-blue-700">Sosial & Budaya</h3>
               <p className="text-sm text-gray-700">
-                Kabupaten Sigi memiliki kekayaan budaya yang kuat, didominasi oleh suku Kaili dan sub-etnisnya yang menjunjung tinggi nilai-nilai adat dan kearifan lokal. Tradisi seperti pemimpin adat (Tetu’a Ngata), rumah adat (Bantaya), serta seni budaya seperti batik Valiri, musik Lalove, dan tarian Moraego menjadi identitas masyarakat. Pemerintah dan dewan adat aktif menjaga kelestarian budaya serta harmoni sosial di tengah perkembangan zaman.
+                Kabupaten Sigi memiliki kekayaan budaya yang kuat, didominasi oleh suku Kaili dan sub-etnisnya yang menjunjung tinggi nilai-nilai adat dan kearifan lokal. Tradisi seperti pemimpin adat (Tetu’a Ngata), rumah adat (Bantaya), serta seni budaya seperti batik Valiri, musik Lalove, dan tarian Moraego menjadi identitas masyarakat.
               </p>
             </div>
           </div>

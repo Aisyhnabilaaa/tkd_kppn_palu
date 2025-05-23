@@ -58,13 +58,25 @@ import {
   Cell,
   Legend,
   ResponsiveContainer,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
 } from "recharts";
+
 import { useState } from "react";
 
 const RealisasiChart = ({ data, isMobile }) => {
   const COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#a28bd4', '#6fcf97'];
 
   const [selectedData, setSelectedData] = useState(null);
+  const maxPersentase = data.length
+  ? Math.max(...data.map((item) => item.persentase), 100)
+  : 100;
+
+const ticks = [0, 25, 50, 75, 100];
+
 
   if (isMobile) {
     return (

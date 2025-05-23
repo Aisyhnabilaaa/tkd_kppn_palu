@@ -144,7 +144,7 @@ const SultengPage = () => {
 
             {/* Mata Pencaharian dan Ekonomi */}
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
-              <h3 className="text-xl font-semibold mb-2 text-blue-700">Ekonomi & UMKM</h3>
+              <h3 className="text-xl font-semibold mb-2 text-blue-700">Perekonomian </h3>
               <p className="text-sm text-gray-700">
                 Perekonomian Parigi Moutong ditopang oleh sektor pertanian dengan komoditas utama. Potensi perikanan dan kelautannya tinggi berkat garis pantai yang panjang. Sektor pariwisata, terutama wisata bahari dan pegunungan, mulai berkembang. UMKM di bidang pengolahan hasil pertanian, perikanan, dan kerajinan turut mendukung ekonomi daerah.
               </p>

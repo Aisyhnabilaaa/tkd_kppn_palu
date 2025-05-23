@@ -152,7 +152,7 @@ const PaluPage = () => {
 
             {/* Mata Pencaharian dan Ekonomi */}
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
-              <h3 className="text-xl font-semibold mb-2 text-blue-700">Ekonomi & UMKM</h3>
+              <h3 className="text-xl font-semibold mb-2 text-blue-700">Perekonomian</h3>
               <p className="text-sm text-gray-700">
                 Ekonomi Kota Palu didominasi oleh sektor jasa, perdagangan, dan industri pengolahan, dengan kontribusi signifikan dari sektor konstruksi dan pemerintahan. Mayoritas penduduk Kota Palu bekerja di sektor informal, terutama dalam perdagangan dan jasa. UMKM, yang mencakup kuliner, kerajinan, dan perdagangan, memainkan peran penting dan didukung melalui pelatihan serta akses permodalan.
               </p>
