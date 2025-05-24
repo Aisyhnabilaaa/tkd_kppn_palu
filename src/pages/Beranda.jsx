@@ -89,31 +89,26 @@ const Beranda = () => {
 
     return (
         <div className="beranda bg-neutral-100">
-
-            {/* Hero Section */}
-            <div
-                className="relative min-h-screen flex flex-col justify-center items-center p-5 text-white
-             bg-[url('src/assets/KPPN.jpg')] bg-no-repeat bg-cover"
-                style={{
-                    backgroundPosition: "33% 20%",
-                }}
-            >
-                {/* Overlay hitam transparan */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black to-black opacity-50" />
-
-                {/* Konten */}
-                <div className="z-10 ml-auto text-right max-w-xl pr-4 md:pr-12">
-                    <h1 className="text-2xl md:text-4xl">Selamat Datang di Situs</h1>
-                    <h3 className="mt-2 text-3xl md:text-5xl font-bold leading-snug">
-                        Transfer ke Daerah Lingkup KPPN Palu
-                    </h3>
-                    <a
-                        href="#tentang"
-                        className="mt-4 inline-block bg-yellow-500 hover:bg-yellow-700 transition-all py-2 px-4 text-blue-900 hover:text-white shadow rounded"
-                    >
-                        Tentang Kami
-                    </a>
+            <div className="min-h-[50vh] text-white relative pb-0">
+                {/* Bagian atas: gambar 50% layar di mobile, full di desktop */}
+                <div
+                    className="h-[50vh] md:h-screen bg-[url('src/assets/KPPN.jpg')] bg-cover bg-no-repeat"
+                    style={{ backgroundPosition: "33% 20%" }}
+                >
+                    <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center text-center">
+                        <h1 className="text-2xl md:text-4xl">Selamat Datang di Situs</h1>
+                        <h3 className="mt-2 text-3xl md:text-5xl font-bold leading-snug">
+                            Transfer ke Daerah Lingkup KPPN Palu
+                        </h3>
+                        <a
+                            href="#tentang"
+                            className="mt-4 inline-block bg-yellow-500 hover:bg-yellow-700 transition-all py-2 px-4 text-blue-900 hover:text-white shadow rounded"
+                        >
+                            Tentang Kami
+                        </a>
+                    </div>
                 </div>
+
             </div>
 
 
