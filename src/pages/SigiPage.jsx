@@ -63,7 +63,7 @@ const SigiPage = () => {
     <div className='hero bg-blue-50 mb-10'>
       <div className="relative flex justify-center items-center px-4 md:px-32 text-white py-32"
         style={{
-          backgroundImage: `url('alamsigi.jpg')`,
+          backgroundImage: `url('/alamsigi.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"
@@ -77,9 +77,9 @@ const SigiPage = () => {
             {/* Teks gambar tengah */}
             <div className="flex flex-col items-center leading-none">
               <div className="inline-block bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 rounded-full pt-3 px-4 hover:shadow-lg transition duration-300 mb-2 ">
-                <img src="Selamat Datang di.png" alt="selamatdatang" className="w-48 mb-3" />
+                <img src="/Selamat Datang di.png" alt="selamatdatang" className="w-48 mb-3" />
               </div>
-              <img src="KABUPATEN SIGI.png" alt="sulawesitengah" className="w-auto mt-3" />
+              <img src="/KABUPATEN SIGI.png" alt="sulawesitengah" className="w-auto mt-3" />
             </div>
             <IoLeafSharp className="text-sky-500 text-6xl scale-x-[-1]" />
           </div>
@@ -107,7 +107,7 @@ const SigiPage = () => {
 
           {/* Gambar */}
           <img
-            src="logosigi.png"
+            src="/logosigi.png"
             alt="sulawesi tengah logo"
             className="w-44 md:w-52 h-auto"
           />
@@ -160,9 +160,6 @@ const SigiPage = () => {
 
             {/* Sosial Budaya */}
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
-              {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
-                <img src="/images/palu3.jpg" alt="Budaya" className="object-cover w-full h-full" />
-              </div> */}
               <h3 className="text-xl font-semibold mb-2 text-blue-700">Sosial & Budaya</h3>
               <p className="text-sm text-gray-700">
                 Kabupaten Sigi memiliki kekayaan budaya yang kuat, didominasi oleh suku Kaili dan sub-etnisnya yang menjunjung tinggi nilai-nilai adat dan kearifan lokal. Tradisi seperti pemimpin adat (Tetu’a Ngata), rumah adat (Bantaya), serta seni budaya seperti batik Valiri, musik Lalove, dan tarian Moraego menjadi identitas masyarakat.

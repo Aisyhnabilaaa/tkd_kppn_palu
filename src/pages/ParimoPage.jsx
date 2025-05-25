@@ -63,7 +63,7 @@ const SultengPage = () => {
     <div className='hero bg-blue-50 mb-10'>
       <div className="relative flex justify-center items-center px-4 md:px-32 text-white py-32"
         style={{
-          backgroundImage: `url('kantor-bupati-parimo.jpg')`,
+          backgroundImage: `url('/kantor-bupati-parimo.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"
@@ -78,9 +78,9 @@ const SultengPage = () => {
             {/* Teks gambar tengah */}
             <div className="flex flex-col items-center leading-none">
               <div className="inline-block bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 rounded-full pt-3 px-4 hover:shadow-lg transition duration-300 mb-2 ">
-                <img src="Selamat Datang di.png" alt="selamatdatang" className="w-48 mb-3" />
+                <img src="/Selamat Datang di.png" alt="selamatdatang" className="w-48 mb-3" />
               </div>
-              <img src="KABUPATEN PARIGI MOUTONG.png" alt="sulawesitengah" className="w-auto mt-3" />
+              <img src="/KABUPATEN PARIGI MOUTONG.png" alt="sulawesitengah" className="w-auto mt-3" />
             </div>
             <IoLeafSharp className="text-sky-500 text-6xl scale-x-[-1]" />
           </div>
@@ -106,7 +106,7 @@ const SultengPage = () => {
           </div>
 
           {/* Gambar */}
-          <img src="logoparimo.png" alt="sulawesi tengah logo" className="w-52 md:w-64 h-auto"/>
+          <img src="/logoparimo.png" alt="sulawesi tengah logo" className="w-52 md:w-64 h-auto"/>
 
           {/* Garis Vertikal / Horizontal */}
           <div className="w-full md:w-8 h-2 md:h-60 bg-blue-500 rounded-full md:my-0 my-2"></div>
