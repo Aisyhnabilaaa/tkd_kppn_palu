@@ -63,7 +63,7 @@ const SigiPage = () => {
     <div className='hero bg-blue-50 mb-10'>
       <div className="relative flex justify-center items-center px-4 md:px-32 text-white py-32"
         style={{
-          backgroundImage: `url('src/assets/img/alamsigi.jpg')`,
+          backgroundImage: `url('alamsigi.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"
@@ -77,9 +77,9 @@ const SigiPage = () => {
             {/* Teks gambar tengah */}
             <div className="flex flex-col items-center leading-none">
               <div className="inline-block bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 rounded-full pt-3 px-4 hover:shadow-lg transition duration-300 mb-2 ">
-                <img src="src/assets/logo/Selamat Datang di.png" alt="selamatdatang" className="w-48 mb-3" />
+                <img src="Selamat Datang di.png" alt="selamatdatang" className="w-48 mb-3" />
               </div>
-              <img src="src\assets\logo\KABUPATEN SIGI.png" alt="sulawesitengah" className="w-auto mt-3" />
+              <img src="KABUPATEN SIGI.png" alt="sulawesitengah" className="w-auto mt-3" />
             </div>
             <IoLeafSharp className="text-sky-500 text-6xl scale-x-[-1]" />
           </div>
@@ -107,7 +107,7 @@ const SigiPage = () => {
 
           {/* Gambar */}
           <img
-            src="src/assets/img/logosigi.png"
+            src="logosigi.png"
             alt="sulawesi tengah logo"
             className="w-44 md:w-52 h-auto"
           />
@@ -144,9 +144,6 @@ const SigiPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-10">
             {/* Geografis dan Topografi */}
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
-              {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
-                <img src="src/assets/img/geo_palu.jpeg" alt="Geografis" className="object-cover w-full h-full" />
-              </div> */}
               <h3 className="text-xl font-semibold mb-2 text-blue-700">Geografis & Topografi</h3>
               <p className="text-sm text-gray-700">
                 Kabupaten Sigi, yang terletak di Provinsi Sulawesi Tengah, memiliki luas sekitar 5.196,02 km<sup>2</sup>. Topografi Kabupaten Sigi bervariasi dengan didominasi oleh pegunungan dan hutan tropis, dengan beberapa dataran rendah. Kabupaten ini juga memiliki Taman Nasional Lore Lindu yang kaya akan keanekaragaman hayati, serta aliran sungai besar seperti Sungai Palu.
@@ -155,9 +152,6 @@ const SigiPage = () => {
 
             {/* Mata Pencaharian dan Ekonomi */}
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
-              {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
-                <img src="src/assets/img/umkm_palu.jpg" alt="Ekonomi" className="object-cover w-full h-full" />
-              </div> */}
               <h3 className="text-xl font-semibold mb-2 text-blue-700">Perekonomian</h3>
               <p className="text-sm text-gray-700">
                 Ekonomi Kabupaten Sigi didominasi oleh sektor pertanian, peternakan, serta perkebunan dan kehutanan. Sebagian besar penduduk bekerja di sektor ini. Sektor perdagangan dan konstruksi turut memberi kontribusi, sementara pariwisata mulai berkembang dengan memanfaatkan potensi alam dan budaya.

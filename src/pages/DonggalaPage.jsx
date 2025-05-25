@@ -64,7 +64,7 @@ const SultengPage = () => {
     <div className='hero bg-blue-50 mb-10'>
       <div className="relative flex justify-center items-center px-4 md:px-32 text-white py-32"
         style={{
-          backgroundImage: `url('src/assets/img/donggala.jpg')`,
+          backgroundImage: `url('donggala.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"
@@ -79,9 +79,9 @@ const SultengPage = () => {
             {/* Teks gambar tengah */}
             <div className="flex flex-col items-center leading-none">
               <div className="inline-block bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 rounded-full pt-3 px-4 hover:shadow-lg transition duration-300 mb-2 ">
-                <img src="src/assets/logo/Selamat Datang di.png" alt="selamatdatang" className="w-48 mb-3" />
+                <img src="Selamat Datang di.png" alt="selamatdatang" className="w-48 mb-3" />
               </div>
-              <img src="src/assets/logo/KABUPATEN DONGGALA.png" alt="sulawesitengah" className="w-auto mt-3" />
+              <img src="KABUPATEN DONGGALA.png" alt="sulawesitengah" className="w-auto mt-3" />
             </div>
             <IoLeafSharp className="text-sky-500 text-6xl scale-x-[-1]" />
           </div>
@@ -94,7 +94,7 @@ const SultengPage = () => {
       {/* INFORMASI MENGENAI DONGGALA */}
       <div className="container mx-auto px-4 py-8">
         {/* <div className="flex flex-col md:flex-row items-center gap-6 mx-10 mb-10 bg-gray-200 drop-shadow-xl p-10 rounded-3xl" data-aos="fade-up" data-aos-duration="1000">
-          <img src="src/assets/img/logo_donggala.png" alt="donggalalogo" className="w-72 h-auto" />
+          <img src="logo_donggala.png" alt="donggalalogo" className="w-72 h-auto" />
           <div className="text-center md:text-left bg-white p-5 rounded-2xl">
             <div className="bg-yellow-200 w-52 ml-4 rounded-full">
               <h6 className="text-2xl text-amber-600 ml-2">Sekilas <span className="text-indigo-900">Tentang</span></h6>
@@ -124,7 +124,7 @@ const SultengPage = () => {
           </div>
 
           {/* Gambar */}
-          <img src="src/assets/img/logo_donggala.png" alt="sulawesi tengah logo" className="w-52 md:w-64 h-auto"/>
+          <img src="logo_donggala.png" alt="sulawesi tengah logo" className="w-52 md:w-64 h-auto"/>
 
           {/* Garis Vertikal / Horizontal */}
           <div className="w-full md:w-8 h-2 md:h-60 bg-blue-500 rounded-full md:my-0 my-2"></div>
@@ -158,9 +158,6 @@ const SultengPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-10">
             {/* Geografis dan Topografi */}
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
-              {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
-                <img src="src/assets/img/geo_palu.jpeg" alt="Geografis" className="object-cover w-full h-full" />
-              </div> */}
               <h3 className="text-xl font-semibold mb-2 text-blue-700">Geografis & Topografi</h3>
               <p className="text-sm text-gray-700">
                 Kabupaten Donggala memiliki luas sekitar 5.275 km<sup>2</sup> dengan kondisi geografis yang bervariasi, mulai dari pesisir pantai hingga wilayah pegunungan. Topografinya bervariasi, terdiri dari daerah pantai, dataran rendah, perbukitan, hingga pegunungan. Keanekaragaman kondisi geografis ini menjadikan Donggala memiliki potensi sumber daya alam yang kaya, baik di sektor kelautan, pertanian, maupun kehutanan.
@@ -169,9 +166,6 @@ const SultengPage = () => {
 
             {/* Mata Pencaharian dan Ekonomi */}
             <div className="bg-white text-justify rounded-xl p-6 shadow-md border-l-4 border-blue-800">
-              {/* <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
-                <img src="src/assets/img/umkm_palu.jpg" alt="Ekonomi" className="object-cover w-full h-full" />
-              </div> */}
               <h3 className="text-xl font-semibold mb-2 text-amber-500">Perekonomian</h3>
               <p className="text-sm text-gray-700">
                 Ekonomi Donggala ditopang oleh sektor perikanan dan kelautan yang kaya, menjadikan mayoritas penduduk berprofesi sebagai nelayan dan pembudidaya hasil laut. Pariwisata bahari dan alam memiliki potensi besar, didukung pantai indah dan bawah laut menarik. UMKM, terutama pengolahan hasil laut dan kerajinan, turut berkontribusi pada ekonomi lokal.

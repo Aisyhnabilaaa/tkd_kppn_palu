@@ -53,36 +53,36 @@ const Beranda = () => {
         {
             title: "Provinsi Sulawesi Tengah",
             description: "Sulawesi, Indonesia",
-            bgImage: "/src/assets/img/Tari-Raego.jpg",
-            logo: "src/assets/img/Tari-Raego.jpg",
+            bgImage: "Tari-Raego.jpg",
+            logo: "Tari-Raego.jpg",
             link: "/sulteng",
         },
         {
             title: "Kota Palu",
             description: "Sulawesi Tengah",
-            bgImage: "/src/assets/img/palugubernur.jpg",
-            logo: "/src/assets/img/Lambang_Kota_Palu.png",
+            bgImage: "palugubernur.jpg",
+            logo: "Lambang_Kota_Palu.png",
             link: "/Palu",
         },
         {
             title: "Kabupaten Parigi Moutong",
             description: "Sulawesi Tengah",
-            bgImage: "/src/assets/img/kantor-bupati-parimo.jpg",
-            logo: "/src/assets/img/Lambang_Kabupaten_Parigi_Moutong.png",
+            bgImage: "kantor-bupati-parimo.jpg",
+            logo: "Lambang_Kabupaten_Parigi_Moutong.png",
             link: "/ParigiMoutong",
         },
         {
             title: "Kabupaten Donggala",
             description: "Sulawesi Tengah",
-            bgImage: "src/assets/img/donggala-kotawisata.jpg",
-            logo: "/src/assets/img/Lambang_Kabupaten_Donggala.png",
+            bgImage: "donggala-kotawisata.jpg",
+            logo: "Lambang_Kabupaten_Donggala.png",
             link: "/Donggala",
         },
         {
             title: "Kabupaten Sigi",
             description: "Sulawesi Tengah",
-            bgImage: "src/assets/img/kantor-bupatii-sigii.jpg",
-            logo: "/src/assets/img/Logo_sigi.png",
+            bgImage: "kantor-bupatii-sigii.jpg",
+            logo: "Logo_sigi.png",
             link: "/Sigi",
         },
     ];
@@ -92,7 +92,7 @@ const Beranda = () => {
             <div className="min-h-[50vh] text-white relative pb-0">
                 {/* Bagian atas: gambar 50% layar di mobile, full di desktop */}
                 <div
-                    className="h-[50vh] md:h-screen bg-[url('src/assets/KPPN.jpg')] bg-cover bg-no-repeat"
+                    className="h-[50vh] md:h-screen bg-[url('/KPPN.jpg')] bg-cover bg-no-repeat"
                     style={{ backgroundPosition: "33% 20%" }}
                 >
                     <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center text-center md:items-end md:text-right md:pr-20">
@@ -117,7 +117,7 @@ const Beranda = () => {
             <div id="tentang"
                 className="relative p-4 md:px-32 text-white"
                 style={{
-                    backgroundImage: `url('src/assets/img/bg-indo.png')`,
+                    backgroundImage: `url('bg-indo.png')`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                 }}
@@ -189,7 +189,7 @@ const Beranda = () => {
             </div>
 
             {/* Daftar Pemerintah Daerah */}
-            <div className="p-5 md:pt-10 bg-cover bg-center" style={{ backgroundImage: `url('src/assets/img/bg-batikbiru.png')` }}>
+            <div className="p-5 md:pt-10 bg-cover bg-center" style={{ backgroundImage: `url('bg-batikbiru.png')` }}>
                 <h1 className="font-bold  text-3xl md:text-4xl text-center text-blue-800 mb-2">
                     Daftar Pemerintah Daerah
                 </h1>

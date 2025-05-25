@@ -46,7 +46,7 @@ const Navbar = () => {
         >
 
             <div className="flex items-center">
-                <img src="src/assets/kppnlogo.png" alt="kppn" className="w-24" />
+                <img src="kppnlogo.png" alt="kppn" className="w-24" />
             </div>
 
             {/* Desktop Navbar */}
