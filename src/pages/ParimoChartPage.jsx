@@ -12,10 +12,10 @@ const ParimoChartPage = () => {
     const fetchData = async () => {
       try {
         const resRealisasi = await axios.get(
-          `http://localhost:3000/tkd/realisasi?daerah=Parigi Moutong&tahun=${tahun}`
+          `https://charttkd-production.up.railway.app/tkd/realisasi?daerah=Parigi Moutong&tahun=${tahun}`
         );
         const resEfisiensi = await axios.get(
-          `http://localhost:3000/tkd/efisiensi?daerah=Parigi Moutong&tahun=${tahun}`
+          `https://charttkd-production.up.railway.app/tkd/efisiensi?daerah=Parigi Moutong&tahun=${tahun}`
         );
 
         const cleaned = resRealisasi.data.map((item) => ({

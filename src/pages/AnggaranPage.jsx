@@ -6,7 +6,7 @@ const AnggaranPage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/tkd/efisiensi') // ganti dengan API kamu
+    axios.get('https://charttkd-production.up.railway.app/tkd/efisiensi') // ganti dengan API kamu
       .then(res => setData(res.data))
       .catch(err => console.error(err));
   }, []);

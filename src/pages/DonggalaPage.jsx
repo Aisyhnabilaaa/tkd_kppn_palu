@@ -22,10 +22,10 @@ const SultengPage = () => {
     const fetchData = async () => {
       try {
         const resRealisasi = await axios.get(
-          `http://localhost:3000/tkd/realisasi?daerah=Kabupaten Donggala&tahun=${tahun}`
+          `https://charttkd-production.up.railway.app/tkd/realisasi?daerah=Kabupaten Donggala&tahun=${tahun}`
         );
         const resEfisiensi = await axios.get(
-          `http://localhost:3000/tkd/efisiensi?daerah=Kabupaten Donggala&tahun=${tahun}`
+          `https://charttkd-production.up.railway.app/tkd/efisiensi?daerah=Kabupaten Donggala&tahun=${tahun}`
         );
 
         const cleaned = resRealisasi.data.map((item) => ({

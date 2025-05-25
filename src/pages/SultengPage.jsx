@@ -20,10 +20,10 @@ const SultengPage = () => {
     const fetchData = async () => {
       try {
         const resRealisasi = await axios.get(
-          `http://localhost:3000/tkd/realisasi?daerah=Sulawesi Tengah&tahun=${tahun}`
+          `https://charttkd-production.up.railway.app/tkd/realisasi?daerah=Sulawesi Tengah&tahun=${tahun}`
         );
         const resEfisiensi = await axios.get(
-          `http://localhost:3000/tkd/efisiensi?daerah=Sulawesi Tengah&tahun=${tahun}`
+          `https://charttkd-production.up.railway.app/tkd/efisiensi?daerah=Sulawesi Tengah&tahun=${tahun}`
         );
 
         const cleaned = resRealisasi.data.map((item) => ({

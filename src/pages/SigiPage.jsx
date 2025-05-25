@@ -21,10 +21,10 @@ const SigiPage = () => {
     const fetchData = async () => {
       try {
         const resRealisasi = await axios.get(
-          `http://localhost:3000/tkd/realisasi?daerah=Kabupaten Sigi&tahun=${tahun}`
+          `https://charttkd-production.up.railway.app/tkd/realisasi?daerah=Kabupaten Sigi&tahun=${tahun}`
         );
         const resEfisiensi = await axios.get(
-          `http://localhost:3000/tkd/efisiensi?daerah=Kabupaten Sigi&tahun=${tahun}`
+          `https://charttkd-production.up.railway.app/tkd/efisiensi?daerah=Kabupaten Sigi&tahun=${tahun}`
         );
 
         const cleaned = resRealisasi.data.map((item) => ({

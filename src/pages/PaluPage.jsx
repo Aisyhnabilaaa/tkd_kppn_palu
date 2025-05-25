@@ -23,10 +23,10 @@ const PaluPage = () => {
     const fetchData = async () => {
       try {
         const resRealisasi = await axios.get(
-          `http://localhost:3000/tkd/realisasi?daerah=Kota Palu&tahun=${tahun}`
+          `https://charttkd-production.up.railway.app/tkd/realisasi?daerah=Kota Palu&tahun=${tahun}`
         );
         const resEfisiensi = await axios.get(
-          `http://localhost:3000/tkd/efisiensi?daerah=Kota Palu&tahun=${tahun}`
+          `https://charttkd-production.up.railway.app/tkd/efisiensi?daerah=Kota Palu&tahun=${tahun}`
         );
 
         const cleaned = resRealisasi.data.map((item) => ({
