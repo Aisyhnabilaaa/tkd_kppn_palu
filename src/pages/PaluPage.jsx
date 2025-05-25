@@ -134,7 +134,7 @@ const PaluPage = () => {
 
             {/* Paragraf Penjelasan */}
             <p className="mt-2 text-justify text-sm md:text-lg mx-2 md:mx-0">
-            Kota Palu merupakan pusat pemerintahan, ekonomi, pendidikan, dan kebudayaan di Provinsi Sulawesi Tengah. Terletak di pesisir barat Pulau Sulawesi, kota ini menghadap langsung ke Teluk Palu dan dikelilingi oleh pegunungan, menjadikannya daerah dengan lanskap geografis yang unik dan kontras antara laut dan pegunungan.
+            Kota Palu merupakan pusat pemerintahan, ekonomi, pendidikan, dan kebudayaan di Sulawesi Tengah. Awalnya bagian dari Kabupaten Donggala, Palu resmi menjadi Kotamadya Daerah Tingkat II pada 27 September 1978 melalui PP No. 20 Tahun 1978. Terletak di pesisir barat Sulawesi, kota ini menghadap Teluk Palu dan dikelilingi pegunungan, menciptakan lanskap geografis yang unik.
             </p>
           </div>
         </div>
@@ -181,7 +181,7 @@ const PaluPage = () => {
           </div>
           <div className="md:w-2/3 w-full">
             <p className="text-gray-700 text-justify text-sm md:text-base">
-              Transfer ke daerah merupakan mekanisme pendanaan dari pemerintah pusat ke daerah, mencakup DAU, DAK, DBH, dan Dana Insentif Fiskal untuk pembangunan, infrastruktur, dan pelayanan publik.
+            Transfer ke daerah adalah dana dari pemerintah pusat (APBN) yang dialokasikan kepada pemerintah daerah untuk membiayai urusan pemerintahan daerah. Dana ini mendukung desentralisasi fiskal dan pemerataan pembangunan di Indonesia. Jenis-jenis dana transfer meliputi: Dana Bagi Hasil (DBH), Dana Alokasi Umum (DAU), Dana Alokasi Khusus (DAK), Dana Insentif Daerah sebagai penghargaan kinerja daerah, serta dana desa.
             </p>
           </div>
         </div>

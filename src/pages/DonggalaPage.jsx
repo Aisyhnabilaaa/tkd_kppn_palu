@@ -146,7 +146,7 @@ const SultengPage = () => {
 
             {/* Paragraf Penjelasan */}
             <p className="mt-2 text-justify text-sm md:text-lg mx-2 md:mx-0">
-            Kabupaten Donggala merupakan salah satu kabupaten tertua di Provinsi Sulawesi Tengah, yang memiliki sejarah panjang dan peran penting dalam perkembangan wilayah ini. Ibu kota kabupatennya adalah Banawa, yang terletak di pesisir barat Teluk Palu. Kabupaten ini berbatasan langsung dengan Kota Palu di sebelah timur, serta Kabupaten Parigi Moutong dan Sigi di sisi lainnya.
+            Kabupaten Donggala, salah satu kabupaten tertua di Sulawesi Tengah, dibentuk pada 1952 sebagai daerah swatantra tingkat II. Sejak abad ke-15, Donggala dikenal sebagai pusat perdagangan dan kota maritim penting. Pusat pemerintahan di Kecamatan Banawa, yang terletak di pesisir barat Teluk Palu, berbatasan dengan Kota Palu, Parigi Moutong, dan Sigi.
             </p>
           </div>
         </div>
@@ -204,7 +204,7 @@ const SultengPage = () => {
           </div>
           <div className="md:w-2/3 w-full">
             <p className="text-gray-700 text-justify text-sm md:text-base">
-              Transfer ke daerah merupakan mekanisme pendanaan dari pemerintah pusat ke daerah, mencakup DAU, DAK, DBH, dan Dana Insentif Fiskal untuk pembangunan, infrastruktur, dan pelayanan publik.
+            Transfer ke daerah adalah dana dari pemerintah pusat (APBN) yang dialokasikan kepada pemerintah daerah untuk membiayai urusan pemerintahan daerah. Dana ini mendukung desentralisasi fiskal dan pemerataan pembangunan di Indonesia. Jenis-jenis dana transfer meliputi: Dana Bagi Hasil (DBH), Dana Alokasi Umum (DAU), Dana Alokasi Khusus (DAK), Dana Insentif Daerah sebagai penghargaan kinerja daerah, serta dana desa.
             </p>
           </div>
         </div>

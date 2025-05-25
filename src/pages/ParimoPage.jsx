@@ -128,7 +128,8 @@ const SultengPage = () => {
 
             {/* Paragraf Penjelasan */}
             <p className="mt-2 text-justify text-sm md:text-lg mx-2 md:mx-0">
-            Kabupaten Parigi Moutong merupakan salah satu daerah administratif di Provinsi Sulawesi Tengah yang memiliki posisi strategis di pesisir utara Pulau Sulawesi. Ibu kota kabupatennya berada di Parigi. Kabupaten ini secara resmi terbentuk pada tahun 2002 melalui pemekaran dari wilayah Kabupaten Donggala.            </p>
+            Kabupaten Parigi Moutong merupakan salah satu daerah administratif di Provinsi Sulawesi Tengah yang memiliki posisi strategis di pesisir utara Pulau Sulawesi. Pusat pemerintahan kabupaten ini terletak di Parigi. Kabupaten Parigi Moutong secara resmi dibentuk pada tahun 2002 melalui pemekaran dari Kabupaten Donggala. Proses pembentukan ini dimulai sejak 1963 dan disahkan oleh DPR RI melalui Undang-Undang Nomor 10 Tahun 2002 pada 10 April 2002.
+            </p>
           </div>
         </div>
 
@@ -173,7 +174,7 @@ const SultengPage = () => {
           </div>
           <div className="md:w-2/3 w-full">
             <p className="text-gray-700 text-justify text-sm md:text-base">
-              Transfer ke daerah merupakan mekanisme pendanaan dari pemerintah pusat ke daerah, mencakup DAU, DAK, DBH, dan Dana Insentif Fiskal untuk pembangunan, infrastruktur, dan pelayanan publik.
+            Transfer ke daerah adalah dana dari pemerintah pusat (APBN) yang dialokasikan kepada pemerintah daerah untuk membiayai urusan pemerintahan daerah. Dana ini mendukung desentralisasi fiskal dan pemerataan pembangunan di Indonesia. Jenis-jenis dana transfer meliputi: Dana Bagi Hasil (DBH), Dana Alokasi Umum (DAU), Dana Alokasi Khusus (DAK), Dana Insentif Daerah sebagai penghargaan kinerja daerah, serta dana desa.
             </p>
           </div>
         </div>

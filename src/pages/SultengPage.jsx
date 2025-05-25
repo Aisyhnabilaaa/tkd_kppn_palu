@@ -131,7 +131,7 @@ const SultengPage = () => {
 
             {/* Paragraf Penjelasan */}
             <p className="mt-2 text-justify text-sm md:text-lg mx-2 md:mx-0">
-            Sulawesi Tengah adalah salah satu provinsi di Pulau Sulawesi dengan ibu kota di Kota Palu. Memiliki luas wilayah sekitar 61.841 km<sup>2</sup>. Provinsi ini dikenal sebagai daerah yang kaya akan sumber daya alam dan keanekaragaman budaya.
+            Sulawesi Tengah adalah salah satu provinsi di Pulau Sulawesi dengan ibu kota di Kota Palu. Provinsi ini resmi dibentuk pada 13 April 1964 melalui Undang-Undang Nomor 13 Tahun 1964. Sulawesi Tengah dikenal sebagai daerah yang kaya akan sumber daya alam serta keanekaragaman budaya.
             </p>
           </div>
         </div>
@@ -177,7 +177,7 @@ const SultengPage = () => {
           </div>
           <div className="md:w-2/3 w-full">
             <p className="text-gray-700 text-justify text-sm md:text-base">
-              Transfer ke daerah merupakan mekanisme pendanaan dari pemerintah pusat ke daerah, mencakup DAU, DAK, DBH, dan Dana Insentif Fiskal untuk pembangunan, infrastruktur, dan pelayanan publik.
+            Transfer ke daerah adalah dana dari pemerintah pusat (APBN) yang dialokasikan kepada pemerintah daerah untuk membiayai urusan pemerintahan daerah. Dana ini mendukung desentralisasi fiskal dan pemerataan pembangunan di Indonesia. Jenis-jenis dana transfer meliputi: Dana Bagi Hasil (DBH), Dana Alokasi Umum (DAU), Dana Alokasi Khusus (DAK), Dana Insentif Daerah sebagai penghargaan kinerja daerah, serta dana desa.
             </p>
           </div>
         </div>

@@ -95,11 +95,12 @@ const Beranda = () => {
                     className="h-[50vh] md:h-screen bg-[url('src/assets/KPPN.jpg')] bg-cover bg-no-repeat"
                     style={{ backgroundPosition: "33% 20%" }}
                 >
-                    <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center text-center">
+                    <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center text-center md:items-end md:text-right md:pr-20">
                         <h1 className="text-2xl md:text-4xl">Selamat Datang di Situs</h1>
                         <h3 className="mt-2 text-3xl md:text-5xl font-bold leading-snug">
-                            Transfer ke Daerah Lingkup KPPN Palu
+                            Transfer ke Daerah<br className="hidden md:block" /> Lingkup KPPN Palu
                         </h3>
+
                         <a
                             href="#tentang"
                             className="mt-4 inline-block bg-yellow-500 hover:bg-yellow-700 transition-all py-2 px-4 text-blue-900 hover:text-white shadow rounded"
@@ -199,7 +200,7 @@ const Beranda = () => {
                         <div
                             key={index}
                             onClick={() => navigate(item.link)}
-                            className={`relative rounded-xl overflow-hidden  shadow-md cursor-pointer group transform transition duration-500 hover:scale-105 h-[200px] ${index === 0 ? 'md:col-span-2 md:row-span-2 md:h-[400px]' : ''}`}
+                            className={`relative rounded-xl overflow-hidden shadow-md border-4 border-white cursor-pointer group transform transition duration-500 hover:scale-105 h-[200px] ${index === 0 ? 'md:col-span-2 md:row-span-2 md:h-[400px]' : ''}`}
                             style={{
                                 backgroundImage: `url(${item.bgImage})`,
                                 backgroundSize: "cover",

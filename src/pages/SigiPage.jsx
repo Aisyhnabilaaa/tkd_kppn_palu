@@ -132,7 +132,7 @@ const SigiPage = () => {
 
             {/* Paragraf Penjelasan */}
             <p className="mt-2 text-justify text-sm md:text-lg mx-2 md:mx-0">
-              Kabupaten Sigi merupakan salah satu kabupaten di Provinsi Sulawesi Tengah yang dibentuk pada tahun 2008 sebagai hasil pemekaran dari Kabupaten Donggala. Ibu kotanya terletak di Bora, Kecamatan Sigi Biromaru. Kabupaten ini dikenal dengan wilayahnya yang subur, serta kedekatannya dengan Kota Palu.
+            Kabupaten Sigi adalah salah satu kabupaten di Provinsi Sulawesi Tengah yang dibentuk pada 24 Juni 2008 melalui Undang-Undang Nomor 27 Tahun 2008 sebagai hasil pemekaran dari Kabupaten Donggala. Ibu kotanya berada di Bora, Kecamatan Sigi Biromaru. Kabupaten ini dikenal dengan wilayahnya yang subur dan letaknya yang berdekatan dengan Kota Palu.
             </p>
           </div>
         </div>
@@ -191,7 +191,7 @@ const SigiPage = () => {
           </div>
           <div className="md:w-2/3 w-full">
             <p className="text-gray-700 text-justify text-sm md:text-base">
-              Transfer ke daerah merupakan mekanisme pendanaan dari pemerintah pusat ke daerah, mencakup DAU, DAK, DBH, dan Dana Insentif Fiskal untuk pembangunan, infrastruktur, dan pelayanan publik.
+            Transfer ke daerah adalah dana dari pemerintah pusat (APBN) yang dialokasikan kepada pemerintah daerah untuk membiayai urusan pemerintahan daerah. Dana ini mendukung desentralisasi fiskal dan pemerataan pembangunan di Indonesia. Jenis-jenis dana transfer meliputi: Dana Bagi Hasil (DBH), Dana Alokasi Umum (DAU), Dana Alokasi Khusus (DAK), Dana Insentif Daerah sebagai penghargaan kinerja daerah, serta dana desa.
             </p>
           </div>
         </div>
