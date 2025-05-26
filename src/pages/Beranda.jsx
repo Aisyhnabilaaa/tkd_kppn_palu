@@ -17,7 +17,7 @@ const Beranda = () => {
 
     const fetchChart = async () => {
         try {
-            const res = await axios.get(`https://charttkd-production.up.railway.app/api/alokasi/grafik?tahun=${tahun}`, {
+            const res = await axios.get(`https://charttkd-production.up.railway.app/alokasi/grafik?tahun=${tahun}`, {
                 headers: {
                     'x-api-key': import.meta.env.VITE_ADMIN_API_KEY,
                 },
