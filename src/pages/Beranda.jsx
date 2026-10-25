@@ -1,13 +1,9 @@
-// Beranda.jsx
-
 import { useNavigate } from "react-router-dom";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-
-import { ResponsiveContainer } from 'recharts';
-
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { API_URL } from '../config';
+import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -17,7 +13,7 @@ const Beranda = () => {
 
     const fetchChart = async () => {
         try {
-            const res = await axios.get(`https://charttkd-production.up.railway.app/alokasi/grafik?tahun=${tahun}`, {
+            const res = await axios.get(`${API_URL}/alokasi/grafik?tahun=${tahun}`, {
                 headers: {
                     'x-api-key': import.meta.env.VITE_ADMIN_API_KEY,
                 },

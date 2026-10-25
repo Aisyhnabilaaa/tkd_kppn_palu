@@ -1,8 +1,19 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 
-// Komponen Button untuk Login (opsional)
+const DAERAH_LINKS = [
+    { href: "/Sulteng", label: "Provinsi Sulawesi Tengah" },
+    { href: "/Palu", label: "Kota Palu" },
+    { href: "/Sigi", label: "Kabupaten Sigi" },
+    { href: "/Donggala", label: "Kabupaten Donggala" },
+    { href: "/ParigiMoutong", label: "Kabupaten Parigi Moutong" },
+];
+
+const DaerahLinks = () =>
+    DAERAH_LINKS.map(({ href, label }) => (
+        <a key={href} href={href} className="block px-4 py-2 hover:bg-gray-100">{label}</a>
+    ));
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
@@ -13,11 +24,6 @@ const Navbar = () => {
     const handleChange = () => {
         setMenu(!menu);
     };
-
-    // Daftar menu navbar
-    // const menuItems = [
-    //     { name: "Home", to: "/" },
-    // ];
 
     // Deteksi arah scroll
     useEffect(() => {
@@ -71,11 +77,7 @@ const Navbar = () => {
 
                     {isDaerahOpen && (
                         <div className="absolute right-0 mt-2 w-56 bg-white text-black rounded shadow-lg z-50 text-sm">
-                            <a href="/Sulteng" className="block px-4 py-2 hover:bg-gray-100">Provinsi Sulawesi Tengah</a>
-                            <a href="/Palu" className="block px-4 py-2 hover:bg-gray-100">Kota Palu</a>
-                            <a href="/Sigi" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Sigi</a>
-                            <a href="/Donggala" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Donggala</a>
-                            <a href="/ParigiMoutong" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Parigi Moutong</a>
+                            <DaerahLinks />
                         </div>
                     )}
                 </div>
@@ -94,10 +96,6 @@ const Navbar = () => {
             >
                 <Link
                     to="/"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
                     className="hover:text-yellow-200"
                     onClick={() => setMenu(false)}
                 >
@@ -118,11 +116,7 @@ const Navbar = () => {
 
                     {isDaerahOpen && (
                         <div className="mt-2 w-56 mx-auto bg-white text-black rounded shadow-md z-50 text-base">
-                            <a href="/Sulteng" className="block px-4 py-2 hover:bg-gray-100">Provinsi Sulawesi Tengah</a>
-                            <a href="/Palu" className="block px-4 py-2 hover:bg-gray-100">Kota Palu</a>
-                            <a href="/Sigi" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Sigi</a>
-                            <a href="/Donggala" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Donggala</a>
-                            <a href="/ParigiMoutong" className="block px-4 py-2 hover:bg-gray-100">Kabupaten Parigi Moutong</a>
+                            <DaerahLinks />
                         </div>
                     )}
                 </div>

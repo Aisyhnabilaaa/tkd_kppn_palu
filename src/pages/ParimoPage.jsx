@@ -1,63 +1,25 @@
 import { IoLeafSharp } from "react-icons/io5";
-
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect } from "react";
 import RealisasiChart from "../components/RealisasiChart";
 import EfisiensiChart from "../components/EfisiensiChart";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useTkdData } from "../hooks/useTkdData";
+import { useIsMobile } from "../hooks/useIsMobile";
 
-const SultengPage = () => {
-  const [realisasiData, setRealisasiData] = useState([]);
-  const [efisiensiData, setEfisiensiData] = useState([]);
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-  const currentYear = new Date().getFullYear()
-  const yearOptions = Array.from({ length: 5 }, (_, i) =>
-    String(currentYear - 3 + i)
-  )
-  const [tahun, setTahun] = useState(new Date().getFullYear());
+const ParimoPage = () => {
+  const { tahun, setTahun, yearOptions, realisasiData, efisiensiData } =
+    useTkdData("Parigi Moutong");
+  const isMobile = useIsMobile();
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const resRealisasi = await axios.get(
-          `https://charttkd-production.up.railway.app/tkd/realisasi?daerah=Parigi Moutong&tahun=${tahun}`
-        );
-        const resEfisiensi = await axios.get(
-          `https://charttkd-production.up.railway.app/tkd/efisiensi?daerah=Parigi Moutong&tahun=${tahun}`
-        );
-
-        const cleaned = resRealisasi.data.map((item) => ({
-          ...item,
-          pagu: Number(item.pagu),
-          realisasi: Number(item.realisasi),
-          persentase: Number(item.persentase),
-          sisa_pagu: Number(item.sisa_pagu),
-        }));
-
-        setRealisasiData(cleaned);
-        setEfisiensiData(resEfisiensi.data);
-      } catch (err) {
-        console.error("Gagal fetch data:", err);
-      }
-    };
-
     AOS.init({
       duration: 500,
       easting: "ease-in-out",
       once: true,
     });
-
-    fetchData();
   }, [tahun]);
-
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <div className='hero bg-blue-50 mb-10'>
@@ -217,4 +179,4 @@ const SultengPage = () => {
   )
 }
 
-export default SultengPage
+export default ParimoPage

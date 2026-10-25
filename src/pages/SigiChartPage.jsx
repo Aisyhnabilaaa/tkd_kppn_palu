@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_URL } from "../config";
 import RealisasiChart from "../components/RealisasiChart";
 import EfisiensiChart from "../components/EfisiensiChart";
 
@@ -12,10 +13,10 @@ const SigiChartPage = () => {
     const fetchData = async () => {
       try {
         const resRealisasi = await axios.get(
-          `https://charttkd-production.up.railway.app/tkd/realisasi?daerah=Kabupaten Sigi&tahun=${tahun}`
+          `${API_URL}/tkd/realisasi?daerah=Kabupaten Sigi&tahun=${tahun}`
         );
         const resEfisiensi = await axios.get(
-          `https://charttkd-production.up.railway.app/tkd/efisiensi?daerah=Kabupaten Sigi&tahun=${tahun}`
+          `${API_URL}/tkd/efisiensi?daerah=Kabupaten Sigi&tahun=${tahun}`
         );
 
         const cleaned = resRealisasi.data.map((item) => ({
